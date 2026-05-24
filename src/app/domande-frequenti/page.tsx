@@ -59,12 +59,20 @@ export default function DomandeFrequentiPage() {
           <h1 className="mt-4 text-4xl font-semibold md:text-5xl">
             Qui troverai le domande che mi vengono poste di frequente.
           </h1>
-          <div className="mt-10 grid gap-6">
-            {faqs.map((faq) => (
-              <div key={faq.question} className="card">
-                <h2 className="text-lg font-semibold">{faq.question}</h2>
-                <p className="mt-3 text-sm text-muted">{faq.answer}</p>
-              </div>
+          <div className="mt-10 grid gap-4">
+            {faqs.map((faq, index) => (
+              <details key={faq.question} className="faq-item">
+                <summary className="flex items-center justify-between gap-4">
+                  <span className="flex items-center gap-3">
+                    <span className="faq-icon">{index + 1}</span>
+                    <span>{faq.question}</span>
+                  </span>
+                  <span className="text-xs uppercase tracking-[0.2em] text-muted">
+                    Apri
+                  </span>
+                </summary>
+                <p className="mt-4 text-sm text-muted">{faq.answer}</p>
+              </details>
             ))}
           </div>
         </div>

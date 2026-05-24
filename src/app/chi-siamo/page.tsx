@@ -43,7 +43,7 @@ export default function ChiSiamoPage() {
               <h2 className="mt-3 text-3xl font-semibold md:text-4xl">
                 Il mio percorso
               </h2>
-              <div className="mt-6 space-y-4 text-sm text-muted">
+              <div className="mt-6 space-y-4 text-sm text-muted timeline">
                 <p>Laurea in Amministrazione, Finanza e Controllo</p>
                 <p>Laurea Magistrale in Finanza Aziendale e Mercati Finanziari</p>
                 <p>Executive Master in Consulenza Finanziaria Indipendente</p>
@@ -51,7 +51,7 @@ export default function ChiSiamoPage() {
                 <p>Tra i primi 100 consulenti finanziari CFP(R) in Italia</p>
               </div>
             </div>
-            <div className="card space-y-4">
+            <div className="card space-y-4 hover-lift">
               <p className="text-sm text-muted">
                 La certificazione CFP(R) o Certified Financial Planner e la
                 certificazione piu importante al mondo in pianificazione
@@ -91,7 +91,7 @@ export default function ChiSiamoPage() {
                 <p>Posizione: via Clemente Lequio 76, Pinerolo TO</p>
               </div>
             </div>
-            <div className="card space-y-3">
+            <div className="card space-y-3 hover-lift">
               <p className="text-xs uppercase tracking-[0.3em] text-muted">
                 Albo e iscrizioni
               </p>

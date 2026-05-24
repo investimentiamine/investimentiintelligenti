@@ -2,12 +2,12 @@ export default function Home() {
   return (
     <div className="relative overflow-hidden">
       <div className="pointer-events-none absolute -right-32 top-20 h-80 w-80 rounded-full bg-accent/15 blur-[120px]" />
-      <div className="pointer-events-none absolute left-10 top-24 h-64 w-64 rounded-full bg-accent-2/20 blur-[120px]" />
+      <div className="pointer-events-none absolute left-10 top-24 h-64 w-64 rounded-full bg-accent-3/20 blur-[120px]" />
 
       <section className="section">
         <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-8">
-            <p className="eyebrow">Progettiamo insieme la tua vita</p>
+            <div className="chip">Pianificazione consapevole</div>
             <div className="space-y-5">
               <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
                 Progettiamo insieme la tua vita.
@@ -27,43 +27,75 @@ export default function Home() {
             <div className="flex flex-wrap gap-3">
               <span className="chip">CFP(R)</span>
               <span className="chip">Render Finanziario</span>
-              <span className="chip">Pianificazione</span>
+              <span className="chip">Metodo proprietario</span>
             </div>
-            <div className="grid gap-4 sm:grid-cols-3">
-              <div className="stat-card">
+            <div className="data-grid">
+              <div className="data-tile hover-lift">
                 <p className="text-xs uppercase tracking-[0.3em] text-muted">
                   Focus
                 </p>
                 <p className="mt-2 text-lg font-semibold">Strategia chiara</p>
+                <p className="mt-2 text-xs text-muted">
+                  Allineiamo obiettivi e strumenti.
+                </p>
               </div>
-              <div className="stat-card">
+              <div className="data-tile hover-lift">
                 <p className="text-xs uppercase tracking-[0.3em] text-muted">
                   Metodo
                 </p>
                 <p className="mt-2 text-lg font-semibold">4 fasi guidate</p>
+                <p className="mt-2 text-xs text-muted">
+                  Dalla diagnosi al monitoraggio.
+                </p>
               </div>
-              <div className="stat-card">
+              <div className="data-tile hover-lift">
                 <p className="text-xs uppercase tracking-[0.3em] text-muted">
                   Supporto
                 </p>
                 <p className="mt-2 text-lg font-semibold">Monitoraggio</p>
+                <p className="mt-2 text-xs text-muted">
+                  Interventi puntuali e trasparenti.
+                </p>
+              </div>
+              <div className="data-tile hover-lift">
+                <p className="text-xs uppercase tracking-[0.3em] text-muted">
+                  Relazione
+                </p>
+                <p className="mt-2 text-lg font-semibold">Zero conflitti</p>
+                <p className="mt-2 text-xs text-muted">
+                  Scelta libera degli strumenti.
+                </p>
               </div>
             </div>
           </div>
           <div className="space-y-6">
-            <div className="glass-panel animate-float">
-              <p className="text-xs uppercase tracking-[0.3em] text-muted">Metodo</p>
+            <div className="tech-panel hover-lift">
+              <p className="text-xs uppercase tracking-[0.3em] text-muted">
+                Console metodo
+              </p>
               <h3 className="mt-3 text-2xl font-semibold">
-                Il mio metodo di lavoro
+                Render Finanziario
               </h3>
               <p className="mt-2 text-sm text-muted">
-                Grazie al Render Finanziario, un metodo innovativo e unico in
-                Italia ispirato agli standard internazionali di pianificazione
-                finanziaria, trasformiamo la complessita in chiarezza e la
-                pianificazione in liberta.
+                Metodo innovativo e unico in Italia, ispirato agli standard
+                internazionali di pianificazione finanziaria.
               </p>
+              <div className="mt-6 grid gap-3 text-xs text-muted">
+                <div className="flex items-center justify-between">
+                  <span>Diagnosi</span>
+                  <span className="font-semibold text-foreground">Attiva</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span>Obiettivi</span>
+                  <span className="font-semibold text-foreground">Definiti</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span>Monitoraggio</span>
+                  <span className="font-semibold text-foreground">Continuo</span>
+                </div>
+              </div>
             </div>
-            <div className="card">
+            <div className="card hover-lift">
               <p className="eyebrow">Sessione iniziale</p>
               <h3 className="mt-3 text-xl font-semibold">
                 Prenota la prima sessione di Rendering
@@ -72,6 +104,8 @@ export default function Home() {
                 Scrivimi su Whatsapp e iniziamo con una fotografia completa della
                 tua situazione finanziaria.
               </p>
+              <div className="mt-4 divider-line" />
+              <p className="mt-4 text-xs text-muted">Durata: 60 minuti</p>
             </div>
           </div>
         </div>
@@ -92,7 +126,7 @@ export default function Home() {
               <div className="divider-line mt-6" />
             </div>
             <div className="grid gap-6">
-              <div className="card card-step">
+              <div className="card card-step hover-lift">
                 <p className="text-xs uppercase tracking-[0.3em] text-muted">
                   Fase 1
                 </p>
@@ -103,7 +137,7 @@ export default function Home() {
                   tuoi sogni.
                 </p>
               </div>
-              <div className="card card-step">
+              <div className="card card-step hover-lift">
                 <p className="text-xs uppercase tracking-[0.3em] text-muted">
                   Fase 2
                 </p>
@@ -115,7 +149,7 @@ export default function Home() {
                   tuo futuro finanziario in modo continuativo.
                 </p>
               </div>
-              <div className="card card-step">
+              <div className="card card-step hover-lift">
                 <p className="text-xs uppercase tracking-[0.3em] text-muted">
                   Fase 3
                 </p>
@@ -127,7 +161,7 @@ export default function Home() {
                   finanziari.
                 </p>
               </div>
-              <div className="card card-step">
+              <div className="card card-step hover-lift">
                 <p className="text-xs uppercase tracking-[0.3em] text-muted">
                   Fase 4
                 </p>
@@ -153,25 +187,25 @@ export default function Home() {
             </h2>
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <div className="card">
+            <div className="value-tile hover-lift">
               <h3 className="text-lg font-semibold">Trasparenza</h3>
               <p className="mt-3 text-sm text-muted">
                 La trasparenza e alla base di un rapporto di fiducia e duraturo.
               </p>
             </div>
-            <div className="card">
+            <div className="value-tile hover-lift">
               <h3 className="text-lg font-semibold">Personalizzazione</h3>
               <p className="mt-3 text-sm text-muted">
                 Ogni persona ha esigenze e obiettivi differenti.
               </p>
             </div>
-            <div className="card">
+            <div className="value-tile hover-lift">
               <h3 className="text-lg font-semibold">Zero conflitti</h3>
               <p className="mt-3 text-sm text-muted">
                 Posso scegliere ogni strumento sul mercato senza incentivi.
               </p>
             </div>
-            <div className="card">
+            <div className="value-tile hover-lift">
               <h3 className="text-lg font-semibold">Aggiornamento continuo</h3>
               <p className="mt-3 text-sm text-muted">
                 Monitoraggio costante e competenze sempre aggiornate.
@@ -198,7 +232,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-6">
           <p className="eyebrow">Cosa dicono di me su Google</p>
           <div className="mt-6 grid gap-6 md:grid-cols-3">
-            <div className="card">
+            <div className="card hover-lift">
               <h3 className="text-lg font-semibold">
                 Dott.ssa Lorenza T. - Professoressa
               </h3>
@@ -208,7 +242,7 @@ export default function Home() {
                 linearita.
               </p>
             </div>
-            <div className="card">
+            <div className="card hover-lift">
               <h3 className="text-lg font-semibold">
                 Dott. Nicolo S. - Medico Chirurgo
               </h3>
@@ -217,7 +251,7 @@ export default function Home() {
                 diversificazione personalizzate e grande disponibilita.
               </p>
             </div>
-            <div className="card">
+            <div className="card hover-lift">
               <h3 className="text-lg font-semibold">
                 Arch. Virginia B. - Light Designer
               </h3>
@@ -230,7 +264,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section bg-surface-muted">
+      <section className="section bg-surface-muted surface-grid">
         <div className="mx-auto w-full max-w-6xl px-6">
           <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="space-y-4">

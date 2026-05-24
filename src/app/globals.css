@@ -2,16 +2,16 @@
 
 :root {
   --background: #f4f1ea;
-  --foreground: #171410;
-  --muted: #5f5a52;
-  --accent: #1f6f78;
-  --accent-2: #c18a2c;
-  --accent-3: #2b3030;
+  --foreground: #15131a;
+  --muted: #575156;
+  --accent: #03045e;
+  --accent-2: #1f6f78;
+  --accent-3: #c18a2c;
   --surface: #ffffff;
   --surface-muted: #fbf7ef;
   --line: #e4ddd0;
-  --shadow-soft: 0 28px 70px -45px rgba(27, 21, 16, 0.35);
-  --shadow-tight: 0 18px 40px -30px rgba(18, 15, 12, 0.45);
+  --shadow-soft: 0 30px 80px -50px rgba(12, 14, 46, 0.35);
+  --shadow-tight: 0 18px 40px -32px rgba(12, 14, 46, 0.45);
 }
 
 @theme inline {
@@ -31,21 +31,21 @@
   body {
     background: radial-gradient(
         circle at top,
-        rgba(31, 111, 120, 0.12),
+        rgba(3, 4, 94, 0.16),
         transparent 60%
       ),
-      linear-gradient(120deg, rgba(31, 111, 120, 0.06), transparent 45%),
+      linear-gradient(120deg, rgba(3, 4, 94, 0.08), transparent 45%),
       repeating-linear-gradient(
         to right,
-        rgba(23, 20, 16, 0.04) 0,
-        rgba(23, 20, 16, 0.04) 1px,
+        rgba(12, 14, 46, 0.04) 0,
+        rgba(12, 14, 46, 0.04) 1px,
         transparent 1px,
         transparent 120px
       ),
       repeating-linear-gradient(
         to bottom,
-        rgba(23, 20, 16, 0.03) 0,
-        rgba(23, 20, 16, 0.03) 1px,
+        rgba(12, 14, 46, 0.03) 0,
+        rgba(12, 14, 46, 0.03) 1px,
         transparent 1px,
         transparent 120px
       ),
@@ -79,7 +79,7 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-semibold text-white shadow-[0_18px_30px_-20px_rgba(31,111,120,0.8)] transition-all hover:-translate-y-0.5 hover:bg-[#185d64];
+    @apply inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-semibold text-white shadow-[0_18px_30px_-20px_rgba(3,4,94,0.7)] transition-all hover:-translate-y-0.5 hover:bg-[#0508a8];
   }
 
   .btn-secondary {
@@ -129,8 +129,8 @@
       ),
       repeating-linear-gradient(
         to right,
-        rgba(31, 111, 120, 0.08) 0,
-        rgba(31, 111, 120, 0.08) 1px,
+        rgba(3, 4, 94, 0.08) 0,
+        rgba(3, 4, 94, 0.08) 1px,
         transparent 1px,
         transparent 140px
       );
@@ -139,6 +139,107 @@
   .stat-card {
     @apply rounded-2xl border border-line bg-white/90 p-4 text-sm;
     box-shadow: var(--shadow-tight);
+  }
+
+  .tech-panel {
+    @apply rounded-3xl border border-line bg-white/90 p-6;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tech-panel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(3, 4, 94, 0.12),
+      transparent
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .tech-panel:hover::after {
+    opacity: 1;
+  }
+
+  .hover-lift {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-tight);
+  }
+
+  .data-grid {
+    @apply grid gap-3 sm:grid-cols-2;
+  }
+
+  .data-tile {
+    @apply rounded-2xl border border-line bg-white/90 p-4 text-sm;
+    box-shadow: var(--shadow-tight);
+  }
+
+  .value-tile {
+    @apply rounded-2xl border border-line bg-white/80 p-6;
+    box-shadow: var(--shadow-tight);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .value-tile::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      140deg,
+      rgba(3, 4, 94, 0.12),
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+
+  .value-tile:hover::before {
+    opacity: 1;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent), transparent);
+  }
+
+  details.faq-item {
+    @apply rounded-2xl border border-line bg-white/90 p-5;
+    box-shadow: var(--shadow-tight);
+  }
+
+  details.faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+  }
+
+  details.faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-icon {
+    @apply grid h-8 w-8 place-items-center rounded-full border border-line bg-white text-xs font-semibold text-foreground;
   }
 
   .card-step {
