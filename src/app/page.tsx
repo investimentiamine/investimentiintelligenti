@@ -6,37 +6,37 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-white text-foreground selection:bg-accent/20">
 
       {/* Hero Section */}
-      <section className="relative px-6 lg:px-20 pt-32 lg:pt-40 pb-0 max-w-7xl mx-auto w-full grid lg:grid-cols-2 items-end gap-10">
-        <div className="space-y-6 z-10 text-center lg:text-left pb-16 lg:pb-32">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-accent tracking-tight">
-            PROGETTIAMO<br className="hidden sm:block"/>INSIEME LA<br className="hidden sm:block"/>TUA VITA?
-          </h1>
-          <p className="text-xl sm:text-2xl text-accent/80 font-medium mt-6">
-            Con un metodo finanziario sereno e prospero
-          </p>
-        </div>
-        <div className="relative h-[450px] sm:h-[600px] lg:h-[750px] flex justify-center items-end mt-10 lg:mt-0 z-0">
-          <div className="absolute inset-0 bg-blue-50/50 rounded-full blur-3xl opacity-70 scale-75 lg:scale-100"></div>
-          <Image 
-            src="/IMG_0391-copia-2.png" 
-            alt="Consulente Finanziario" 
-            fill 
-            className="object-contain object-bottom drop-shadow-2xl"
-            priority
-          />
+      <section className="relative w-full pt-32 lg:pt-40 pb-0 overflow-hidden bg-gradient-to-b from-blue-50/40 to-white">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 items-end gap-10">
+          <div className="pb-16 lg:pb-32 z-10 text-center lg:text-left space-y-6">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-accent tracking-tight">
+              PROGETTIAMO<br className="hidden lg:block"/>INSIEME LA<br className="hidden lg:block"/>TUA VITA?
+            </h1>
+            <p className="text-xl sm:text-2xl text-accent/80 font-medium">
+              Con un metodo finanziario sereno e prospero
+            </p>
+            <div className="pt-4 lg:hidden">
+               <a href="/contatti" className="inline-block px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl">
+                 Prenota Appuntamento
+               </a>
+            </div>
+          </div>
+          <div className="relative h-[450px] sm:h-[600px] lg:h-[700px] w-full flex justify-center items-end z-10">
+            <div className="absolute bottom-0 w-[80%] h-[80%] bg-blue-200/50 rounded-full blur-3xl opacity-60"></div>
+            <Image 
+              src="/IMG_0391-copia-2.png" 
+              alt="Consulente Finanziario" 
+              fill 
+              className="object-contain object-bottom drop-shadow-2xl"
+              priority
+            />
+          </div>
         </div>
       </section>
 
-      {/* Metodo Section with relative container for wave */}
-      <div className="relative bg-accent z-20">
-        {/* Wave to Dark Blue (Absolutely positioned to the top of the container) */}
-        <div className="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-full pointer-events-none">
-          <svg viewBox="0 0 1440 320" className="w-full h-[80px] md:h-[150px] lg:h-[280px] block" preserveAspectRatio="none">
-            <path fill="#000435" d="M0,320 L0,220 C400,280 800,100 1440,0 L1440,320 Z"></path>
-          </svg>
-        </div>
-
-        <section id="metodo" className="text-white py-16 lg:py-24 px-6 relative z-10">
+      {/* Metodo Section - Clean Professional Straight Separator */}
+      <div className="relative bg-accent z-20 border-t-8 border-blue-100">
+        <section id="metodo" className="text-white py-20 lg:py-28 px-6 relative z-10">
           <div className="max-w-6xl mx-auto text-center mb-16 lg:mb-24">
             <h2 className="text-3xl lg:text-5xl font-bold mb-6">IL MIO METODO DI LAVORO</h2>
             <p className="max-w-3xl mx-auto text-base lg:text-lg text-blue-100/80">
