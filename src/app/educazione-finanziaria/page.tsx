@@ -1,6 +1,21 @@
 import Image from "next/image";
 import { ArrowDown, Calendar } from "lucide-react";
 
+const featuredVideo = { 
+  id: "HVfMOqSIbFI", 
+  title: "FONDO PENSIONE: Come RISPARMIARE fino a 2200€ di TASSE?!", 
+  label: "In Evidenza" 
+};
+
+const videos = [
+  { id: "iehr42fRFOs", title: "Ti sei mai fatto queste DOMANDE? L'importanza della PIANIFICAZIONE", label: "Popolare" },
+  { id: "GABbznC25Qk", title: "PAC: PIANO di ACCUMULO del CAPITALE | Ecco perché devi averlo!", label: "Popolare" },
+  { id: "S7xEq1oqqcs", title: "Come gestire i soldi da liberi professionisti: controllo di gestione 2026", label: "Recente" },
+  { id: "aZDKndru6x8", title: "Come fare BUDGETING nel 2026 per famiglie (+Template GRATIS)", label: "Recente" },
+  { id: "KUqh69wNfSg", title: "Budgeting 2026: Come gestire i soldi e risparmiare con il metodo 50/30/20", label: "Popolare" },
+  { id: "T4QTbANZm-I", title: "Come gestire i soldi e risparmiare", label: "Recente" },
+];
+
 export default function EducazioneFinanziariaPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -43,63 +58,10 @@ export default function EducazioneFinanziariaPage() {
             <ArrowDown size={36} strokeWidth={3} />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-16">
-            {/* Video Placeholder 1 */}
-            <div className="flex flex-col group cursor-pointer border-b-[3px] border-blue-600/0 hover:border-blue-600 pb-6 transition-all">
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-200 mb-4 shadow-md group-hover:shadow-xl transition-all">
-                <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-colors">
-                   {/* Play Button */}
-                   <div className="w-16 h-12 bg-red-600 rounded-xl flex items-center justify-center text-white scale-90 group-hover:scale-100 transition-transform shadow-lg">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z" /></svg>
-                   </div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-2 text-xs text-accent/60 font-semibold mb-2 uppercase tracking-wider">
-                <Calendar size={14} /> 20 Feb
-              </div>
-              <h3 className="font-bold text-lg text-accent px-2 group-hover:text-blue-600 transition-colors leading-snug">
-                L'importanza della pianificazione finanziaria
-              </h3>
-            </div>
-
-            {/* Video Placeholder 2 */}
-            <div className="flex flex-col group cursor-pointer border-b-[3px] border-blue-600/0 hover:border-blue-600 pb-6 transition-all">
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-200 mb-4 shadow-md group-hover:shadow-xl transition-all">
-                <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-colors">
-                   <div className="w-16 h-12 bg-red-600 rounded-xl flex items-center justify-center text-white scale-90 group-hover:scale-100 transition-transform shadow-lg">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z" /></svg>
-                   </div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-2 text-xs text-accent/60 font-semibold mb-2 uppercase tracking-wider">
-                <Calendar size={14} /> 20 Feb
-              </div>
-              <h3 className="font-bold text-lg text-accent px-2 group-hover:text-blue-600 transition-colors leading-snug">
-                La strategia del piano di accumulo
-              </h3>
-            </div>
-
-            {/* Video Placeholder 3 */}
-            <div className="flex flex-col group cursor-pointer border-b-[3px] border-blue-600/0 hover:border-blue-600 pb-6 transition-all">
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-200 mb-4 shadow-md group-hover:shadow-xl transition-all">
-                <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-colors">
-                   <div className="w-16 h-12 bg-red-600 rounded-xl flex items-center justify-center text-white scale-90 group-hover:scale-100 transition-transform shadow-lg">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z" /></svg>
-                   </div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-2 text-xs text-accent/60 font-semibold mb-2 uppercase tracking-wider">
-                <Calendar size={14} /> 20 Feb
-              </div>
-              <h3 className="font-bold text-lg text-accent px-2 group-hover:text-blue-600 transition-colors leading-snug">
-                Ecco perché devi crearti la tua seconda pensione
-              </h3>
-            </div>
-          </div>
-
-          {/* Main Large Video Placeholder */}
-          <div className="max-w-4xl mx-auto flex flex-col group cursor-pointer border-b-[3px] border-blue-600/0 hover:border-blue-600 pb-6 transition-all">
+          {/* Main Large Video */}
+          <a href={`https://youtu.be/${featuredVideo.id}`} target="_blank" rel="noopener noreferrer" className="block max-w-4xl mx-auto flex flex-col group cursor-pointer border-b-[3px] border-blue-600/0 hover:border-blue-600 pb-6 transition-all mb-16">
             <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-200 mb-6 shadow-lg group-hover:shadow-2xl transition-all">
+                <Image src={`https://img.youtube.com/vi/${featuredVideo.id}/maxresdefault.jpg`} alt={featuredVideo.title} fill className="object-cover" />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-colors">
                    <div className="w-24 h-16 bg-red-600 rounded-2xl flex items-center justify-center text-white scale-90 group-hover:scale-100 transition-transform shadow-xl">
                       <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z" /></svg>
@@ -107,11 +69,32 @@ export default function EducazioneFinanziariaPage() {
                 </div>
             </div>
             <div className="flex items-center justify-center gap-2 text-xs text-accent/60 font-semibold mb-3 uppercase tracking-wider">
-              <Calendar size={14} /> 20 Feb
+              <Calendar size={14} /> {featuredVideo.label}
             </div>
             <h3 className="font-bold text-2xl lg:text-3xl text-accent px-4 group-hover:text-blue-600 transition-colors leading-tight">
-              Come risparmiare sulle tasse con il fondo pensione
+              {featuredVideo.title}
             </h3>
+          </a>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            {videos.map((video) => (
+              <a href={`https://youtu.be/${video.id}`} target="_blank" rel="noopener noreferrer" key={video.id} className="flex flex-col group cursor-pointer border-b-[3px] border-blue-600/0 hover:border-blue-600 pb-6 transition-all">
+                <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-200 mb-4 shadow-md group-hover:shadow-xl transition-all">
+                  <Image src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} fill className="object-cover" />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-colors">
+                     <div className="w-16 h-12 bg-red-600 rounded-xl flex items-center justify-center text-white scale-90 group-hover:scale-100 transition-transform shadow-lg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z" /></svg>
+                     </div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-xs text-accent/60 font-semibold mb-2 uppercase tracking-wider">
+                  <Calendar size={14} /> {video.label}
+                </div>
+                <h3 className="font-bold text-lg text-accent px-2 group-hover:text-blue-600 transition-colors leading-snug">
+                  {video.title}
+                </h3>
+              </a>
+            ))}
           </div>
 
         </div>
