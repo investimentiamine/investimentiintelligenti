@@ -122,12 +122,12 @@ export function TFR2026() {
 
       <hr className="my-12" />
       
-      <div className="bg-accent text-white p-8 rounded-3xl mt-12 text-center">
-        <h3 className="text-white mt-0 text-2xl">Il libro è in uscita</h3>
-        <p className="text-blue-100 mb-8">
+      <div className="not-prose bg-accent text-white p-6 sm:p-10 rounded-3xl mt-12 text-center">
+        <h3 className="text-white mt-0 mb-4 text-2xl sm:text-3xl font-bold">Il libro è in uscita</h3>
+        <p className="text-blue-100 mb-8 text-sm sm:text-base leading-relaxed">
           Approfondisco la pensione, la previdenza integrativa, gli investimenti per il lungo periodo e molto altro nel mio libro che sta per uscire. È il distillato di anni di lavoro con persone reali e dati ufficiali.
         </p>
-        <a href="https://wa.me/393273577594" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-accent font-bold px-8 py-3 rounded-full hover:bg-blue-50 transition-colors">
+        <a href="https://wa.me/393273577594" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-accent font-bold px-6 py-3.5 sm:px-8 sm:py-3.5 rounded-full hover:bg-blue-50 transition-colors w-full sm:w-auto">
           Iscriviti alla lista d'attesa
         </a>
       </div>
