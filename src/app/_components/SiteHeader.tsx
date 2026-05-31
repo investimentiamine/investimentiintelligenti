@@ -21,6 +21,9 @@ export default function SiteHeader() {
   const isDarkHeroPage = pathname === "/chi-siamo" || pathname === "/domande-frequenti" || pathname === "/educazione-finanziaria" || pathname === "/blog" || pathname?.startsWith("/blog/");
   const textColor = (!isScrolled && isDarkHeroPage) ? "text-white" : "text-accent";
   const hoverColor = (!isScrolled && isDarkHeroPage) ? "hover:text-blue-200" : "hover:text-blue-600";
+  const buttonStyle = (!isScrolled && isDarkHeroPage) 
+    ? "bg-white text-accent hover:bg-blue-600 hover:text-white" 
+    : "bg-accent text-white hover:bg-blue-800";
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"}`}>
@@ -39,7 +42,7 @@ export default function SiteHeader() {
         </div>
 
         <div className="hidden lg:block z-10">
-          <a href="https://wa.me/393273577594" target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 bg-accent text-white rounded-full hover:bg-blue-800 transition-colors text-sm font-semibold shadow-lg">Prenota Appuntamento</a>
+          <a href="https://wa.me/393273577594" target="_blank" rel="noopener noreferrer" className={`px-8 py-3.5 rounded-full transition-colors text-sm font-semibold shadow-lg ${buttonStyle}`}>Prenota Appuntamento</a>
         </div>
 
         {/* Mobile Menu Toggle */}
