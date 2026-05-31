@@ -49,6 +49,7 @@ export default function SiteFooter() {
           <Link href="/" className="hover:text-white transition-colors">Home</Link>
           <Link href="/chi-siamo" className="hover:text-white transition-colors">Chi Sono</Link>
           <Link href="/educazione-finanziaria" className="hover:text-white transition-colors">Educazione Finanziaria</Link>
+          <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
           <Link href="/domande-frequenti" className="hover:text-white transition-colors">Domande Frequenti</Link>
           <Link href="/contatti" className="hover:text-white transition-colors">Prenota Appuntamento</Link>
         </div>

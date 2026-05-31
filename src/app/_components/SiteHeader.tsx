@@ -18,7 +18,7 @@ export default function SiteHeader() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isDarkHeroPage = pathname === "/chi-siamo" || pathname === "/domande-frequenti" || pathname === "/educazione-finanziaria";
+  const isDarkHeroPage = pathname === "/chi-siamo" || pathname === "/domande-frequenti" || pathname === "/educazione-finanziaria" || pathname === "/blog";
   const textColor = (!isScrolled && isDarkHeroPage) ? "text-white" : "text-accent";
   const hoverColor = (!isScrolled && isDarkHeroPage) ? "hover:text-blue-200" : "hover:text-blue-600";
 
@@ -34,6 +34,7 @@ export default function SiteHeader() {
           <Link href="/" className={`${hoverColor} transition-colors`}>Home</Link>
           <Link href="/chi-siamo" className={`${hoverColor} transition-colors`}>Chi Sono</Link>
           <Link href="/educazione-finanziaria" className={`${hoverColor} transition-colors`}>Educazione Finanziaria</Link>
+          <Link href="/blog" className={`${hoverColor} transition-colors`}>Blog</Link>
           <Link href="/domande-frequenti" className={`${hoverColor} transition-colors`}>Domande Frequenti</Link>
         </div>
 
@@ -57,6 +58,7 @@ export default function SiteHeader() {
           <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors">Home</Link>
           <Link href="/chi-siamo" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors">Chi Sono</Link>
           <Link href="/educazione-finanziaria" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors">Educazione Finanziaria</Link>
+          <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors">Blog</Link>
           <Link href="/domande-frequenti" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors">Domande Frequenti</Link>
           <Link href="/contatti" onClick={() => setIsMobileMenuOpen(false)} className="px-6 py-2 bg-accent text-white rounded-full hover:bg-blue-800 transition-colors mt-2">Prenota Appuntamento</Link>
         </div>
