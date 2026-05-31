@@ -1,3 +1,38 @@
+const faqs = [
+  {
+    q: "Cosa significa “mettere ordine nel patrimonio familiare”?",
+    a: "Significa fare una fotografia completa di tutto ciò che la famiglia possiede (liquidità, immobili, investimenti, polizze, TFR, fondi pensione, debiti), dare un compito preciso a ogni voce in funzione degli obiettivi di vita, eliminare sovrapposizioni e colmare lacune, e impostare una manutenzione periodica."
+  },
+  {
+    q: "Da dove si comincia per organizzare il patrimonio di famiglia?",
+    a: "Si comincia dall'inventario. Tutti i conti correnti, investimenti, immobili, polizze, fondi pensione, debiti: su un solo foglio. Poi si scrive accanto a ogni voce a cosa serve. Le voci con “scopo non chiaro” sono il punto da cui partire."
+  },
+  {
+    q: "Quanti soldi tenere fermi sul conto corrente?",
+    a: "La regola “tre stipendi” è una semplificazione e va personalizzata. Per un dipendente con reddito stabile, il fondo di emergenza adeguato è in genere pari a sei mesi di spese fisse familiari. Per un libero professionista può salire a dodici mesi o più."
+  },
+  {
+    q: "Conviene avere più conti correnti o uno solo?",
+    a: "Per un dipendente con vita finanziaria semplice un conto principale può bastare, eventualmente affiancato da un canale separato per il fondo di emergenza. Per un libero professionista la separazione tra flussi personali e professionali è la base di una gestione sostenibile."
+  },
+  {
+    q: "Cosa è il “risparmio tradito”?",
+    a: "È l'espressione che uso nel mio libro per descrivere ciò che accade quando il risparmio delle famiglie italiane viene gestito senza un progetto coerente: prodotti accumulati nel tempo da intermediari diversi, scelte fatte sulla base del prodotto del momento invece che sugli obiettivi di vita."
+  },
+  {
+    q: "Quanto costa lasciare i soldi fermi sul conto corrente?",
+    a: "In termini di potere d'acquisto, il costo dipende dall'inflazione del periodo. Su orizzonti di dieci o vent'anni anche un'inflazione “normale” del 2-3% annuo erode silenziosamente una parte significativa del capitale fermo."
+  },
+  {
+    q: "Cosa intende un consulente finanziario per “Progettazione Finanziaria”?",
+    a: "Per me, Progettazione Finanziaria significa partire dalla vita di una persona (obiettivi, fasi, valori, vincoli, fragilità) e non dai prodotti finanziari disponibili. Il prodotto è il materiale di costruzione. Il progetto è la casa che vuoi costruire."
+  },
+  {
+    q: "Quando è il momento giusto per ripensare la propria organizzazione finanziaria?",
+    a: "Il momento giusto non esiste come momento naturale: va creato. I momenti che spingono a farlo sono in genere i cambiamenti di vita. Ma più si aspetta, più il lavoro è lungo e complesso."
+  }
+];
+
 export function OrdinePatrimonio() {
   return (
     <>
@@ -120,29 +155,24 @@ export function OrdinePatrimonio() {
       </div>
 
       <h2>Domande frequenti</h2>
-      <p><strong>Cosa significa “mettere ordine nel patrimonio familiare”?</strong><br />
-      Significa fare una fotografia completa di tutto ciò che la famiglia possiede (liquidità, immobili, investimenti, polizze, TFR, fondi pensione, debiti), dare un compito preciso a ogni voce in funzione degli obiettivi di vita, eliminare sovrapposizioni e colmare lacune, e impostare una manutenzione periodica.</p>
-      
-      <p><strong>Da dove si comincia per organizzare il patrimonio di famiglia?</strong><br />
-      Si comincia dall'inventario. Tutti i conti correnti, investimenti, immobili, polizze, fondi pensione, debiti: su un solo foglio. Poi si scrive accanto a ogni voce a cosa serve. Le voci con “scopo non chiaro” sono il punto da cui partire.</p>
-
-      <p><strong>Quanti soldi tenere fermi sul conto corrente?</strong><br />
-      La regola “tre stipendi” è una semplificazione e va personalizzata. Per un dipendente con reddito stabile, il fondo di emergenza adeguato è in genere pari a sei mesi di spese fisse familiari. Per un libero professionista può salire a dodici mesi o più.</p>
-
-      <p><strong>Conviene avere più conti correnti o uno solo?</strong><br />
-      Per un dipendente con vita finanziaria semplice un conto principale può bastare, eventualmente affiancato da un canale separato per il fondo di emergenza. Per un libero professionista la separazione tra flussi personali e professionali è la base di una gestione sostenibile.</p>
-
-      <p><strong>Cosa è il “risparmio tradito”?</strong><br />
-      È l'espressione che uso nel mio libro per descrivere ciò che accade quando il risparmio delle famiglie italiane viene gestito senza un progetto coerente: prodotti accumulati nel tempo da intermediari diversi, scelte fatte sulla base del prodotto del momento invece che sugli obiettivi di vita.</p>
-
-      <p><strong>Quanto costa lasciare i soldi fermi sul conto corrente?</strong><br />
-      In termini di potere d'acquisto, il costo dipende dall'inflazione del periodo. Su orizzonti di dieci o vent'anni anche un'inflazione “normale” del 2-3% annuo erode silenziosamente una parte significativa del capitale fermo.</p>
-
-      <p><strong>Cosa intende un consulente finanziario per “Progettazione Finanziaria”?</strong><br />
-      Per me, Progettazione Finanziaria significa partire dalla vita di una persona (obiettivi, fasi, valori, vincoli, fragilità) e non dai prodotti finanziari disponibili. Il prodotto è il materiale di costruzione. Il progetto è la casa che vuoi costruire.</p>
-
-      <p><strong>Quando è il momento giusto per ripensare la propria organizzazione finanziaria?</strong><br />
-      Il momento giusto non esiste come momento naturale: va creato. I momenti che spingono a farlo sono in genere i cambiamenti di vita. Ma più si aspetta, più il lavoro è lungo e complesso.</p>
+      <div className="grid gap-4 not-prose my-8">
+        {faqs.map((faq, index) => (
+          <details key={faq.q} className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex items-start sm:items-center justify-between gap-4 p-6 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-base sm:text-lg text-accent">
+              <span className="flex items-start sm:items-center gap-4">
+                <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-700 text-sm mt-0.5 sm:mt-0">{index + 1}</span>
+                <span>{faq.q}</span>
+              </span>
+              <span className="flex-shrink-0 transition-transform duration-300 group-open:rotate-180 text-blue-500 mt-1 sm:mt-0">
+                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div className="p-6 pt-2 text-accent/70 leading-relaxed text-sm sm:text-base">
+              <p>{faq.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
 
       <h2>Bibliografia e fonti</h2>
       <ul>

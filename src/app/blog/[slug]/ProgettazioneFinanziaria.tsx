@@ -1,3 +1,38 @@
+const faqs = [
+  {
+    q: "Cos'è la progettazione finanziaria in poche parole?",
+    a: "È un metodo di pianificazione finanziaria personalizzata che parte dalla persona — valori, obiettivi, priorità di vita, fragilità — e solo dopo arriva agli strumenti (investimenti, polizze, fondi, previdenza). L'opposto del modello tradizionale, che parte dai prodotti."
+  },
+  {
+    q: "Qual è la differenza tra pianificazione finanziaria e progettazione finanziaria?",
+    a: "Non è una contrapposizione, è una declinazione. La progettazione finanziaria è il termine che ho scelto per definire il mio modo di fare pianificazione finanziaria: un metodo che parte dalla persona e solo dopo arriva agli strumenti. La pianificazione finanziaria resta il concetto-cornice; la progettazione finanziaria ne è la versione che rimette l'individuo al centro."
+  },
+  {
+    q: "Cos'è il Render Finanziario®?",
+    a: "È uno strumento proprietario sviluppato dal Dott. Amine Alahiyane: una tavola grafica che aiuta il cliente a visualizzare in forma concreta la propria vita futura insieme a quella delle persone a cui tiene."
+  },
+  {
+    q: "A chi serve la progettazione finanziaria?",
+    a: "A chiunque abbia un patrimonio — anche modesto — e voglia costruire un futuro finanziario allineato alla propria vita. Diventa particolarmente urgente nelle fasi 35-55 anni, quando il patrimonio inizia ad accumularsi, le responsabilità familiari aumentano e la pensione diventa visibile all'orizzonte."
+  },
+  {
+    q: "Quanto costa una progettazione finanziaria?",
+    a: "Il costo varia in base alla complessità del patrimonio e degli obiettivi. Lavorando con il modello di Südtirol Bank, il valore del lavoro è legato al cointeresse: la soddisfazione e i risultati del cliente nel tempo, non a singole sottoscrizioni. Il primo incontro conoscitivo è gratuito."
+  },
+  {
+    q: "Come scegliere il consulente finanziario giusto?",
+    a: "Il test più semplice è osservare le prime domande. Se chiede subito quanto vuoi investire, qual è il tuo orizzonte temporale, la tua tolleranza al rischio, sei dentro un modello di vendita. Se invece le prime domande riguardano te, la tua vita, le tue responsabilità, allora sei in una vera consulenza."
+  },
+  {
+    q: "Quanto tempo richiede costruire un progetto finanziario?",
+    a: "Il percorso iniziale richiede in genere 2-3 incontri distribuiti su qualche settimana. Ma la progettazione non finisce lì: continua nel tempo con un monitoraggio strutturato, perché la vita cambia e il piano deve adattarsi. Non è un documento da chiudere in un cassetto, è un organismo vivo."
+  },
+  {
+    q: "Posso fare progettazione finanziaria da solo?",
+    a: "Le prime fasi sì: consiglio sempre di iniziare a fermarsi e fotografare la propria situazione anche prima di rivolgersi a un consulente. Ma quando il patrimonio diventa significativo e gli obiettivi complessi, la presenza di un professionista qualificato fa la differenza."
+  }
+];
+
 export function ProgettazioneFinanziaria() {
   return (
     <>
@@ -98,29 +133,24 @@ export function ProgettazioneFinanziaria() {
       </div>
 
       <h2>Domande frequenti sulla progettazione finanziaria</h2>
-      <p><strong>Cos'è la progettazione finanziaria in poche parole?</strong><br />
-      È un metodo di pianificazione finanziaria personalizzata che parte dalla persona — valori, obiettivi, priorità di vita, fragilità — e solo dopo arriva agli strumenti (investimenti, polizze, fondi, previdenza). L'opposto del modello tradizionale, che parte dai prodotti.</p>
-
-      <p><strong>Qual è la differenza tra pianificazione finanziaria e progettazione finanziaria?</strong><br />
-      Non è una contrapposizione, è una declinazione. La progettazione finanziaria è il termine che ho scelto per definire il mio modo di fare pianificazione finanziaria: un metodo che parte dalla persona e solo dopo arriva agli strumenti. La pianificazione finanziaria resta il concetto-cornice; la progettazione finanziaria ne è la versione che rimette l'individuo al centro.</p>
-
-      <p><strong>Cos'è il Render Finanziario®?</strong><br />
-      È uno strumento proprietario sviluppato dal Dott. Amine Alahiyane: una tavola grafica che aiuta il cliente a visualizzare in forma concreta la propria vita futura insieme a quella delle persone a cui tiene.</p>
-
-      <p><strong>A chi serve la progettazione finanziaria?</strong><br />
-      A chiunque abbia un patrimonio — anche modesto — e voglia costruire un futuro finanziario allineato alla propria vita. Diventa particolarmente urgente nelle fasi 35-55 anni, quando il patrimonio inizia ad accumularsi, le responsabilità familiari aumentano e la pensione diventa visibile all'orizzonte.</p>
-
-      <p><strong>Quanto costa una progettazione finanziaria?</strong><br />
-      Il costo varia in base alla complessità del patrimonio e degli obiettivi. Lavorando con il modello di Südtirol Bank, il valore del lavoro è legato al cointeresse: la soddisfazione e i risultati del cliente nel tempo, non a singole sottoscrizioni. Il primo incontro conoscitivo è gratuito.</p>
-
-      <p><strong>Come scegliere il consulente finanziario giusto?</strong><br />
-      Il test più semplice è osservare le prime domande. Se chiede subito quanto vuoi investire, qual è il tuo orizzonte temporale, la tua tolleranza al rischio, sei dentro un modello di vendita. Se invece le prime domande riguardano te, la tua vita, le tue responsabilità, allora sei in una vera consulenza.</p>
-
-      <p><strong>Quanto tempo richiede costruire un progetto finanziario?</strong><br />
-      Il percorso iniziale richiede in genere 2-3 incontri distribuiti su qualche settimana. Ma la progettazione non finisce lì: continua nel tempo con un monitoraggio strutturato, perché la vita cambia e il piano deve adattarsi. Non è un documento da chiudere in un cassetto, è un organismo vivo.</p>
-
-      <p><strong>Posso fare progettazione finanziaria da solo?</strong><br />
-      Le prime fasi sì: consiglio sempre di iniziare a fermarsi e fotografare la propria situazione anche prima di rivolgersi a un consulente. Ma quando il patrimonio diventa significativo e gli obiettivi complessi, la presenza di un professionista qualificato fa la differenza.</p>
+      <div className="grid gap-4 not-prose my-8">
+        {faqs.map((faq, index) => (
+          <details key={faq.q} className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex items-start sm:items-center justify-between gap-4 p-6 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-base sm:text-lg text-accent">
+              <span className="flex items-start sm:items-center gap-4">
+                <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-700 text-sm mt-0.5 sm:mt-0">{index + 1}</span>
+                <span>{faq.q}</span>
+              </span>
+              <span className="flex-shrink-0 transition-transform duration-300 group-open:rotate-180 text-blue-500 mt-1 sm:mt-0">
+                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div className="p-6 pt-2 text-accent/70 leading-relaxed text-sm sm:text-base">
+              <p>{faq.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
 
       <h2>Fonti e riferimenti</h2>
       <ul>

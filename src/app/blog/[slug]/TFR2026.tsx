@@ -1,3 +1,42 @@
+const faqs = [
+  {
+    q: "Chi è interessato dal silenzio assenso dal 1° luglio 2026?",
+    a: "I lavoratori dipendenti del settore privato assunti per la prima volta dal 1° luglio 2026 in avanti. Sono esclusi i lavoratori domestici, gli organismi pubblici privatizzati, gli enti pubblici economici e i dipendenti della pubblica amministrazione (salvo i casi in cui il rapporto di lavoro sia regolato integralmente dal diritto comune)."
+  },
+  {
+    q: "Cosa succede se non scelgo entro i 60 giorni?",
+    a: "Se entro 60 giorni dall'assunzione non comunichi alcuna scelta al tuo datore di lavoro, il TFR maturando, il contributo del datore di lavoro (se previsto dal CCNL) e il contributo minimo a tuo carico vengono versati automaticamente al fondo pensione di categoria previsto dal contratto collettivo. I versamenti iniziano dal mese successivo alla scadenza dei 60 giorni."
+  },
+  {
+    q: "La scelta di destinare il TFR al fondo pensione è reversibile?",
+    a: "No. Una volta che il TFR confluisce nel fondo pensione — sia per scelta esplicita sia per silenzio assenso — la decisione è irreversibile: non potrai più riportare il TFR in azienda. Diversamente, se entro i 60 giorni scegli espressamente di mantenere il TFR in azienda, potrai sempre cambiare idea in un momento successivo e aderire a un fondo pensione."
+  },
+  {
+    q: "A quale fondo pensione verrei iscritto automaticamente?",
+    a: "Al fondo pensione negoziale previsto dal contratto collettivo nazionale (CCNL) applicato dalla tua azienda. Se nella tua azienda esistono più forme di previdenza complementare di riferimento, l'iscrizione avviene a quella che raccoglie il maggior numero di iscritti tra i lavoratori dell'azienda, salvo diverso accordo aziendale."
+  },
+  {
+    q: "Posso scegliere un fondo pensione diverso da quello di categoria?",
+    a: "Sì. Entro i 60 giorni dall'assunzione puoi indicare al datore di lavoro un fondo pensione diverso, liberamente individuato: può essere un fondo pensione aperto o un Piano Individuale Pensionistico (PIP). In quel caso, il TFR confluirà nel fondo da te scelto e non in quello di default."
+  },
+  {
+    q: "Il silenzio assenso riguarda anche chi è già al lavoro da anni?",
+    a: "Per i lavoratori che alla data del 1° luglio 2026 risultano già occupati, le regole sono leggermente diverse. Se cambi azienda, il nuovo datore di lavoro è tenuto a verificare se in passato hai già destinato il TFR a un fondo pensione e, in caso negativo, a fornirti un'informativa specifica."
+  },
+  {
+    q: "Quali sono i vantaggi fiscali del fondo pensione?",
+    a: "I principali vantaggi fiscali sono due. Primo: i contributi volontari versati al fondo pensione sono deducibili dal reddito imponibile fino a 5.300 euro all'anno. Secondo: la tassazione finale è agevolata. Al momento della prestazione, l'aliquota parte da un massimo del 15% e si riduce fino a un minimo del 9%."
+  },
+  {
+    q: "Posso prelevare i soldi dal fondo pensione prima della pensione?",
+    a: "Sì, in casi specifici. La legge prevede tre tipologie di anticipazioni: in qualsiasi momento fino al 75% per spese sanitarie straordinarie; dopo 8 anni fino al 75% per l'acquisto o ristrutturazione prima casa; dopo 8 anni fino al 30% per ulteriori esigenze personali."
+  },
+  {
+    q: "Conviene di più il TFR in azienda o il fondo pensione?",
+    a: "Non esiste una risposta universale. Dipende dalla tua età, dal tuo orizzonte temporale, dal tuo profilo di rischio, dalla tua aliquota IRPEF attuale e attesa, dalla qualità del fondo di categoria e dai tuoi obiettivi finanziari complessivi. Una valutazione personalizzata fatta insieme a un consulente resta la strada migliore."
+  }
+];
+
 export function TFR2026() {
   return (
     <>
@@ -94,32 +133,24 @@ export function TFR2026() {
       </div>
 
       <h2>Domande frequenti sul silenzio assenso TFR 2026</h2>
-      <p><strong>Chi è interessato dal silenzio assenso dal 1° luglio 2026?</strong><br />
-      I lavoratori dipendenti del settore privato assunti per la prima volta dal 1° luglio 2026 in avanti. Sono esclusi i lavoratori domestici, gli organismi pubblici privatizzati, gli enti pubblici economici e i dipendenti della pubblica amministrazione (salvo i casi in cui il rapporto di lavoro sia regolato integralmente dal diritto comune).</p>
-
-      <p><strong>Cosa succede se non scelgo entro i 60 giorni?</strong><br />
-      Se entro 60 giorni dall'assunzione non comunichi alcuna scelta al tuo datore di lavoro, il TFR maturando, il contributo del datore di lavoro (se previsto dal CCNL) e il contributo minimo a tuo carico vengono versati automaticamente al fondo pensione di categoria previsto dal contratto collettivo. I versamenti iniziano dal mese successivo alla scadenza dei 60 giorni.</p>
-
-      <p><strong>La scelta di destinare il TFR al fondo pensione è reversibile?</strong><br />
-      No. Una volta che il TFR confluisce nel fondo pensione — sia per scelta esplicita sia per silenzio assenso — la decisione è irreversibile: non potrai più riportare il TFR in azienda. Diversamente, se entro i 60 giorni scegli espressamente di mantenere il TFR in azienda, potrai sempre cambiare idea in un momento successivo e aderire a un fondo pensione.</p>
-
-      <p><strong>A quale fondo pensione verrei iscritto automaticamente?</strong><br />
-      Al fondo pensione negoziale previsto dal contratto collettivo nazionale (CCNL) applicato dalla tua azienda. Se nella tua azienda esistono più forme di previdenza complementare di riferimento, l'iscrizione avviene a quella che raccoglie il maggior numero di iscritti tra i lavoratori dell'azienda, salvo diverso accordo aziendale.</p>
-
-      <p><strong>Posso scegliere un fondo pensione diverso da quello di categoria?</strong><br />
-      Sì. Entro i 60 giorni dall'assunzione puoi indicare al datore di lavoro un fondo pensione diverso, liberamente individuato: può essere un fondo pensione aperto o un Piano Individuale Pensionistico (PIP). In quel caso, il TFR confluirà nel fondo da te scelto e non in quello di default.</p>
-
-      <p><strong>Il silenzio assenso riguarda anche chi è già al lavoro da anni?</strong><br />
-      Per i lavoratori che alla data del 1° luglio 2026 risultano già occupati, le regole sono leggermente diverse. Se cambi azienda, il nuovo datore di lavoro è tenuto a verificare se in passato hai già destinato il TFR a un fondo pensione e, in caso negativo, a fornirti un'informativa specifica.</p>
-
-      <p><strong>Quali sono i vantaggi fiscali del fondo pensione?</strong><br />
-      I principali vantaggi fiscali sono due. Primo: i contributi volontari versati al fondo pensione sono deducibili dal reddito imponibile fino a 5.300 euro all'anno. Secondo: la tassazione finale è agevolata. Al momento della prestazione, l'aliquota parte da un massimo del 15% e si riduce fino a un minimo del 9%.</p>
-
-      <p><strong>Posso prelevare i soldi dal fondo pensione prima della pensione?</strong><br />
-      Sì, in casi specifici. La legge prevede tre tipologie di anticipazioni: in qualsiasi momento fino al 75% per spese sanitarie straordinarie; dopo 8 anni fino al 75% per l'acquisto o ristrutturazione prima casa; dopo 8 anni fino al 30% per ulteriori esigenze personali.</p>
-
-      <p><strong>Conviene di più il TFR in azienda o il fondo pensione?</strong><br />
-      Non esiste una risposta universale. Dipende dalla tua età, dal tuo orizzonte temporale, dal tuo profilo di rischio, dalla tua aliquota IRPEF attuale e attesa, dalla qualità del fondo di categoria e dai tuoi obiettivi finanziari complessivi. Una valutazione personalizzata fatta insieme a un consulente resta la strada migliore.</p>
+      <div className="grid gap-4 not-prose my-8">
+        {faqs.map((faq, index) => (
+          <details key={faq.q} className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex items-start sm:items-center justify-between gap-4 p-6 cursor-pointer hover:bg-slate-50 transition-colors font-semibold text-base sm:text-lg text-accent">
+              <span className="flex items-start sm:items-center gap-4">
+                <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-700 text-sm mt-0.5 sm:mt-0">{index + 1}</span>
+                <span>{faq.q}</span>
+              </span>
+              <span className="flex-shrink-0 transition-transform duration-300 group-open:rotate-180 text-blue-500 mt-1 sm:mt-0">
+                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+              </span>
+            </summary>
+            <div className="p-6 pt-2 text-accent/70 leading-relaxed text-sm sm:text-base">
+              <p>{faq.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
 
       <h2>Fonti e riferimenti normativi</h2>
       <ul>
