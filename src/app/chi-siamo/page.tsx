@@ -10,7 +10,7 @@ export default function ChiSiamo() {
         <div className="absolute inset-0 z-0">
           <Image 
             src="/hero.png" // Fallback to hero.png or we can use another image if available
-            alt="Amine Bouzan Background" 
+            alt="Amine Alahiyane Background" 
             fill 
             className="object-cover object-top opacity-30" 
           />
@@ -55,7 +55,7 @@ export default function ChiSiamo() {
 
           <div className="pt-12 flex flex-col items-center gap-4">
             <div className="relative w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-xl">
-              <Image src="/IMG_0391-copia-2.png" alt="Amine Bouzan" fill className="object-cover object-top" />
+              <Image src="/IMG_0391-copia-2.png" alt="Amine Alahiyane" fill className="object-cover object-top" />
             </div>
             <div className="text-sm font-semibold text-accent/60 italic">
               Costruiamo il tuo futuro
@@ -177,15 +177,24 @@ export default function ChiSiamo() {
       </section>
 
       {/* Dove puoi trovarmi Section */}
-      <section className="bg-surface-muted py-20 lg:py-28 px-6 text-center">
-        <div className="max-w-3xl mx-auto">
+      <section className="bg-slate-50 py-20 lg:py-28 px-6 text-center">
+        <div className="max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-accent mb-6">Dove puoi trovarmi?</h2>
-          <p className="text-lg text-accent/70 mb-10">
-            Se ti interessa parlare con me, usa pure i form di contatto o chiamami.
+          <p className="text-lg text-accent/80 font-medium">
+            Puoi incontrarmi personalmente a Pinerolo o a Torino. Altrimenti sono disponibile online!
           </p>
-          <a href="https://wa.me/393273577594" target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex">
-            Vai ai Contatti
-          </a>
+        </div>
+        <div className="max-w-6xl mx-auto w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl border border-gray-200/50 bg-white">
+          <iframe 
+            src="https://maps.google.com/maps?q=Via%20Clemente%20Lequio%2076%2C%20Pinerolo&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Mappa ufficio Pinerolo"
+          ></iframe>
         </div>
       </section>
     </div>

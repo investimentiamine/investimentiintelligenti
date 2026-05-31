@@ -25,8 +25,8 @@ export default function SiteHeader() {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"}`}>
       <div className="flex items-center justify-between px-6 lg:px-20 mx-auto max-w-7xl w-full">
-        <Link href="/" className={`font-bold ${textColor} text-xl leading-tight z-10 transition-colors`}>
-          Amine<br />Bouzan
+        <Link href="/" className={`font-display text-2xl font-bold leading-tight ${textColor} transition-colors z-50`}>
+          Amine<br />Alahiyane
         </Link>
         
         {/* Desktop Nav */}

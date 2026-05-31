@@ -59,7 +59,7 @@ export default function SiteFooter() {
         </div>
       </div>
       <div className="text-center mt-12 text-[10px] sm:text-xs text-blue-200/40 tracking-wider">
-        DOCUMENTO DI MARKETING CON FINALITÀ PROMOZIONALI, REDATTO DA AMINE BOUZAN DA CONSIDERARSI COME COMUNICAZIONE COMMERCIALE.
+        DOCUMENTO DI MARKETING CON FINALITÀ PROMOZIONALI, REDATTO DA AMINE ALAHIYANE DA CONSIDERARSI COME COMUNICAZIONE COMMERCIALE.
       </div>
     </footer>
   );
