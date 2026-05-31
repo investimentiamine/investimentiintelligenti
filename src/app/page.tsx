@@ -21,12 +21,12 @@ export default function Home() {
       {/* Navbar */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"}`}>
         <div className="flex items-center justify-between px-6 lg:px-20 mx-auto max-w-7xl w-full">
-          <div className="font-bold text-accent text-xl lg:hidden">
+          <div className="font-bold text-accent text-xl">
             Amine Bouzan
           </div>
           
           {/* Desktop Nav */}
-          <div className="hidden lg:flex gap-8 items-center justify-center w-full text-sm font-semibold text-accent">
+          <div className="hidden lg:flex gap-8 items-center justify-end w-full text-sm font-semibold text-accent">
             <a href="#" className="hover:text-blue-600 transition-colors">Home</a>
             <a href="#" className="hover:text-blue-600 transition-colors">Chi Sono</a>
             <a href="#metodo" className="hover:text-blue-600 transition-colors">Il mio Metodo</a>
@@ -57,8 +57,8 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative px-6 lg:px-20 pt-32 lg:pt-40 pb-20 max-w-7xl mx-auto w-full grid lg:grid-cols-2 items-center gap-10">
-        <div className="space-y-6 z-10 text-center lg:text-left">
+      <section className="relative px-6 lg:px-20 pt-32 lg:pt-40 pb-0 max-w-7xl mx-auto w-full grid lg:grid-cols-2 items-end gap-10">
+        <div className="space-y-6 z-10 text-center lg:text-left pb-16 lg:pb-32">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] text-accent tracking-tight">
             PROGETTIAMO<br className="hidden sm:block"/>INSIEME LA<br className="hidden sm:block"/>TUA VITA?
           </h1>
@@ -66,7 +66,7 @@ export default function Home() {
             Con un metodo finanziario sereno e prospero
           </p>
         </div>
-        <div className="relative h-[400px] sm:h-[500px] lg:h-[700px] flex justify-center items-end mt-10 lg:mt-0">
+        <div className="relative h-[400px] sm:h-[500px] lg:h-[700px] flex justify-center items-end mt-10 lg:mt-0 z-20 translate-y-8 lg:translate-y-20">
           <div className="absolute inset-0 bg-blue-50/50 rounded-full blur-3xl opacity-70 scale-75 lg:scale-100"></div>
           <Image 
             src="/IMG_0391-copia-2.png" 
