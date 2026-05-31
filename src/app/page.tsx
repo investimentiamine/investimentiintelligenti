@@ -7,8 +7,8 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative w-full pt-32 lg:pt-40 pb-0 overflow-hidden bg-gradient-to-b from-blue-50/40 to-white">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 items-end gap-10">
-          <div className="pb-16 lg:pb-32 z-10 text-center lg:text-left space-y-6">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10">
+          <div className="self-center pb-10 lg:pb-20 z-10 text-center lg:text-left space-y-6 pt-10 lg:pt-0">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-accent tracking-tight">
               PROGETTIAMO<br className="hidden lg:block"/>INSIEME LA<br className="hidden lg:block"/>TUA VITA?
             </h1>
@@ -21,7 +21,7 @@ export default function Home() {
                </a>
             </div>
           </div>
-          <div className="relative h-[450px] sm:h-[600px] lg:h-[700px] w-full flex justify-center items-end z-10">
+          <div className="relative h-[450px] sm:h-[600px] lg:h-[700px] w-full flex justify-center items-end z-10 self-end">
             <div className="absolute bottom-0 w-[80%] h-[80%] bg-blue-200/50 rounded-full blur-3xl opacity-60"></div>
             <Image 
               src="/IMG_0391-copia-2.png" 
