@@ -61,7 +61,7 @@ export default function EducazioneFinanziariaPage() {
           {/* Main Large Video */}
           <a href={`https://youtu.be/${featuredVideo.id}`} target="_blank" rel="noopener noreferrer" className="block max-w-4xl mx-auto flex flex-col group cursor-pointer border-b-[3px] border-blue-600/0 hover:border-blue-600 pb-6 transition-all mb-16">
             <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-200 mb-6 shadow-lg group-hover:shadow-2xl transition-all">
-                <Image src={`https://img.youtube.com/vi/${featuredVideo.id}/maxresdefault.jpg`} alt={featuredVideo.title} fill className="object-cover" />
+                <img src={`https://img.youtube.com/vi/${featuredVideo.id}/maxresdefault.jpg`} alt={featuredVideo.title} className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-colors">
                    <div className="w-24 h-16 bg-red-600 rounded-2xl flex items-center justify-center text-white scale-90 group-hover:scale-100 transition-transform shadow-xl">
                       <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z" /></svg>
@@ -80,7 +80,7 @@ export default function EducazioneFinanziariaPage() {
             {videos.map((video) => (
               <a href={`https://youtu.be/${video.id}`} target="_blank" rel="noopener noreferrer" key={video.id} className="flex flex-col group cursor-pointer border-b-[3px] border-blue-600/0 hover:border-blue-600 pb-6 transition-all">
                 <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-200 mb-4 shadow-md group-hover:shadow-xl transition-all">
-                  <Image src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} fill className="object-cover" />
+                  <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} className="absolute inset-0 w-full h-full object-cover" />
                   <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-colors">
                      <div className="w-16 h-12 bg-red-600 rounded-xl flex items-center justify-center text-white scale-90 group-hover:scale-100 transition-transform shadow-lg">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z" /></svg>

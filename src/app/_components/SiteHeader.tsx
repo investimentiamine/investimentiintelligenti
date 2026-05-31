@@ -18,7 +18,7 @@ export default function SiteHeader() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isDarkHeroPage = pathname === "/chi-siamo" || pathname === "/domande-frequenti" || pathname === "/educazione-finanziaria" || pathname === "/blog";
+  const isDarkHeroPage = pathname === "/chi-siamo" || pathname === "/domande-frequenti" || pathname === "/educazione-finanziaria" || pathname === "/blog" || pathname?.startsWith("/blog/");
   const textColor = (!isScrolled && isDarkHeroPage) ? "text-white" : "text-accent";
   const hoverColor = (!isScrolled && isDarkHeroPage) ? "hover:text-blue-200" : "hover:text-blue-600";
 
