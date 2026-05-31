@@ -63,7 +63,7 @@ export default function ChiSiamo() {
           </div>
 
           <div className="pt-12">
-            <a href="https://wa.me/393273577594" target="_blank" rel="noopener noreferrer" className="inline-block text-xl lg:text-2xl font-black text-accent hover:text-blue-700 transition-colors tracking-wide underline underline-offset-8 decoration-2 decoration-blue-200 hover:decoration-blue-700">
+            <a href="https://wa.me/message/IYGM7IR5X6E2J1" target="_blank" rel="noopener noreferrer" className="inline-block text-xl lg:text-2xl font-black text-accent hover:text-blue-700 transition-colors tracking-wide underline underline-offset-8 decoration-2 decoration-blue-200 hover:decoration-blue-700">
               PROGETTIAMO INSIEME IL TUO FUTURO!
             </a>
           </div>

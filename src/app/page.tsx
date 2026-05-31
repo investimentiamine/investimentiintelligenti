@@ -16,7 +16,7 @@ export default function Home() {
               Per un futuro finanziario sereno e prospero
             </p>
             <div className="pt-6">
-               <a href="https://wa.me/393273577594" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl">
+               <a href="https://wa.me/message/IYGM7IR5X6E2J1" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl">
                  Prenota Appuntamento
                </a>
             </div>

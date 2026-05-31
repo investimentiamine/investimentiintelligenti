@@ -42,7 +42,7 @@ export default function SiteHeader() {
         </div>
 
         <div className="hidden lg:block z-10">
-          <a href="https://wa.me/393273577594" target="_blank" rel="noopener noreferrer" className={`px-8 py-3.5 rounded-full transition-colors text-sm font-semibold shadow-lg ${buttonStyle}`}>Prenota Appuntamento</a>
+          <a href="https://wa.me/message/IYGM7IR5X6E2J1" target="_blank" rel="noopener noreferrer" className={`px-8 py-3.5 rounded-full transition-colors text-sm font-semibold shadow-lg ${buttonStyle}`}>Prenota Appuntamento</a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -63,7 +63,7 @@ export default function SiteHeader() {
           <Link href="/educazione-finanziaria" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors">Educazione Finanziaria</Link>
           <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors">Blog</Link>
           <Link href="/domande-frequenti" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-600 transition-colors">Domande Frequenti</Link>
-          <a href="https://wa.me/393273577594" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="px-6 py-2 bg-accent text-white rounded-full hover:bg-blue-800 transition-colors mt-2">Prenota Appuntamento</a>
+          <a href="https://wa.me/message/IYGM7IR5X6E2J1" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="px-6 py-2 bg-accent text-white rounded-full hover:bg-blue-800 transition-colors mt-2">Prenota Appuntamento</a>
         </div>
       )}
     </nav>

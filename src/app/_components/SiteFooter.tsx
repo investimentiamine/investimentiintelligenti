@@ -51,7 +51,7 @@ export default function SiteFooter() {
           <Link href="/educazione-finanziaria" className="hover:text-white transition-colors">Educazione Finanziaria</Link>
           <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
           <Link href="/domande-frequenti" className="hover:text-white transition-colors">Domande Frequenti</Link>
-          <a href="https://wa.me/393273577594" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Prenota Appuntamento</a>
+          <a href="https://wa.me/message/IYGM7IR5X6E2J1" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Prenota Appuntamento</a>
         </div>
         <div className="flex gap-8">
           <Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
