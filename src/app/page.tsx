@@ -21,22 +21,25 @@ export default function Home() {
       {/* Navbar */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"}`}>
         <div className="flex items-center justify-between px-6 lg:px-20 mx-auto max-w-7xl w-full">
-          <div className="font-bold text-accent text-xl">
-            Amine Bouzan
+          <div className="font-bold text-accent text-xl leading-tight z-10">
+            Amine<br />Bouzan
           </div>
           
           {/* Desktop Nav */}
-          <div className="hidden lg:flex gap-8 items-center justify-end w-full text-sm font-semibold text-accent">
+          <div className="hidden lg:flex flex-1 items-center justify-center gap-8 text-sm font-semibold text-accent z-10 pl-8">
             <a href="#" className="hover:text-blue-600 transition-colors">Home</a>
             <a href="#" className="hover:text-blue-600 transition-colors">Chi Sono</a>
             <a href="#metodo" className="hover:text-blue-600 transition-colors">Il mio Metodo</a>
             <a href="#" className="hover:text-blue-600 transition-colors">Domande Frequenti</a>
-            <a href="#" className="px-6 py-2 bg-accent text-white rounded-full hover:bg-blue-800 transition-colors">Prenota Appuntamento</a>
+          </div>
+
+          <div className="hidden lg:block z-10">
+            <a href="#" className="px-8 py-3.5 bg-accent text-white rounded-full hover:bg-blue-800 transition-colors text-sm font-semibold shadow-lg">Prenota Appuntamento</a>
           </div>
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="lg:hidden text-accent p-2"
+            className="lg:hidden text-accent p-2 z-10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle Menu"
           >
@@ -59,31 +62,31 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative px-6 lg:px-20 pt-32 lg:pt-40 pb-0 max-w-7xl mx-auto w-full grid lg:grid-cols-2 items-end gap-10">
         <div className="space-y-6 z-10 text-center lg:text-left pb-16 lg:pb-32">
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] text-accent tracking-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-accent tracking-tight">
             PROGETTIAMO<br className="hidden sm:block"/>INSIEME LA<br className="hidden sm:block"/>TUA VITA?
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-accent/80 font-medium mt-6">
+          <p className="text-xl sm:text-2xl text-accent/80 font-medium mt-6">
             Con un metodo finanziario sereno e prospero
           </p>
         </div>
-        <div className="relative h-[400px] sm:h-[500px] lg:h-[700px] flex justify-center items-end mt-10 lg:mt-0 z-20 translate-y-8 lg:translate-y-20">
+        <div className="relative h-[450px] sm:h-[600px] lg:h-[750px] flex justify-center items-end mt-10 lg:mt-0 z-0">
           <div className="absolute inset-0 bg-blue-50/50 rounded-full blur-3xl opacity-70 scale-75 lg:scale-100"></div>
           <Image 
             src="/IMG_0391-copia-2.png" 
             alt="Consulente Finanziario" 
             fill 
-            className="object-contain object-bottom z-10 drop-shadow-2xl"
+            className="object-contain object-bottom drop-shadow-2xl"
             priority
           />
         </div>
       </section>
 
       {/* Metodo Section with relative container for wave */}
-      <div className="relative bg-accent">
+      <div className="relative bg-accent z-20">
         {/* Wave to Dark Blue (Absolutely positioned to the top of the container) */}
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-none transform -translate-y-full pointer-events-none">
-          <svg viewBox="0 0 1440 320" className="w-full h-[60px] md:h-[120px] lg:h-[180px] block" preserveAspectRatio="none">
-            <path fill="#000435" d="M0,224L80,197.3C160,171,320,117,480,117.3C640,117,800,171,960,197.3C1120,224,1280,224,1360,224L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+          <svg viewBox="0 0 1440 320" className="w-full h-[80px] md:h-[150px] lg:h-[280px] block" preserveAspectRatio="none">
+            <path fill="#000435" d="M0,320 L0,220 C400,280 800,100 1440,0 L1440,320 Z"></path>
           </svg>
         </div>
 
