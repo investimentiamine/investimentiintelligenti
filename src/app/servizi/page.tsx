@@ -76,7 +76,7 @@ export default function ServiziPage() {
                 </p>
               </div>
               <div className="flex flex-col items-start gap-4">
-                <a href="/contatti" className="btn-primary">
+                <a href="https://wa.me/393273577594" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Prenota la call
                 </a>
                 <p className="text-xs text-muted">

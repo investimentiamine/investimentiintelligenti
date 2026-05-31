@@ -63,9 +63,9 @@ export default function ChiSiamo() {
           </div>
 
           <div className="pt-12">
-            <Link href="/contatti" className="inline-block text-xl lg:text-2xl font-black text-accent hover:text-blue-700 transition-colors tracking-wide underline underline-offset-8 decoration-2 decoration-blue-200 hover:decoration-blue-700">
+            <a href="https://wa.me/393273577594" target="_blank" rel="noopener noreferrer" className="inline-block text-xl lg:text-2xl font-black text-accent hover:text-blue-700 transition-colors tracking-wide underline underline-offset-8 decoration-2 decoration-blue-200 hover:decoration-blue-700">
               PROGETTIAMO INSIEME IL TUO FUTURO!
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -183,9 +183,9 @@ export default function ChiSiamo() {
           <p className="text-lg text-accent/70 mb-10">
             Se ti interessa parlare con me, usa pure i form di contatto o chiamami.
           </p>
-          <Link href="/contatti" className="btn-primary inline-flex">
+          <a href="https://wa.me/393273577594" target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex">
             Vai ai Contatti
-          </Link>
+          </a>
         </div>
       </section>
     </div>
