@@ -9,7 +9,7 @@ export default function Home() {
       <section className="relative w-full pt-32 lg:pt-40 pb-0 overflow-hidden bg-gradient-to-b from-blue-50/40 to-white">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10">
           <div className="self-center pb-10 lg:pb-20 z-10 text-center lg:text-left space-y-6 pt-10 lg:pt-0">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1] text-accent tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-accent tracking-tight">
               PROGETTIAMO<br />INSIEME LA<br />TUA VITA?
             </h1>
             <p className="text-xl sm:text-2xl text-accent/80 font-medium">
