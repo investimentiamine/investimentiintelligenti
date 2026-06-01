@@ -38,19 +38,19 @@ export default function SiteFooter() {
           <p className="uppercase tracking-widest text-[10px] md:text-xs font-bold text-white mb-4 md:mb-6">Albo e Iscrizioni</p>
           <p className="leading-relaxed">Consulente finanziario abilitato all'offerta fuori sede iscritto all'albo OCF con delibera N. 1873 del 24/03/2022.</p>
           <p className="leading-relaxed">Subagente assicurativo iscritto all'albo RUI sezione E con N.E000712221.</p>
-          <div className="flex flex-col gap-6 mt-6 md:mt-8">
+          <div className="flex flex-col xl:flex-row gap-6 xl:gap-8 mt-6 md:mt-8 items-start">
             {/* IVASS Block */}
             <div className="flex flex-col items-start gap-2">
-              <span className="text-[10px] md:text-xs font-bold text-white tracking-wider">iscritto all'albo n. E000712221</span>
-              <img src="/download-1.png" alt="IVASS" className="h-12 md:h-16 object-contain bg-white/90 p-2 rounded" />
+              <span className="text-[10px] md:text-xs font-bold text-white tracking-wider whitespace-nowrap">iscritto all'albo n. E000712221</span>
+              <img src="/download-1.png" alt="IVASS" className="h-12 md:h-14 object-contain bg-white/90 p-2 rounded" />
             </div>
 
-            <hr className="border-white/20 w-3/4" />
+            <hr className="border-white/20 w-3/4 xl:hidden" />
 
             {/* OCF Block */}
             <div className="flex flex-col items-start gap-2">
-              <span className="text-[10px] md:text-xs font-bold text-white tracking-wider">iscritto all'albo n. 1873</span>
-              <img src="/logo.png" alt="OCF" className="h-12 md:h-16 object-contain bg-white/90 p-2 rounded" />
+              <span className="text-[10px] md:text-xs font-bold text-white tracking-wider whitespace-nowrap">iscritto all'albo n. 1873</span>
+              <img src="/logo.png" alt="OCF" className="h-12 md:h-14 object-contain bg-white/90 p-2 rounded" />
             </div>
           </div>
         </div>
@@ -62,9 +62,12 @@ export default function SiteFooter() {
           <Link href="/educazione-finanziaria" className="hover:text-white transition-colors">Educazione Finanziaria</Link>
           <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
           <Link href="/domande-frequenti" className="hover:text-white transition-colors">Domande Frequenti</Link>
-          <a href="https://wa.me/message/IYGM7IR5X6E2J1" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Prenota Appuntamento</a>
+          <a href="https://wa.me/message/IYGM7IR5X6E2J1" target="_blank" rel="noopener noreferrer" className="hidden md:block hover:text-white transition-colors">Prenota Appuntamento</a>
         </div>
-        <div className="flex gap-8">
+        
+        <hr className="w-full border-white/10 md:hidden" />
+        
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-4">
           <Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
           <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
           <Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
