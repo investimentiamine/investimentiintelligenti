@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { AlignLeft, PenLine, Wallet, Eye, Star, Quote } from "lucide-react";
 
 export default function Home() {
@@ -146,9 +147,9 @@ export default function Home() {
           </div>
         </div>
 
-        <button className="btn-primary relative z-10 px-14 py-4 text-lg shadow-[0_10px_30px_rgba(0,68,255,0.4)] hover:shadow-[0_15px_40px_rgba(0,68,255,0.6)] hover:-translate-y-1">
+        <Link href="/chi-siamo" className="btn-primary relative z-10 px-14 py-4 text-lg shadow-[0_10px_30px_rgba(0,68,255,0.4)] hover:shadow-[0_15px_40px_rgba(0,68,255,0.6)] hover:-translate-y-1 inline-block">
           Chi Sono
-        </button>
+        </Link>
 
         {/* Wave Divider to Mission */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20 pointer-events-none translate-y-[1px]">
