@@ -181,7 +181,7 @@ export default function Home() {
                 {[1,2,3,4,5].map(i => <Star key={i} size={18} fill="currentColor" strokeWidth={0} />)}
               </div>
               <h3 className="font-bold text-lg text-accent mb-2">Dott.ssa Lorenza T. - Professoressa</h3>
-              <p className="text-sm text-accent/70 mb-6 leading-relaxed flex-grow">Consulente preparato e affidabile. Dopo un'attenta analisi del portafoglio, prospetta soluzioni adatte e spiega con...</p>
+              <p className="text-sm text-accent/70 mb-6 leading-relaxed flex-grow">Consulente preparato e affidabile. Dopo un'attenta analisi del portafoglio, prospetta soluzioni adatte e spiega con sintesi e linearità concetti che spesso appaiono complessi...</p>
               <a href="https://www.google.com/search?sca_esv=3d3edac27adaa913&q=Studio+di+Consulenza+Finanziaria+-+Dott.+Amine+Alahiyane&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EyBsvUYGwu4thxx4G9BXZYqGaaL7xnFAe7UAVo-ZboqTwFXUikp2zZSqRu8011dY33Nu0r4%3D&uds=AOm0WdE9G6E6l0NV56fgnfyGXriKGPywmHQZIZGoWE2du7ZMqJpuvF0EB880GkKrucaZgL5zCcMLlPM18eOMpVp8zWfH3GdoNFhiOTK0xX-CelIiY_qGbtDCoYXfxqI7OpFIixAchuQTuu3YY_6K2Upp04DpdWNhBdonRGmP7iOYwHDBvWK7pAw&sa=X&ved=2ahUKEwj87Z2ovuyQAxXz9rsIHctmBxsQ3PALegQIRBAF&biw=1512&bih=861&dpr=2" target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm font-semibold hover:underline inline-flex items-center gap-1 mt-auto">Continua a leggere &rarr;</a>
             </div>
             <div className="card text-left flex flex-col h-full hover:-translate-y-1 transition-transform">
@@ -189,7 +189,7 @@ export default function Home() {
                 {[1,2,3,4,5].map(i => <Star key={i} size={18} fill="currentColor" strokeWidth={0} />)}
               </div>
               <h3 className="font-bold text-lg text-accent mb-2">Dott. Nicolò S. - Medico Chirurgo</h3>
-              <p className="text-sm text-accent/70 mb-6 leading-relaxed flex-grow">Consiglia in modo chiaro e semplice, con strategie di diversificazione personalizzate e grande disponibilità...</p>
+              <p className="text-sm text-accent/70 mb-6 leading-relaxed flex-grow">Consiglia in modo chiaro e semplice, con strategie di diversificazione personalizzate e grande disponibilità. Un professionista che mette al centro le esigenze del cliente in ogni fase...</p>
               <a href="https://www.google.com/search?sca_esv=3d3edac27adaa913&q=Studio+di+Consulenza+Finanziaria+-+Dott.+Amine+Alahiyane&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EyBsvUYGwu4thxx4G9BXZYqGaaL7xnFAe7UAVo-ZboqTwFXUikp2zZSqRu8011dY33Nu0r4%3D&uds=AOm0WdE9G6E6l0NV56fgnfyGXriKGPywmHQZIZGoWE2du7ZMqJpuvF0EB880GkKrucaZgL5zCcMLlPM18eOMpVp8zWfH3GdoNFhiOTK0xX-CelIiY_qGbtDCoYXfxqI7OpFIixAchuQTuu3YY_6K2Upp04DpdWNhBdonRGmP7iOYwHDBvWK7pAw&sa=X&ved=2ahUKEwj87Z2ovuyQAxXz9rsIHctmBxsQ3PALegQIRBAF&biw=1512&bih=861&dpr=2" target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm font-semibold hover:underline inline-flex items-center gap-1 mt-auto">Continua a leggere &rarr;</a>
             </div>
             <div className="card text-left flex flex-col h-full hover:-translate-y-1 transition-transform">
@@ -197,7 +197,7 @@ export default function Home() {
                 {[1,2,3,4,5].map(i => <Star key={i} size={18} fill="currentColor" strokeWidth={0} />)}
               </div>
               <h3 className="font-bold text-lg text-accent mb-2">Arch. Virginia B. - Light Designer</h3>
-              <p className="text-sm text-accent/70 mb-6 leading-relaxed flex-grow">Professionale, serio e molto competente. Ti segue passo dopo passo con competenza e chiarezza...</p>
+              <p className="text-sm text-accent/70 mb-6 leading-relaxed flex-grow">Professionale, serio e molto competente. Ti segue passo dopo passo con competenza e chiarezza, rendendo ogni decisione finanziaria consapevole e serena...</p>
               <a href="https://www.google.com/search?sca_esv=3d3edac27adaa913&q=Studio+di+Consulenza+Finanziaria+-+Dott.+Amine+Alahiyane&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EyBsvUYGwu4thxx4G9BXZYqGaaL7xnFAe7UAVo-ZboqTwFXUikp2zZSqRu8011dY33Nu0r4%3D&uds=AOm0WdE9G6E6l0NV56fgnfyGXriKGPywmHQZIZGoWE2du7ZMqJpuvF0EB880GkKrucaZgL5zCcMLlPM18eOMpVp8zWfH3GdoNFhiOTK0xX-CelIiY_qGbtDCoYXfxqI7OpFIixAchuQTuu3YY_6K2Upp04DpdWNhBdonRGmP7iOYwHDBvWK7pAw&sa=X&ved=2ahUKEwj87Z2ovuyQAxXz9rsIHctmBxsQ3PALegQIRBAF&biw=1512&bih=861&dpr=2" target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm font-semibold hover:underline inline-flex items-center gap-1 mt-auto">Continua a leggere &rarr;</a>
             </div>
           </div>

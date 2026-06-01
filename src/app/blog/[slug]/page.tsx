@@ -71,6 +71,16 @@ export default async function BlogPostPage({
               <p>Presto verranno caricati i contenuti reali per "{post.title}". Torna a visitarci!</p>
             </>
           )}
+
+          <div className="mt-16 pt-8 border-t border-gray-200 text-center not-prose">
+            <h3 className="text-2xl font-bold text-accent mb-4">Vuoi approfondire la tua situazione finanziaria?</h3>
+            <p className="text-slate-600 mb-8 text-base">
+              Prenota una prima consulenza gratuita per capire come posso aiutarti a raggiungere i tuoi obiettivi in modo sereno.
+            </p>
+            <a href="https://wa.me/message/IYGM7IR5X6E2J1" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+              Prenota Appuntamento
+            </a>
+          </div>
         </article>
       </section>
 
