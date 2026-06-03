@@ -164,13 +164,13 @@ export default function ChiSiamo() {
 
           <div className="max-w-4xl mx-auto text-center space-y-6 mt-24 lg:mt-32">
             <p className="text-sm lg:text-base text-blue-100/90 font-medium">
-              La certificazione CFP® o Certified Financial Planner è la certificazione più importante al mondo in pianificazione finanziaria presente in 26 paesi con oltre 200.000 professionisti attivi.
+              La certificazione CFP® o Certified Financial Planner è la certificazione più importante al mondo in pianificazione finanziaria presente in 28 paesi con oltre 230.000 professionisti attivi.
             </p>
             <p className="text-sm lg:text-base text-blue-100/90 font-medium">
               I professionisti CFP® soddisfano rigorosi standard di istruzione, formazione ed etica e si impegnano a servire al meglio gli interessi dei loro clienti.
             </p>
             <p className="text-sm lg:text-base text-blue-100/90 font-medium">
-              Gli standard di eccellenza CFP® e un insieme di linee guida, pratiche e criteri universalmente riconosciuti e adottati dai consulenti finanziari per garantire la qualità, l'efficacia e l'integrità dei servizi che offrono.
+              Lo standard di eccellenza CFP® è un insieme di linee guida, pratiche e criteri universalmente riconosciuti e adottati dai consulenti finanziari per garantire la qualità, l'efficacia e l'integrità dei servizi che offrono.
             </p>
           </div>
         </div>
