@@ -33,7 +33,7 @@ export default function SiteHeader() {
         </Link>
         
         {/* Desktop Nav */}
-        <div className={`hidden lg:flex flex-1 items-center justify-center gap-8 text-sm font-semibold ${textColor} z-10 pl-8 transition-colors`}>
+        <div className={`hidden lg:flex flex-1 items-center justify-center gap-8 text-base font-semibold ${textColor} z-10 pl-8 transition-colors`}>
           <Link href="/" className={`${hoverColor} transition-colors`}>Home</Link>
           <Link href="/chi-siamo" className={`${hoverColor} transition-colors`}>Chi Sono</Link>
           <Link href="/educazione-finanziaria" className={`${hoverColor} transition-colors`}>Educazione Finanziaria</Link>
