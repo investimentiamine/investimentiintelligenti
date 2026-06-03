@@ -42,15 +42,15 @@ export default function ChiSiamo() {
           </p>
           
           <p className="text-lg lg:text-xl text-accent/80 leading-relaxed">
-            Il mio obiettivo è farti vivere senza ansie finanziarie, permettendoti di dedicare tempo a tutto il tuo mondo: iniziare a progettare insieme un percorso solido e strutturato verso una maggiore serenità finanziaria.
+            Il mio obiettivo è farti vivere senza ansie finanziarie, permettendoti di cambiare innanzitutto il tuo mindset e iniziare a progettare insieme un percorso solido e strutturato verso una maggiore serenità finanziaria.
           </p>
           
           <p className="text-lg lg:text-xl text-accent/70 leading-relaxed">
-            Se la tua vita è mossa soprattutto da incertezze generali, preoccupazioni economiche o poco tempo a disposizione, io posso aggiungervi tutta la consapevolezza su cui ti serve e che ti rende assolutamente necessaria per la costruzione di un futuro sereno e prospero.
+            Se la tua vita è mossa soprattutto da incertezze generali, preoccupazioni economiche e poco tempo a disposizione, io posso aggiungere tutto lo scomparto analitico che ti serve e che si rende assolutamente necessario per la costruzione di un futuro sereno e prospero.
           </p>
           
           <p className="text-lg lg:text-xl text-accent/70 leading-relaxed">
-            Se vuoi scoprire come possiamo lavorare insieme per costruire sin da adesso il tuo futuro (ma anche l'attualità promozione, individuazione di obiettivi e gestione delle incertezze della vita), contattami!
+            Se vuoi scoprire come possiamo lavorare insieme per costruire sin da adesso il tuo futuro finanziario (fatto di pianificazione, individuazione di obiettivi e gestione delle incertezze della vita), contattami!
           </p>
 
           <div className="pt-12 flex flex-col items-center gap-4">
