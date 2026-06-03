@@ -1,6 +1,6 @@
 # Investimenti Intelligenti - Amine Alahiyane
 
-Sito web personale e professionale per **Amine Alahiyane**, Consulente Finanziario Indipendente. Il sito è progettato con un'estetica moderna, animazioni fluide e una forte impronta istituzionale, mantenendo al tempo stesso un approccio umano e accessibile.
+Sito web personale e professionale per **Amine Alahiyane**, Consulente Finanziario CFP®. Il sito è progettato con un'estetica moderna, animazioni fluide e una forte impronta istituzionale, mantenendo al tempo stesso un approccio umano e accessibile.
 
 ## 🚀 Tecnologie Utilizzate
 
