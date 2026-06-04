@@ -11,13 +11,6 @@ export const posts = [
     excerpt: "Dal 1° luglio 2026 l'adesione alla previdenza complementare diventa la regola, la rinuncia l'eccezione. Cosa significa per i lavoratori dipendenti e perché non puoi più rimandare."
   },
   {
-    title: "Ribilanciamento: quando serve davvero",
-    date: "03 Mag 2026",
-    tag: "Strategia",
-    slug: "ribilanciamento-quando-serve",
-    excerpt: "Questo è un testo segnaposto temporaneo. Quando avrai i tuoi veri articoli, questo spazio mostrerà un breve riassunto dell'argomento trattato."
-  },
-  {
     title: "Come mettere ordine nel patrimonio familiare (e perché non puoi più rimandarlo)",
     date: "18 Ago 2026",
     tag: "Pianificazione",
