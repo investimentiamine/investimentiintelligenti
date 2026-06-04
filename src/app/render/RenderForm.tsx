@@ -145,8 +145,8 @@ export default function RenderForm() {
         <span className="text-xs text-accent/60 leading-relaxed">
           Acconsento al trattamento dei miei dati personali ai sensi dell&rsquo;articolo 13 del
           Regolamento (UE) 2016/679 e alla ricezione di informazioni commerciali. *{" "}
-          <a href="/privacy-policy" target="_blank" className="underline hover:text-accent-2">
-            Leggi la privacy policy
+          <a href="/informativaprivacyform" target="_blank" className="underline hover:text-accent-2">
+            Leggi l&rsquo;informativa privacy
           </a>
           .
         </span>
