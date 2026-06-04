@@ -122,28 +122,28 @@ export default function Home() {
               <AlignLeft size={32} />
             </div>
             <h3 className="text-xl font-bold text-accent mb-3">Trasparenza</h3>
-            <p className="text-accent/70 text-sm leading-relaxed mt-auto">La trasparenza è alla base di un rapporto di fiducia solido e duraturo. Ti spiego ogni dettaglio con chiarezza, affinché tu possa avere sempre il controllo delle tue finanze.</p>
+            <p className="text-accent/70 text-sm leading-relaxed mt-auto">La trasparenza è alla base di un rapporto di fiducia e duraturo.</p>
           </div>
           <div className="flex flex-col items-center h-full">
             <div className="bg-blue-600 text-white p-5 rounded-full mb-6 shadow-[0_8px_20px_rgba(37,99,235,0.4)]">
               <PenLine size={32} />
             </div>
             <h3 className="text-xl font-bold text-accent mb-3">Personalizzazione</h3>
-            <p className="text-accent/70 text-sm leading-relaxed mt-auto">Ogni persona ha esigenze, sogni e obiettivi differenti. Costruisco strategie su misura, adattate esclusivamente al tuo profilo e ai tuoi progetti di vita.</p>
+            <p className="text-accent/70 text-sm leading-relaxed mt-auto">Ogni persona ha esigenze e obiettivi differenti.</p>
           </div>
           <div className="flex flex-col items-center h-full">
             <div className="bg-blue-600 text-white p-5 rounded-full mb-6 shadow-[0_8px_20px_rgba(37,99,235,0.4)]">
               <Wallet size={32} />
             </div>
             <h3 className="text-xl font-bold text-accent mb-3">Zero conflitti</h3>
-            <p className="text-accent/70 text-sm leading-relaxed mt-auto">Posso scegliere ogni strumento disponibile sul mercato in totale autonomia, senza alcun incentivo o vincolo aziendale, garantendoti sempre la soluzione migliore per te.</p>
+            <p className="text-accent/70 text-sm leading-relaxed mt-auto">Posso scegliere ogni strumento sul mercato senza incentivi.</p>
           </div>
           <div className="flex flex-col items-center h-full">
             <div className="bg-blue-600 text-white p-5 rounded-full mb-6 shadow-[0_8px_20px_rgba(37,99,235,0.4)]">
               <Eye size={32} />
             </div>
             <h3 className="text-xl font-bold text-accent mb-3">Aggiornamento</h3>
-            <p className="text-accent/70 text-sm leading-relaxed mt-auto">Monitoraggio costante dei mercati e competenze sempre aggiornate. Partecipo a master e corsi di formazione per offrirti sempre il massimo della professionalità.</p>
+            <p className="text-accent/70 text-sm leading-relaxed mt-auto">Monitoraggio costante e competenze sempre aggiornate.</p>
           </div>
         </div>
 
