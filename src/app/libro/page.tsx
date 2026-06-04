@@ -1,0 +1,258 @@
+import Image from "next/image";
+import { BookOpen, ShieldAlert, TrendingUp, Brain, Landmark, Home, PiggyBank, Target, ChevronRight, CheckCircle2 } from "lucide-react";
+
+export default function LibroPage() {
+  return (
+    <div className="flex flex-col min-h-screen bg-white text-foreground selection:bg-accent/20">
+
+      {/* Hero Section */}
+      <section className="relative w-full pt-32 lg:pt-44 pb-32 lg:pb-44 overflow-hidden bg-gradient-to-b from-blue-50/40 to-white">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="z-10 text-center lg:text-left space-y-6">
+            <div className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 text-xs font-bold uppercase tracking-widest rounded-full">
+              Il libro di Amine Alahiyane
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] text-accent tracking-tight">
+              NON BASTA<br />AVERE SOLDI
+            </h1>
+            <p className="text-lg sm:text-xl text-accent/70 font-medium max-w-lg mx-auto lg:mx-0 leading-relaxed">
+              Il libro che ti apre gli occhi su come funziona davvero il sistema finanziario italiano e su cosa puoi fare per riprendere il controllo del tuo futuro.
+            </p>
+            <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a href="#acquista" className="inline-block px-10 py-4 bg-accent text-white font-bold rounded-full hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-center">
+                Acquista su Amazon
+              </a>
+              <a href="#scopri" className="inline-block px-10 py-4 border-2 border-accent text-accent font-bold rounded-full hover:bg-accent hover:text-white transition-all text-center">
+                Scopri di cosa parla
+              </a>
+            </div>
+          </div>
+
+          {/* Book mockup placeholder */}
+          <div className="relative flex justify-center items-center z-10">
+            <div className="absolute w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] bg-blue-200/40 rounded-full blur-3xl opacity-60"></div>
+            <div className="relative w-[260px] h-[380px] sm:w-[300px] sm:h-[440px] lg:w-[340px] lg:h-[500px] bg-gradient-to-br from-accent to-blue-900 rounded-2xl shadow-2xl flex flex-col items-center justify-center p-8 text-center border border-blue-300/20">
+              <BookOpen className="text-blue-300/60 mb-6" size={48} />
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight mb-4">
+                Non basta<br />avere soldi
+              </h2>
+              <div className="w-12 h-0.5 bg-blue-400/50 mb-4"></div>
+              <p className="text-blue-200/80 text-sm font-medium">
+                Amine Alahiyane
+              </p>
+              <p className="text-blue-300/50 text-xs mt-1">
+                Consulente Finanziario CFP®
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Wave Divider */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20 pointer-events-none translate-y-[1px]">
+          <svg viewBox="0 0 1440 120" className="w-full h-[40px] md:h-[70px] lg:h-[100px] block" preserveAspectRatio="none">
+            <path fill="#000435" d="M0,60 C400,120 1040,0 1440,60 L1440,120 L0,120 Z"></path>
+          </svg>
+        </div>
+      </section>
+
+      {/* Il Problema Section */}
+      <div className="relative bg-accent z-20" id="scopri">
+        <section className="text-white py-20 lg:py-28 px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="text-3xl lg:text-5xl font-bold">Ti riconosci in queste frasi?</h2>
+            <div className="grid sm:grid-cols-2 gap-5 text-left max-w-3xl mx-auto">
+              {[
+                "\"I soldi sono al sicuro solo sul conto corrente.\"",
+                "\"Il mattone non tradisce mai.\"",
+                "\"In borsa guadagna solo chi è già ricco.\"",
+                "\"La banca mi chiama solo per vendermi qualcosa.\"",
+                "\"Il mio bancario cambia in continuazione.\"",
+                "\"Ci penserò più avanti.\"",
+              ].map((frase) => (
+                <div key={frase} className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/10">
+                  <p className="text-blue-100/90 text-sm font-medium italic leading-relaxed">{frase}</p>
+                </div>
+              ))}
+            </div>
+            <div className="max-w-2xl mx-auto pt-4">
+              <p className="text-lg text-blue-100/80 leading-relaxed">
+                Se hai pensato almeno una di queste cose, non sei solo. Sono le convinzioni con cui cresce la maggior parte degli italiani. Ma <strong className="text-white">e se non fosse davvero cos&igrave;?</strong>
+              </p>
+              <p className="text-lg text-blue-100/80 leading-relaxed mt-4">
+                In Italia 1.593 miliardi di euro giacciono fermi sui conti correnti. Intanto l&rsquo;inflazione li erode in silenzio, la pensione pubblica si assottiglia e il sistema bancario non sempre lavora nel tuo interesse.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Wave Divider */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20 pointer-events-none translate-y-[1px]">
+          <svg viewBox="0 0 1440 120" className="w-full h-[40px] md:h-[70px] lg:h-[100px] block" preserveAspectRatio="none">
+            <path fill="#ffffff" d="M0,60 C400,120 1040,0 1440,60 L1440,120 L0,120 Z"></path>
+          </svg>
+        </div>
+      </div>
+
+      {/* Cosa troverai Section */}
+      <section className="py-20 lg:py-28 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-5xl font-bold text-accent mb-6">Cosa troverai nel libro</h2>
+            <p className="text-lg text-accent/70 max-w-2xl mx-auto">
+              Un percorso di consapevolezza in 15 capitoli, scritto per chi vuole capire come funzionano davvero i soldi, la pensione e gli investimenti in Italia.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: <Landmark size={28} />,
+                title: "La pensione che non ci sarà",
+                desc: "Come è cambiato il sistema previdenziale italiano, perché le pensioni future saranno molto più basse e cosa puoi fare adesso per non farti trovare impreparato.",
+              },
+              {
+                icon: <ShieldAlert size={28} />,
+                title: "Il risparmio tradito",
+                desc: "Cosa succede davvero dietro le quinte delle banche: pressioni commerciali, conflitti di interesse e perché il sistema troppo spesso non lavora per te.",
+              },
+              {
+                icon: <PiggyBank size={28} />,
+                title: "I soldi fermi non fanno rumore",
+                desc: "L'inflazione è una tassa invisibile. Scopri quanto ti costa davvero lasciare il denaro fermo sul conto corrente, anno dopo anno.",
+              },
+              {
+                icon: <Home size={28} />,
+                title: "Il mito del mattone",
+                desc: "Il mattone non tradisce mai? Non è così semplice. Costi nascosti, concentrazione del rischio e perché l'immobiliare va trattato come un investimento, non come un rifugio.",
+              },
+              {
+                icon: <TrendingUp size={28} />,
+                title: "I mercati fanno paura perché si vedono",
+                desc: "La storia di Andrea, ibernato per 20 anni: da 100.000 a oltre 536.000 euro nonostante crisi, pandemie e guerre. Il tempo è il vero alleato.",
+              },
+              {
+                icon: <Brain size={28} />,
+                title: "Le trappole della mente",
+                desc: "Avversione alle perdite, bias cognitivi, il nuovo cuggino digitale: perché le emozioni sono il peggior nemico dei tuoi investimenti e come difenderti.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-white rounded-[2rem] p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                <div className="bg-blue-600 text-white p-4 rounded-full mb-6 inline-flex shadow-[0_8px_20px_rgba(37,99,235,0.4)]">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-bold text-accent mb-3 group-hover:text-blue-600 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-accent/70 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Per chi è Section */}
+      <section className="relative py-24 lg:py-32 px-6 bg-slate-50">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-accent mb-8">Per chi è questo libro?</h2>
+            <div className="space-y-5">
+              {[
+                "Per chi non ha mai cambiato banca e non sa bene perché",
+                "Per chi lascia i soldi fermi sul conto \"perché almeno sono al sicuro\"",
+                "Per chi si rifugia nel mattone perché è l'unica cosa che sembra concreta",
+                "Per chi si è sentito tradito da un investimento che non ha mai capito fino in fondo",
+                "Per chi rimanda da anni il tema della pensione integrativa",
+                "Per chi vuole capire come funziona il sistema prima di affidarsi a qualcuno",
+                "Per chi vuole regalare consapevolezza finanziaria a una persona cara",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="text-blue-600 mt-0.5 shrink-0" size={20} />
+                  <p className="text-accent/80 text-base leading-relaxed">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white rounded-[2rem] p-8 lg:p-10 shadow-xl border border-gray-100">
+            <p className="text-lg text-accent/80 leading-relaxed italic mb-6">
+              &ldquo;Ho scritto queste pagine pensando a un lettore ben preciso: lo scettico. Quello che non ha mai cambiato banca, che lascia i soldi fermi sul conto, che si rifugia nel mattone perch&eacute; &ldquo;&egrave; sicuro&rdquo;. Non scrivo per convincere, ma per aprire uno spiraglio, piantare un seme di curiosit&agrave;.&rdquo;
+            </p>
+            <div className="flex items-center gap-4">
+              <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-blue-100 shadow-md shrink-0">
+                <Image src="/IMG_0391-copia-2.png" alt="Amine Alahiyane" fill className="object-cover object-top" />
+              </div>
+              <div>
+                <p className="font-bold text-accent">Amine Alahiyane</p>
+                <p className="text-sm text-accent/60">Consulente Finanziario CFP®</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Chi è l'autore Section */}
+      <div className="relative bg-accent">
+        <section className="py-24 lg:py-32 px-6 text-white relative z-10">
+          <div className="max-w-5xl mx-auto grid lg:grid-cols-5 gap-12 items-center">
+            <div className="lg:col-span-2 flex justify-center">
+              <div className="relative w-[250px] h-[320px] lg:w-[300px] lg:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl border-2 border-blue-400/20">
+                <Image src="/aMINE-5-scaled.jpg" alt="Amine Alahiyane" fill className="object-cover" />
+              </div>
+            </div>
+            <div className="lg:col-span-3 space-y-6">
+              <h2 className="text-3xl lg:text-4xl font-bold">Chi è l&rsquo;autore</h2>
+              <p className="text-blue-100/80 leading-relaxed">
+                Amine Alahiyane è Consulente Finanziario e tra i primi 100 professionisti in Italia a ottenere la certificazione internazionale <strong className="text-white">CFP® (Certified Financial Planner)</strong>, il massimo standard mondiale in pianificazione finanziaria.
+              </p>
+              <p className="text-blue-100/80 leading-relaxed">
+                Laureato in Finanza Aziendale e Mercati Finanziari, ha completato un Executive Master in Consulenza Finanziaria Indipendente. Fondatore del canale YouTube <strong className="text-white">&ldquo;Investimenti Intelligenti&rdquo;</strong>, aiuta ogni giorno persone e famiglie a progettare il proprio futuro finanziario con metodo, trasparenza e un approccio profondamente umano.
+              </p>
+              <p className="text-blue-100/80 leading-relaxed">
+                Il suo metodo, il <strong className="text-white">Render Finanziario</strong>, trasforma la complessit&agrave; finanziaria in chiarezza, partendo sempre dalla vita delle persone e mai dai prodotti.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Wave Divider */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20 pointer-events-none translate-y-[1px]">
+          <svg viewBox="0 0 1440 120" className="w-full h-[40px] md:h-[70px] lg:h-[100px] block" preserveAspectRatio="none">
+            <path fill="#f8fafc" d="M0,60 C400,120 1040,0 1440,60 L1440,120 L0,120 Z"></path>
+          </svg>
+        </div>
+      </div>
+
+      {/* CTA Finale */}
+      <section id="acquista" className="bg-slate-50 py-24 lg:py-32 px-6">
+        <div className="max-w-3xl mx-auto text-center space-y-8">
+          <h2 className="text-3xl lg:text-5xl font-bold text-accent">
+            Pronto a cambiare prospettiva?
+          </h2>
+          <p className="text-lg text-accent/70 leading-relaxed max-w-2xl mx-auto">
+            Questo libro non &egrave; un manuale tecnico. &Egrave; un percorso di consapevolezza per chiunque voglia capire come muoversi nel mondo della finanza personale con maggiore lucidit&agrave;, smontare le false credenze e iniziare a progettare davvero il proprio futuro.
+          </p>
+
+          <div className="bg-white rounded-[2rem] p-8 lg:p-12 shadow-xl border border-gray-100 max-w-xl mx-auto">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <BookOpen className="text-blue-600" size={28} />
+              <h3 className="text-2xl font-bold text-accent">Non basta avere soldi</h3>
+            </div>
+            <p className="text-accent/60 text-sm mb-8">Amine Alahiyane &middot; Consulente Finanziario CFP®</p>
+            <a
+              href="#"
+              className="inline-flex items-center justify-center gap-2 w-full px-10 py-4 bg-accent text-white font-bold rounded-full hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-lg"
+            >
+              Acquista su Amazon <ChevronRight size={20} />
+            </a>
+            <p className="text-xs text-accent/40 mt-4">Il link Amazon sar&agrave; disponibile appena il libro sar&agrave; pubblicato.</p>
+          </div>
+
+          <p className="text-accent/50 text-sm pt-4 max-w-lg mx-auto italic">
+            &ldquo;Il mio obiettivo non &egrave; che tu diventi un esperto di finanza, ma che diventi esperto della tua finanza.&rdquo;
+          </p>
+        </div>
+      </section>
+
+    </div>
+  );
+}
