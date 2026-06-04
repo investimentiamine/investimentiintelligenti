@@ -1,9 +1,44 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { Compass, Eye, PencilRuler, Phone, Ear } from "lucide-react";
+import { Compass, Eye, PencilRuler, Phone, Ear, Star, BadgeCheck } from "lucide-react";
 import RenderForm from "./RenderForm";
 
 const WHATSAPP_URL = "https://wa.me/message/IYGM7IR5X6E2J1";
+const CTA_LABEL = "Richiedi la tua sessione di Render Finanziario";
+
+const REVIEWS = [
+  {
+    initials: "CS",
+    name: "Cristian S.",
+    role: "Imprenditore",
+    text: "Persona di gran pazienza e disponibilità! Consulente di concezione completamente diversa dalle grandi banche.. non vende «pacchetti» di investimento ma cuce con cura ogni richiesta in base alle esigenze del cliente! Consigliato! Indispensabile!",
+  },
+  {
+    initials: "FD",
+    name: "Federico D.",
+    role: "Ricercatore",
+    text: "Sono entrato nel mondo della finanza grazie ad Amine, dopo settimane di letture della sua newsletter. Inizialmente avevo qualche titubanza, ma dal primo incontro di lavoro Amine ha risolto tutti i dubbi con chiarezza, semplicità e soprattutto empatia. Mi è piaciuto che le prime domande non fossero sul quanto volessi guadagnare, ma su quale fosse il mio progetto di vita.",
+  },
+  {
+    initials: "MB",
+    name: "Matteo B.",
+    role: "Manager",
+    text: "Una persona di fiducia. Mi sento supportato e coinvolto a differenza del rapporto con il referente di banca. Sono molto soddisfatto del percorso, lo consiglio vivamente!",
+  },
+  {
+    initials: "VB",
+    name: "Virginia B.",
+    role: "Libero professionista",
+    text: "Certezza, solidità, fiducia, disponibilità, sicurezza: le prime parole che mi vengono in mente descrivendo il nostro rapporto. Posso dirmi completamente soddisfatta.",
+  },
+];
+
+const CREDENTIALS = [
+  "CFP® — tra i primi 100 in Italia",
+  "Executive Master in Consulenza Finanziaria Indipendente",
+  "Iscritto all'albo OCF n. 1873",
+  "Canale YouTube «Investimenti Intelligenti»",
+];
 
 export const metadata: Metadata = {
   title: "La tua sessione di Render Finanziario | Amine Alahiyane",
@@ -15,14 +50,11 @@ export default function RenderPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-foreground selection:bg-accent/20">
       {/* Hero */}
-      <section className="relative w-full pt-32 lg:pt-44 pb-28 lg:pb-40 overflow-hidden bg-gradient-to-b from-blue-50/40 to-white">
+      <section className="relative w-full pt-20 lg:pt-28 pb-28 lg:pb-40 overflow-hidden bg-gradient-to-b from-blue-50/40 to-white">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
           <div className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 text-xs font-bold uppercase tracking-widest rounded-full">
             Riservato a chi ha letto il libro
           </div>
-          <p className="text-base text-accent/60 font-medium">
-            Hai chiuso il libro. Adesso si apre la porta.
-          </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] text-accent tracking-tight">
             Il tuo patrimonio non merita di essere gestito.
             <br />
@@ -30,14 +62,15 @@ export default function RenderPage() {
           </h1>
           <p className="text-lg sm:text-xl text-accent/70 font-medium max-w-2xl mx-auto leading-relaxed">
             Come promesso nelle ultime pagine, ho lasciato uno spazio aperto solo per chi è arrivato
-            fino in fondo: una <strong>sessione di Render Finanziario</strong>, in regalo.
+            fino in fondo: una <strong className="text-accent">sessione di Render Finanziario</strong>{" "}
+            con me, in regalo per te che sei arrivato fino a qui.
           </p>
           <div className="pt-2">
             <a
               href="#richiedi"
               className="inline-block px-10 py-4 bg-accent text-white font-bold rounded-full hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
-              Richiedi la tua sessione gratuita
+              {CTA_LABEL}
             </a>
           </div>
         </div>
@@ -58,13 +91,15 @@ export default function RenderPage() {
             <p className="text-lg text-blue-100/80 leading-relaxed">
               Non è una simulazione, non è un portafoglio modello, non è una proposta da firmare. È una{" "}
               <strong className="text-white">tavola grafica</strong> che accende la luce sui tuoi
-              obiettivi: ti aiuta a vedere con chiarezza la tua vita futura &mdash; e quella delle
-              persone che ami &mdash; prima ancora di parlare di strumenti.
+              obiettivi futuri e ti aiuta a vedere con{" "}
+              <strong className="text-white">chiarezza la tua vita futura</strong> &mdash; e quella
+              delle persone che ami &mdash; prima ancora di parlare di strumenti.
             </p>
             <p className="text-lg text-blue-100/80 leading-relaxed">
               Come un architetto usa il render per far vedere una casa prima di costruirla, io uso il
-              Render Finanziario per aiutarti a vedere la vita che vuoi costruire o proteggere: le
-              tappe, le priorità, le persone, gli obiettivi vicini e lontani.
+              Render Finanziario per aiutarti a{" "}
+              <strong className="text-white">vedere la vita che vuoi costruire e proteggere</strong>:
+              le tappe, le priorità, le persone, gli obiettivi vicini e lontani.
             </p>
           </div>
         </section>
@@ -77,7 +112,7 @@ export default function RenderPage() {
         </div>
       </div>
 
-      {/* Cosa sarà / non sarà */}
+      {/* Cosa sarà / come funziona */}
       <section className="py-20 lg:py-28 px-6">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <h2 className="text-3xl lg:text-4xl font-bold text-accent">Cosa sarà questa sessione</h2>
@@ -88,7 +123,6 @@ export default function RenderPage() {
           </p>
         </div>
 
-        {/* Come funziona — 3 step */}
         <div className="max-w-5xl mx-auto mt-16 grid sm:grid-cols-3 gap-6">
           {[
             {
@@ -120,12 +154,84 @@ export default function RenderPage() {
           ))}
         </div>
         <p className="text-center text-accent/50 text-sm mt-8 italic">
-          Gratuita e senza alcun impegno.
+          Gratuita e senza alcun impegno per te che hai letto il libro.
         </p>
       </section>
 
+      {/* Authority + Recensioni */}
+      <section className="bg-slate-50 py-20 lg:py-28 px-6">
+        <div className="max-w-5xl mx-auto">
+          {/* Chi sono */}
+          <div className="bg-white rounded-[2rem] p-8 lg:p-12 shadow-xl border border-gray-100 grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-2 flex justify-center">
+              <div className="relative w-[220px] h-[280px] lg:w-[260px] lg:h-[340px] rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100">
+                <Image src="/aMINE-5-scaled.jpg" alt="Amine Alahiyane" fill className="object-cover" />
+              </div>
+            </div>
+            <div className="lg:col-span-3 space-y-5">
+              <h2 className="text-3xl lg:text-4xl font-bold text-accent">Chi sono</h2>
+              <p className="text-accent/75 leading-relaxed">
+                Sono <strong className="text-accent">Amine Alahiyane</strong>, Consulente Finanziario e
+                tra i primi 100 professionisti in Italia ad aver ottenuto la certificazione
+                internazionale <strong className="text-accent">CFP®</strong> &mdash; la più importante
+                al mondo in pianificazione finanziaria.
+              </p>
+              <p className="text-accent/75 leading-relaxed">
+                Aiuto persone e famiglie a progettare il proprio futuro con metodo, trasparenza e un
+                approccio profondamente umano. Parto sempre dalla vita delle persone, mai dai prodotti.
+              </p>
+              <ul className="space-y-2.5 pt-1">
+                {CREDENTIALS.map((c) => (
+                  <li key={c} className="flex items-start gap-2.5">
+                    <BadgeCheck className="text-blue-600 mt-0.5 shrink-0" size={18} />
+                    <span className="text-sm text-accent/80">{c}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Recensioni */}
+          <div className="mt-16 text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold text-accent mb-3">Cosa dicono di me</h2>
+            <div className="flex items-center justify-center gap-1 mb-12">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} size={20} className="fill-yellow-400 text-yellow-400" />
+              ))}
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-6">
+            {REVIEWS.map((review) => (
+              <div
+                key={review.name}
+                className="bg-white rounded-[2rem] p-7 lg:p-8 shadow-sm border border-gray-100 flex flex-col"
+              >
+                <div className="flex items-center gap-1 mb-4">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-accent/80 text-sm leading-relaxed italic flex-1">
+                  &ldquo;{review.text}&rdquo;
+                </p>
+                <div className="flex items-center gap-3 mt-6 pt-5 border-t border-gray-100">
+                  <div className="flex items-center justify-center w-11 h-11 rounded-full bg-accent text-white text-sm font-bold shrink-0">
+                    {review.initials}
+                  </div>
+                  <div>
+                    <p className="font-bold text-accent text-sm">{review.name}</p>
+                    <p className="text-accent/55 text-xs">{review.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Form */}
-      <section id="richiedi" className="bg-slate-50 py-20 lg:py-28 px-6 scroll-mt-24">
+      <section id="richiedi" className="bg-white py-20 lg:py-28 px-6 scroll-mt-12">
         <div className="max-w-xl mx-auto">
           <div className="text-center mb-10">
             <div className="inline-flex items-center justify-center bg-accent text-white rounded-full p-3 mb-5">
@@ -173,6 +279,26 @@ export default function RenderPage() {
           </div>
         </section>
       </div>
+
+      {/* Riga legale minima (sostituisce il footer, nascosto su questa landing) */}
+      <footer className="bg-accent text-blue-200/50 px-6 pb-10 pt-2 text-center text-[11px] leading-relaxed">
+        <div className="max-w-3xl mx-auto space-y-1">
+          <p>
+            Amine Alahiyane &middot; Consulente finanziario abilitato all&rsquo;offerta fuori sede,
+            iscritto all&rsquo;albo OCF con delibera n. 1873 del 24/03/2022 &middot; Subagente
+            assicurativo iscritto all&rsquo;albo RUI sez. E n. E000712221.
+          </p>
+          <p>P. IVA 12679780010 &middot; Copyright &copy; 2026 Amine Alahiyane</p>
+          <p className="space-x-4 pt-1">
+            <a href="/privacy-policy" target="_blank" className="hover:text-white underline">
+              Privacy Policy
+            </a>
+            <a href="/cookie-policy" target="_blank" className="hover:text-white underline">
+              Cookie Policy
+            </a>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
