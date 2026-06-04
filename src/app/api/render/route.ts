@@ -10,6 +10,11 @@
 const MAILERLITE_GROUP_ID = "188617390103201749";
 const MAILERLITE_ENDPOINT = "https://connect.mailerlite.com/api/subscribers";
 
+// Testo del consenso mostrato e accettato nel form: registrato in MailerLite
+// (campo "marketing_preferences" + opted_in_at + optin_ip) come prova GDPR.
+const CONSENT_TEXT =
+  "Acconsento al trattamento dei miei dati personali ai sensi dell'articolo 13 del Regolamento (UE) 2016/679 e alla ricezione di informazioni commerciali *";
+
 export async function POST(request: Request) {
   let payload: {
     name?: string;
@@ -50,6 +55,10 @@ export async function POST(request: Request) {
     );
   }
 
+  // Prova del consenso (GDPR): momento e indirizzo IP di chi ha accettato.
+  const optinIp = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || undefined;
+  const optedInAt = new Date().toISOString().slice(0, 19).replace("T", " ");
+
   try {
     const res = await fetch(MAILERLITE_ENDPOINT, {
       method: "POST",
@@ -60,9 +69,17 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({
         email,
-        fields: { name, last_name: lastName, phone },
+        fields: {
+          name,
+          last_name: lastName,
+          phone,
+          marketing_preferences: CONSENT_TEXT,
+        },
         groups: [MAILERLITE_GROUP_ID],
         status: "active",
+        opted_in_at: optedInAt,
+        optin_ip: optinIp,
+        ip_address: optinIp,
       }),
     });
 
