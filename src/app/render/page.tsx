@@ -8,25 +8,21 @@ const CTA_LABEL = "Richiedi la tua sessione di Render Finanziario";
 
 const REVIEWS = [
   {
-    initials: "CS",
     name: "Cristian S.",
     role: "Imprenditore",
     text: "Persona di gran pazienza e disponibilità! Consulente di concezione completamente diversa dalle grandi banche.. non vende «pacchetti» di investimento ma cuce con cura ogni richiesta in base alle esigenze del cliente! Consigliato! Indispensabile!",
   },
   {
-    initials: "FD",
     name: "Federico D.",
     role: "Ricercatore",
     text: "Sono entrato nel mondo della finanza grazie ad Amine, dopo settimane di letture della sua newsletter. Inizialmente avevo qualche titubanza, ma dal primo incontro di lavoro Amine ha risolto tutti i dubbi con chiarezza, semplicità e soprattutto empatia. Mi è piaciuto che le prime domande non fossero sul quanto volessi guadagnare, ma su quale fosse il mio progetto di vita.",
   },
   {
-    initials: "MB",
     name: "Matteo B.",
     role: "Manager",
     text: "Una persona di fiducia. Mi sento supportato e coinvolto a differenza del rapporto con il referente di banca. Sono molto soddisfatto del percorso, lo consiglio vivamente!",
   },
   {
-    initials: "VB",
     name: "Virginia B.",
     role: "Libero professionista",
     text: "Certezza, solidità, fiducia, disponibilità, sicurezza: le prime parole che mi vengono in mente descrivendo il nostro rapporto. Posso dirmi completamente soddisfatta.",
@@ -37,7 +33,6 @@ const CREDENTIALS = [
   "CFP® — tra i primi 100 in Italia",
   "Executive Master in Consulenza Finanziaria Indipendente",
   "Iscritto all'albo OCF n. 1873",
-  "Canale YouTube «Investimenti Intelligenti»",
 ];
 
 export const metadata: Metadata = {
@@ -164,8 +159,8 @@ export default function RenderPage() {
           {/* Chi sono */}
           <div className="bg-white rounded-[2rem] p-8 lg:p-12 shadow-xl border border-gray-100 grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-2 flex justify-center">
-              <div className="relative w-[220px] h-[280px] lg:w-[260px] lg:h-[340px] rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100">
-                <Image src="/aMINE-5-scaled.jpg" alt="Amine Alahiyane" fill className="object-cover" />
+              <div className="relative w-full max-w-[340px] aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100">
+                <Image src="/amine-attestato-cfp.jpg" alt="Amine Alahiyane con la certificazione CFP®" fill className="object-cover" />
               </div>
             </div>
             <div className="lg:col-span-3 space-y-5">
@@ -177,8 +172,10 @@ export default function RenderPage() {
                 al mondo in pianificazione finanziaria.
               </p>
               <p className="text-accent/75 leading-relaxed">
-                Aiuto persone e famiglie a progettare il proprio futuro con metodo, trasparenza e un
-                approccio profondamente umano. Parto sempre dalla vita delle persone, mai dai prodotti.
+                Aiuto <strong className="text-accent">famiglie, liberi professionisti e imprenditori</strong>{" "}
+                a progettare il proprio futuro con metodo, trasparenza e un approccio profondamente
+                umano. Parto sempre dalla vita delle persone, mai dai prodotti: prima il progetto, poi
+                gli strumenti.
               </p>
               <ul className="space-y-2.5 pt-1">
                 {CREDENTIALS.map((c) => (
@@ -215,14 +212,9 @@ export default function RenderPage() {
                 <p className="text-accent/80 text-sm leading-relaxed italic flex-1">
                   &ldquo;{review.text}&rdquo;
                 </p>
-                <div className="flex items-center gap-3 mt-6 pt-5 border-t border-gray-100">
-                  <div className="flex items-center justify-center w-11 h-11 rounded-full bg-accent text-white text-sm font-bold shrink-0">
-                    {review.initials}
-                  </div>
-                  <div>
-                    <p className="font-bold text-accent text-sm">{review.name}</p>
-                    <p className="text-accent/55 text-xs">{review.role}</p>
-                  </div>
+                <div className="mt-6 pt-5 border-t border-gray-100">
+                  <p className="font-bold text-accent text-sm">{review.name}</p>
+                  <p className="text-accent/55 text-xs">{review.role}</p>
                 </div>
               </div>
             ))}
@@ -255,21 +247,25 @@ export default function RenderPage() {
             <p className="text-xl lg:text-2xl font-semibold italic leading-relaxed">
               Nessun call center. Ti richiamo direttamente io per fissare un incontro personale.
             </p>
-            <p className="text-lg text-blue-100/80 italic leading-relaxed">
-              Riceverai una chiamata da questo numero:{" "}
+            <div className="space-y-2">
+              <p className="text-lg text-blue-100/80 italic leading-relaxed">
+                Riceverai una chiamata da questo numero:
+              </p>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 font-bold text-white underline decoration-blue-400 underline-offset-4 hover:decoration-white"
+                className="inline-flex items-center gap-2 text-2xl font-bold text-white underline decoration-blue-400 underline-offset-4 hover:decoration-white"
               >
-                <Phone size={18} /> 351 89 71 482
-              </a>{" "}
-              <span className="not-italic">(inizia a salvarti il numero così saprai che sono io)</span>
-            </p>
+                <Phone size={22} /> 351 89 71 482
+              </a>
+              <p className="text-sm text-blue-100/70">
+                (inizia a salvarti il numero così saprai che sono io)
+              </p>
+            </div>
             <div className="flex justify-center pt-2">
-              <div className="relative w-40 h-40 rounded-3xl overflow-hidden shadow-2xl border-2 border-blue-400/20">
-                <Image src="/AMINE-2-scaled.jpg" alt="Amine Alahiyane" fill className="object-cover" />
+              <div className="relative w-44 h-44 rounded-3xl overflow-hidden shadow-2xl border-2 border-blue-400/20">
+                <Image src="/amine-braccia-conserte.jpg" alt="Amine Alahiyane" fill className="object-cover" />
               </div>
             </div>
             <div className="pt-2">
