@@ -4,7 +4,7 @@ import { AlignLeft, PenLine, Wallet, Eye, Star, Quote } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-white text-foreground selection:bg-accent/20">
+    <div className="flex flex-col bg-white text-foreground selection:bg-accent/20">
 
       {/* Hero Section */}
       <section className="relative w-full pt-32 lg:pt-40 pb-0 overflow-hidden bg-gradient-to-b from-blue-50/40 to-white">

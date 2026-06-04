@@ -35,7 +35,7 @@ export const posts = [
 
 export default function BlogPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50">
+    <div className="flex flex-col bg-slate-50 h-full">
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 flex flex-col items-center justify-center">
         {/* Background Image & Overlay */}

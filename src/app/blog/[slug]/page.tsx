@@ -24,7 +24,7 @@ export default async function BlogPostPage({
   const suggestedPosts = posts.filter(p => p.slug !== slug).slice(0, 3);
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50">
+    <div className="flex flex-col bg-slate-50">
       {/* Article Hero Section */}
       <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 flex flex-col items-center justify-center">
         <div className="absolute inset-0 z-0">
