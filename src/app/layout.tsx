@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import SiteFooter from "./_components/SiteFooter";
-import SiteHeader from "./_components/SiteHeader";
+import SiteFooterGate from "./_components/SiteFooterGate";
+import SiteHeaderGate from "./_components/SiteHeaderGate";
 
 const displayFont = Fraunces({
   variable: "--font-display",
@@ -41,9 +41,9 @@ export default function RootLayout({
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window, document, "clarity", "script", "nr5q6n25sz");`}
         </Script>
-        <SiteHeader />
+        <SiteHeaderGate />
         <main className="flex-1">{children}</main>
-        <SiteFooter />
+        <SiteFooterGate />
       </body>
     </html>
   );

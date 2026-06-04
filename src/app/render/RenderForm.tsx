@@ -166,7 +166,7 @@ export default function RenderForm() {
             <Loader2 size={20} className="animate-spin" /> Invio in corso&hellip;
           </>
         ) : (
-          "Richiedi la tua sessione gratuita"
+          "Richiedi la tua sessione di Render Finanziario"
         )}
       </button>
     </form>
