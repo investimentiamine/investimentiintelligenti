@@ -4,6 +4,13 @@ import { ChevronRight } from "lucide-react";
 
 export const posts = [
   {
+    title: "Pensioni, demografia e il grande inganno: perché serve pianificare oggi",
+    date: "Ottobre 2025",
+    tag: "Previdenza",
+    slug: "pensioni-demografia-grande-inganno",
+    excerpt: "Non sono le regole di calcolo a minare le pensioni future, ma la demografia. Sei milioni di lavoratori in meno in dieci anni e tassi di sostituzione in caduta libera: perché chi ha 30 o 40 anni deve pianificare oggi. Articolo scritto per FPSB Italia."
+  },
+  {
     title: "Silenzio assenso TFR 2026: cosa cambia davvero dal 1° luglio",
     date: "Maggio 2026",
     tag: "Previdenza",

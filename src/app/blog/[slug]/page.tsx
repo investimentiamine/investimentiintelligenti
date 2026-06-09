@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { TFR2026 } from "./TFR2026";
 import { OrdinePatrimonio } from "./OrdinePatrimonio";
 import { ProgettazioneFinanziaria } from "./ProgettazioneFinanziaria";
+import { PensioniDemografia } from "./PensioniDemografia";
 
 export default async function BlogPostPage({
   params,
@@ -64,8 +65,9 @@ export default async function BlogPostPage({
           {slug === "silenzio-assenso-tfr-2026" && <TFR2026 />}
           {slug === "ordine-patrimonio-familiare" && <OrdinePatrimonio />}
           {slug === "cos-e-la-progettazione-finanziaria" && <ProgettazioneFinanziaria />}
-          
-          {!["silenzio-assenso-tfr-2026", "ordine-patrimonio-familiare", "cos-e-la-progettazione-finanziaria"].includes(slug) && (
+          {slug === "pensioni-demografia-grande-inganno" && <PensioniDemografia />}
+
+          {!["silenzio-assenso-tfr-2026", "ordine-patrimonio-familiare", "cos-e-la-progettazione-finanziaria", "pensioni-demografia-grande-inganno"].includes(slug) && (
             <>
               <p className="lead">Questo è un articolo dimostrativo.</p>
               <p>Presto verranno caricati i contenuti reali per "{post.title}". Torna a visitarci!</p>
