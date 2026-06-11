@@ -51,9 +51,9 @@ export default function RenderGuidaPage() {
             Riservato a chi ha letto la guida gratuita
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] text-accent tracking-tight">
-            Il tuo patrimonio non merita di essere gestito.
+            Il tuo patrimonio non va solo gestito:
             <br />
-            Merita di essere <span className="text-accent-2">progettato</span>.
+            merita di essere <span className="text-accent-2">progettato</span>.
           </h1>
           <p className="text-lg sm:text-xl text-accent/70 font-medium max-w-2xl mx-auto leading-relaxed">
             Come promesso nelle ultime pagine della guida, ho lasciato una porta aperta solo per chi è
@@ -87,9 +87,7 @@ export default function RenderGuidaPage() {
             <p className="text-lg text-blue-100/80 leading-relaxed">
               Non è una simulazione, non è un portafoglio modello, non è una proposta da firmare. È una{" "}
               <strong className="text-white">tavola grafica</strong> che accende la luce sui tuoi
-              obiettivi futuri e ti aiuta a vedere con{" "}
-              <strong className="text-white">chiarezza la tua vita futura</strong> &mdash; e quella
-              delle persone che ami &mdash; prima ancora di parlare di strumenti.
+              obiettivi futuri, elimina futuri e lascia solo obiettivi.
             </p>
             <p className="text-lg text-blue-100/80 leading-relaxed">
               Come un architetto usa il render per far vedere una casa prima di costruirla, io uso il
@@ -149,7 +147,7 @@ export default function RenderGuidaPage() {
             </div>
           ))}
         </div>
-        <p className="text-center text-accent/50 text-sm mt-8 italic">
+        <p className="text-center text-accent/70 text-sm font-bold mt-8 italic">
           Gratuita e senza alcun impegno per te che hai letto la guida.
         </p>
       </section>
