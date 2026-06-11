@@ -51,9 +51,9 @@ export default function RenderPage() {
             Riservato a chi ha letto il libro
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] text-accent tracking-tight">
-            Il tuo patrimonio non merita di essere gestito.
+            Il tuo patrimonio non va solo gestito:
             <br />
-            Merita di essere <span className="text-accent-2">progettato</span>.
+            merita di essere <span className="text-accent-2">progettato</span>.
           </h1>
           <p className="text-lg sm:text-xl text-accent/70 font-medium max-w-2xl mx-auto leading-relaxed">
             Come promesso nelle ultime pagine, ho lasciato uno spazio aperto solo per chi è arrivato
@@ -84,9 +84,11 @@ export default function RenderPage() {
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-3xl lg:text-4xl font-bold">Cos&rsquo;è il Render Finanziario</h2>
             <p className="text-lg text-blue-100/80 leading-relaxed">
-              Non è una simulazione, non è un portafoglio modello, non è una proposta da firmare. È una{" "}
-              <strong className="text-white">tavola grafica</strong> che accende la luce sui tuoi
-              obiettivi futuri e ti aiuta a vedere con{" "}
+              Non è una simulazione, non è un portafoglio modello, non è una proposta da firmare.
+            </p>
+            <p className="text-lg text-blue-100/80 leading-relaxed">
+              È una <strong className="text-white">tavola grafica</strong> che accende la luce sui tuoi
+              obiettivi e ti aiuta a vedere con{" "}
               <strong className="text-white">chiarezza la tua vita futura</strong> &mdash; e quella
               delle persone che ami &mdash; prima ancora di parlare di strumenti.
             </p>
@@ -148,7 +150,7 @@ export default function RenderPage() {
             </div>
           ))}
         </div>
-        <p className="text-center text-accent/50 text-sm mt-8 italic">
+        <p className="text-center text-accent/70 text-sm mt-8 font-bold">
           Gratuita e senza alcun impegno per te che hai letto il libro.
         </p>
       </section>
