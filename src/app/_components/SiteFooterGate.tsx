@@ -3,10 +3,10 @@
 import { usePathname } from "next/navigation";
 import SiteFooter from "./SiteFooter";
 
-// Nasconde il footer completo sulle landing page di conversione (es. /render),
+// Nasconde il footer completo sulle landing page di conversione (es. /render, /renderguida),
 // dove i link di navigazione distrarrebbero dal solo obiettivo: la CTA.
-// La pagina /render mostra al suo posto una riga legale minima (albo, P.IVA).
-const HIDE_FOOTER_ON = ["/render"];
+// Queste pagine mostrano al loro posto una riga legale minima (albo, P.IVA).
+const HIDE_FOOTER_ON = ["/render", "/renderguida"];
 
 export default function SiteFooterGate() {
   const pathname = usePathname();
