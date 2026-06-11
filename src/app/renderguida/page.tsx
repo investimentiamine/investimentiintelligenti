@@ -87,7 +87,9 @@ export default function RenderGuidaPage() {
             <p className="text-lg text-blue-100/80 leading-relaxed">
               Non è una simulazione, non è un portafoglio modello, non è una proposta da firmare. È una{" "}
               <strong className="text-white">tavola grafica</strong> che accende la luce sui tuoi
-              obiettivi futuri, elimina futuri e lascia solo obiettivi.
+              obiettivi e ti aiuta a vedere con{" "}
+              <strong className="text-white">chiarezza la tua vita futura</strong> &mdash; e quella
+              delle persone che ami &mdash; prima ancora di parlare di strumenti.
             </p>
             <p className="text-lg text-blue-100/80 leading-relaxed">
               Come un architetto usa il render per far vedere una casa prima di costruirla, io uso il
