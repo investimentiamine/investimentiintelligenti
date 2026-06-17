@@ -197,7 +197,7 @@ export default function LibroAnteprimaPage() {
           <div className="max-w-5xl mx-auto grid lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-2 flex justify-center">
               <div className="relative w-[250px] h-[320px] lg:w-[300px] lg:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl border-2 border-blue-400/20">
-                <Image src="/aMINE-5-scaled.jpg" alt="Amine Alahiyane" fill className="object-cover" />
+                <Image src="/amine-attestato-cfp.jpg" alt="Amine Alahiyane con la certificazione CFP®" fill className="object-cover" />
               </div>
             </div>
             <div className="lg:col-span-3 space-y-6">
