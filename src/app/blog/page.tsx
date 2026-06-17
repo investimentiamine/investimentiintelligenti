@@ -5,7 +5,7 @@ import { ChevronRight } from "lucide-react";
 export const posts = [
   {
     title: "Silenzio assenso TFR 2026: cosa cambia davvero dal 1° luglio",
-    date: "Maggio 2026",
+    date: "Giugno 2026",
     tag: "Previdenza",
     slug: "silenzio-assenso-tfr-2026",
     excerpt: "Dal 1° luglio 2026 l'adesione alla previdenza complementare diventa la regola, la rinuncia l'eccezione. Cosa significa per i lavoratori dipendenti e perché non puoi più rimandare."
@@ -19,7 +19,7 @@ export const posts = [
   },
   {
     title: "Cos'è la progettazione finanziaria: parto dalla vita, non dai prodotti",
-    date: "Maggio 2026",
+    date: "Giugno 2026",
     tag: "Metodo",
     slug: "cos-e-la-progettazione-finanziaria",
     excerpt: "Perché la pianificazione finanziaria personalizzata non parte dal portafoglio, ma dalla persona — e perché questo cambia tutto."
