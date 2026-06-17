@@ -127,7 +127,7 @@ export function TFR2026() {
         <p className="text-blue-100 mb-8 text-sm sm:text-base leading-relaxed">
           Approfondisco la pensione, la previdenza integrativa, gli investimenti per il lungo periodo e molto altro nel mio libro che sta per uscire. È il distillato di anni di lavoro con persone reali e dati ufficiali.
         </p>
-        <a href="https://wa.me/message/IYGM7IR5X6E2J1" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-accent font-bold px-6 py-3.5 sm:px-8 sm:py-3.5 rounded-full hover:bg-blue-50 transition-colors w-full sm:w-auto">
+        <a href="/libroanteprima" className="inline-block bg-white text-accent font-bold px-6 py-3.5 sm:px-8 sm:py-3.5 rounded-full hover:bg-blue-50 transition-colors w-full sm:w-auto">
           Iscriviti alla lista d'attesa
         </a>
       </div>
