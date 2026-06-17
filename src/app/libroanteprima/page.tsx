@@ -14,10 +14,10 @@ export default function LibroAnteprimaPage() {
               Il libro di Amine Alahiyane
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] text-accent tracking-tight">
-              NON BASTA<br />AVERE SOLDI
+              NON BASTA AVERE<br />PI&Ugrave; SOLDI
             </h1>
             <p className="text-lg sm:text-xl text-accent/70 font-medium max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              Il libro che ti apre gli occhi su come funziona davvero il sistema finanziario italiano e su cosa puoi fare per riprendere il controllo del tuo futuro.
+              Capire il denaro per vivere con pi&ugrave; libert&agrave;, ritrovare chiarezza e ridurre le preoccupazioni.
             </p>
             <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href="#anteprima" className="inline-block px-10 py-4 bg-accent text-white font-bold rounded-full hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-center">
@@ -35,7 +35,7 @@ export default function LibroAnteprimaPage() {
             <div className="relative w-[260px] h-[380px] sm:w-[300px] sm:h-[440px] lg:w-[340px] lg:h-[500px] bg-gradient-to-br from-accent to-blue-900 rounded-2xl shadow-2xl flex flex-col items-center justify-center p-8 text-center border border-blue-300/20">
               <BookOpen className="text-blue-300/60 mb-6" size={48} />
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight mb-4">
-                Non basta<br />avere soldi
+                Non basta avere<br />pi&ugrave; soldi
               </h2>
               <div className="w-12 h-0.5 bg-blue-400/50 mb-4"></div>
               <p className="text-blue-200/80 text-sm font-medium">
