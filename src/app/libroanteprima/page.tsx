@@ -203,13 +203,13 @@ export default function LibroAnteprimaPage() {
             <div className="lg:col-span-3 space-y-6">
               <h2 className="text-3xl lg:text-4xl font-bold">Chi è l&rsquo;autore</h2>
               <p className="text-blue-100/80 leading-relaxed">
-                Amine Alahiyane è Consulente Finanziario e tra i primi 100 professionisti in Italia a ottenere la certificazione internazionale <strong className="text-white">CFP&reg; (Certified Financial Planner)</strong>, il massimo standard mondiale in pianificazione finanziaria.
+                Amine Alahiyane &egrave; Consulente Finanziario e tra i primi 100 professionisti in Italia a ottenere la certificazione internazionale <strong className="text-white">CFP&reg; (Certified Financial Planner)</strong>, la certificazione pi&ugrave; importante al mondo in pianificazione finanziaria.
               </p>
               <p className="text-blue-100/80 leading-relaxed">
                 Laureato in Finanza Aziendale e Mercati Finanziari, ha completato un Executive Master in Consulenza Finanziaria Indipendente. Fondatore del canale YouTube <strong className="text-white">&ldquo;Investimenti Intelligenti&rdquo;</strong>, aiuta ogni giorno persone e famiglie a progettare il proprio futuro finanziario con metodo, trasparenza e un approccio profondamente umano.
               </p>
               <p className="text-blue-100/80 leading-relaxed">
-                Il suo metodo, il <strong className="text-white">Render Finanziario</strong>, trasforma la complessit&agrave; finanziaria in chiarezza, partendo sempre dalla vita delle persone e mai dai prodotti.
+                Ideatore del <strong className="text-white">Render Finanziario</strong>, una tavola grafica che trasforma la complessit&agrave; finanziaria in chiarezza, partendo sempre dalla vita delle persone e mai dai prodotti.
               </p>
             </div>
           </div>
