@@ -17,7 +17,7 @@ export default function LibroAnteprimaPage() {
               NON BASTA AVERE<br />PI&Ugrave; SOLDI
             </h1>
             <p className="text-lg sm:text-xl text-accent/70 font-medium max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              Capire il denaro per vivere con pi&ugrave; libert&agrave;, ritrovare chiarezza e ridurre le preoccupazioni.
+              Il libro che ti apre gli occhi su come funziona davvero il sistema finanziario italiano e su cosa puoi fare per riprendere il controllo del tuo futuro.
             </p>
             <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href="#anteprima" className="inline-block px-10 py-4 bg-accent text-white font-bold rounded-full hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-center">
