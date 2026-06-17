@@ -152,7 +152,7 @@ export default function LibroAnteprimaForm() {
             <Loader2 size={20} className="animate-spin" /> Invio in corso&hellip;
           </>
         ) : (
-          "Iscriviti all’anteprima"
+          "Entra nella lista riservata"
         )}
       </button>
     </form>

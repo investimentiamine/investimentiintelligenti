@@ -21,7 +21,7 @@ export default function LibroAnteprimaPage() {
             </p>
             <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href="#anteprima" className="inline-block px-10 py-4 bg-accent text-white font-bold rounded-full hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-center">
-                Iscriviti all&rsquo;anteprima
+                Entra nella lista riservata
               </a>
               <a href="#scopri" className="inline-block px-10 py-4 border-2 border-accent text-accent font-bold rounded-full hover:bg-accent hover:text-white transition-all text-center">
                 Scopri di cosa parla
@@ -227,11 +227,25 @@ export default function LibroAnteprimaPage() {
       <section id="anteprima" className="bg-slate-50 py-24 lg:py-32 px-6 scroll-mt-12">
         <div className="max-w-xl mx-auto text-center space-y-8">
           <h2 className="text-3xl lg:text-5xl font-bold text-accent">
-            Vuoi leggere il libro in anteprima?
+            Entra nel percorso riservato del libro
           </h2>
           <p className="text-lg text-accent/70 leading-relaxed max-w-2xl mx-auto">
-            Lascia i tuoi dati e sarai tra i primi a ricevere il libro prima dell&rsquo;uscita ufficiale. Nessun impegno, solo il vantaggio di leggerlo prima di tutti.
+            Per ricevere in anteprima le novit&agrave; sul libro
           </p>
+          <div className="text-left max-w-md mx-auto space-y-4">
+            {[
+              "Aggiornamenti in anteprima — data di uscita, copertina definitiva, dove sarà disponibile",
+              "Contenuti bonus esclusivi — approfondimenti su temi del libro che non sono finiti nelle pagine",
+              "Dietro le quinte — il percorso di scrittura, le scelte editoriali, cosa è stato tagliato e perché",
+              "Accesso prioritario a eventi — presentazioni dal vivo o in diretta streaming",
+              "Prezzo riservato o bonus al lancio — sconto lancio, checklist finanziaria o capitolo extra in esclusiva",
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3">
+                <CheckCircle2 className="text-blue-600 mt-0.5 shrink-0" size={18} />
+                <p className="text-accent/75 text-sm leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
           <LibroAnteprimaForm />
           <p className="text-accent/50 text-sm pt-4 max-w-lg mx-auto italic">
             &ldquo;Il mio obiettivo non &egrave; che tu diventi un esperto di finanza, ma che diventi esperto della tua finanza.&rdquo;
