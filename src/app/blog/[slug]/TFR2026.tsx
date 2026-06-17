@@ -41,17 +41,20 @@ export function TFR2026() {
   return (
     <>
       <p className="lead italic text-accent/70 border-l-4 border-blue-400 pl-6">
-        Dal 1° luglio 2026 l'adesione alla previdenza complementare diventa la regola, la rinuncia l'eccezione. Cosa significa per i lavoratori dipendenti del settore privato, perché lo Stato lo sta facendo davvero e come trasformare un automatismo normativo in una scelta consapevole.
+        <em>Dal 1° luglio 2026 l'adesione alla previdenza complementare diventa la regola, la rinuncia l'eccezione.</em>
       </p>
-      
-      <p>A cura di <strong>Dott. Amine Alahiyane, CFP®</strong></p>
+
+      <p>A cura di <strong>Dott. Amine Alahiyane, Consulente Finanziario CFP®</strong></p>
 
       <p>
-        Per la prima volta nella storia previdenziale italiana, non scegliere è una scelta. <strong>Dal 1° luglio 2026</strong> — con l'entrata in vigore dell'articolo 1, commi 203-205 della Legge 30 dicembre 2025 n. 199 (Legge di Bilancio 2026) — i lavoratori dipendenti del settore privato che vengono assunti per la prima volta saranno iscritti automaticamente alla previdenza complementare. Se entro 60 giorni dall'assunzione non manifestano espressamente una scelta diversa, il loro TFR confluirà di default nel fondo pensione previsto dal contratto collettivo applicato in azienda.
+        Per la prima volta nella storia previdenziale italiana, <em>non scegliere è una scelta.</em>
       </p>
-      <p>Non è un dettaglio tecnico. È un cambio di paradigma culturale.</p>
       <p>
-        Per decenni, il sistema italiano si è retto su una promessa implicita: <em>ci penserà lo Stato</em>. Pensione pubblica, TFR in azienda, magari una casa in più. Quella promessa, oggi, lo dice il legislatore stesso: non basta. E lo dice nel modo più chiaro possibile, ribaltando l'onere della scelta. Non sei più tu che devi attivarti per aderire alla previdenza integrativa. Sei tu che, se vuoi restarne fuori, devi dirlo entro un tempo preciso.
+        <strong>Dal 1° luglio 2026</strong> — con l'entrata in vigore dell'articolo 1, commi 203-205 della Legge 30 dicembre 2025 n. 199 (Legge di Bilancio 2026) — i lavoratori dipendenti del settore privato che vengono assunti per la prima volta saranno <em>iscritti automaticamente alla previdenza complementare.</em> Se <em>entro 60 giorni </em>dall'assunzione non manifestano espressamente una scelta diversa, il loro TFR confluirà di default nel fondo pensione previsto da CCNL dell'azienda.
+      </p>
+      <p><em>È un cambio di paradigma culturale.</em></p>
+      <p>
+        Per decenni, il sistema italiano si è retto su una promessa implicita: <em>ci penserà lo Stato.</em> Quella promessa, oggi, lo dice il legislatore stesso: non basta. E lo dice nel modo più chiaro possibile, <em>ribaltando l'onere della scelta.</em> Non sei più tu che devi attivarti per aderire alla previdenza integrativa. Sei tu che, se vuoi restarne fuori, devi dirlo entro un tempo preciso.
       </p>
       <p>
         In questo articolo voglio aiutarti a capire tre cose: cosa cambia concretamente per te il 1° luglio 2026, perché lo Stato lo sta facendo proprio adesso, e — soprattutto — come trasformare un automatismo normativo in una decisione tua, consapevole, costruita su misura della tua vita.
