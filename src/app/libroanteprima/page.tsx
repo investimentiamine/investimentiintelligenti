@@ -253,6 +253,26 @@ export default function LibroAnteprimaPage() {
         </div>
       </section>
 
+      {/* Riga legale minima */}
+      <footer className="bg-accent text-blue-200/50 px-6 pb-10 pt-6 text-center text-[11px] leading-relaxed">
+        <div className="max-w-3xl mx-auto space-y-1">
+          <p>
+            Amine Alahiyane &middot; Consulente finanziario abilitato all&rsquo;offerta fuori sede,
+            iscritto all&rsquo;albo OCF con delibera n. 1873 del 24/03/2022 &middot; Subagente
+            assicurativo iscritto all&rsquo;albo RUI sez. E n. E000712221.
+          </p>
+          <p>P. IVA 12679780010 &middot; Copyright &copy; 2026 Amine Alahiyane</p>
+          <p className="space-x-4 pt-1">
+            <a href="/privacy-policy" target="_blank" className="hover:text-white underline">
+              Privacy Policy
+            </a>
+            <a href="/cookie-policy" target="_blank" className="hover:text-white underline">
+              Cookie Policy
+            </a>
+          </p>
+        </div>
+      </footer>
+
     </div>
   );
 }
