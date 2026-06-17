@@ -77,10 +77,13 @@ export default function LibroAnteprimaPage() {
             </div>
             <div className="max-w-2xl mx-auto pt-4">
               <p className="text-lg text-blue-100/80 leading-relaxed">
-                Se hai pensato almeno una di queste cose, non sei solo. Sono le convinzioni con cui cresce la maggior parte degli italiani. Ma <strong className="text-white">e se non fosse davvero cos&igrave;?</strong>
+                Se hai pensato almeno una di queste cose, non sei solo. Sono le convinzioni con cui cresce la maggior parte degli italiani.
               </p>
               <p className="text-lg text-blue-100/80 leading-relaxed mt-4">
-                In Italia 1.593 miliardi di euro giacciono fermi sui conti correnti. Intanto l&rsquo;inflazione li erode in silenzio, la pensione pubblica si assottiglia e il sistema bancario non sempre lavora nel tuo interesse.
+                <strong className="text-white">E se non fosse davvero cos&igrave;?</strong>
+              </p>
+              <p className="text-lg text-blue-100/80 leading-relaxed mt-4">
+                In Italia <strong className="text-white">1.593 miliardi di euro</strong> giacciono fermi <strong className="text-white">sui conti correnti.</strong> Intanto l&rsquo;inflazione li erode in silenzio, la pensione pubblica si assottiglia e il sistema bancario non sempre lavora nel tuo interesse.
               </p>
             </div>
           </div>
