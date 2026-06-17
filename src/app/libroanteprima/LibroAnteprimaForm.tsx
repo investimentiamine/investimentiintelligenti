@@ -46,9 +46,9 @@ export default function LibroAnteprimaForm() {
         <div className="inline-flex items-center justify-center bg-green-100 text-green-600 rounded-full p-4 mb-6">
           <CheckCircle2 size={40} />
         </div>
-        <h3 className="text-2xl font-bold text-accent mb-4">Iscrizione completata!</h3>
+        <h3 className="text-2xl font-bold text-accent mb-4">Sei entrato nella lista riservata!</h3>
         <p className="text-accent/70 leading-relaxed">
-          Grazie! Sei nella lista dell&rsquo;anteprima. Ti scriver&ograve; non appena il libro sar&agrave; pronto per te.
+          Verrai aggiornato in anteprima appena ci saranno novit&agrave; importanti!
         </p>
       </div>
     );
