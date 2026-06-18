@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "Dove avviene la consulenza?",
     answer:
-      "La consulenza puo svolgersi fisicamente nel mio ufficio a Pinerolo (TO) in Via Clemente Lequio 76 o a Torino in Via Gioberti 16. Altrimenti possiamo svolgere la consulenza anche online, dato che posso seguire anche i clienti lontani da me a distanza.",
+      "La consulenza puo svolgersi fisicamente nel mio ufficio a Pinerolo (TO) in Via Clemente Lequio 76 o a Torino in Via Alfieri 17. Altrimenti possiamo svolgere la consulenza anche online, dato che posso seguire anche i clienti lontani da me a distanza.",
   },
   {
     question: "Non ho mai investito posso iniziare con te?",
