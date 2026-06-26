@@ -95,6 +95,18 @@ export function OrdinePatrimonio() {
         E così succede, paradossalmente, che le famiglie più prudenti finiscano per essere le più disordinate. Sono quelle che, per non sbagliare, hanno detto sì a tutto: un po&rsquo; di liquidità sempre, un po&rsquo; di mattone, qualche polizza, qualche obbligazione, qualche fondo. Hanno <strong>costruito un patrimonio per stratificazione, non per progetto</strong>. Ed è proprio quel patrimonio che oggi va ripensato come si ripensa una casa: prima il progetto, poi i materiali.
       </p>
 
+      <hr className="my-12" />
+
+      <div className="not-prose bg-accent text-white p-6 sm:p-10 rounded-3xl mt-12 text-center">
+        <h3 className="text-white mt-0 mb-4 text-2xl sm:text-3xl font-bold">Il libro è in uscita</h3>
+        <p className="text-blue-100 mb-8 text-sm sm:text-base leading-relaxed">
+          Approfondisco la progettazione finanziaria, gli investimenti per il lungo periodo e molto altro nel mio libro che sta per uscire. È il distillato di anni di lavoro con persone reali, dati ufficiali e una convinzione di fondo: la confusione finanziaria non è un destino, è un problema risolvibile.
+        </p>
+        <a href="/libroanteprima" className="inline-block bg-white text-accent font-bold px-6 py-3.5 sm:px-8 sm:py-3.5 rounded-full hover:bg-blue-50 transition-colors w-full sm:w-auto">
+          Iscriviti alla lista d&rsquo;attesa
+        </a>
+      </div>
+
       <h2>Il costo silenzioso del disordine</h2>
       <p>
         La voce di costo più conosciuta del disordine patrimoniale è la liquidità ferma. In Italia, secondo i dati FABI, oltre il 25% della ricchezza finanziaria delle famiglie resta come liquidità sui conti correnti. Vale la pena chiarire un equivoco frequente: <strong>tenere soldi sul conto è risparmiare, non è investire.</strong> Risparmiare vuol dire mettere da parte, trattenere consumo oggi per averlo disponibile domani. Sono due cose diverse, e l&rsquo;inflazione le tratta diversamente. Sul conto, il potere d&rsquo;acquisto si erode anno dopo anno: l&rsquo;inflazione media in Italia nel 2022 è stata dell&rsquo;8,1% (ISTAT, dicembre 2022); negli anni successivi è rientrata, ma il danno cumulato resta. Il conto ti protegge il numero (il &ldquo;100&rdquo; resta &ldquo;100&rdquo;), non quello che con quel &ldquo;100&rdquo; puoi davvero comprare.
@@ -117,18 +129,6 @@ export function OrdinePatrimonio() {
       <p>
         Tutte queste voci, sommate, costano alle famiglie italiane più di quanto costino i rendimenti negativi sui mercati nei loro anni peggiori. Ma essendo distribuite nel tempo e mai dichiarate da nessuno, non vengono percepite. Sono il rumore di fondo di un Paese che non ha mai messo l&rsquo;educazione finanziaria al centro della propria scuola. Lo dicono i numeri: secondo l&rsquo;indagine OCSE PISA 2022 Financial Literacy (rapporto INVALSI – Banca d&rsquo;Italia pubblicato nel 2024), gli studenti quindicenni italiani ottengono 484 punti contro una media OCSE di 498, e il 18% non raggiunge il livello minimo di competenza finanziaria. Cresciamo senza un linguaggio per parlare del nostro patrimonio. E un patrimonio di cui non sai parlare è un patrimonio che inevitabilmente si disordina.
       </p>
-
-      <hr className="my-12" />
-
-      <div className="not-prose bg-accent text-white p-6 sm:p-10 rounded-3xl mt-12 text-center">
-        <h3 className="text-white mt-0 mb-4 text-2xl sm:text-3xl font-bold">Il libro è in uscita</h3>
-        <p className="text-blue-100 mb-8 text-sm sm:text-base leading-relaxed">
-          Approfondisco la progettazione finanziaria, gli investimenti per il lungo periodo e molto altro nel mio libro che sta per uscire. È il distillato di anni di lavoro con persone reali, dati ufficiali e una convinzione di fondo: la confusione finanziaria non è un destino, è un problema risolvibile.
-        </p>
-        <a href="/libroanteprima" className="inline-block bg-white text-accent font-bold px-6 py-3.5 sm:px-8 sm:py-3.5 rounded-full hover:bg-blue-50 transition-colors w-full sm:w-auto">
-          Iscriviti alla lista d&rsquo;attesa
-        </a>
-      </div>
 
       <h2>Non è un problema di prodotti, è un problema di progetto</h2>
       <p>
