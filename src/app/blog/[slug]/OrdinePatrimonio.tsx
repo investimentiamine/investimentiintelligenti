@@ -118,6 +118,18 @@ export function OrdinePatrimonio() {
         Tutte queste voci, sommate, costano alle famiglie italiane più di quanto costino i rendimenti negativi sui mercati nei loro anni peggiori. Ma essendo distribuite nel tempo e mai dichiarate da nessuno, non vengono percepite. Sono il rumore di fondo di un Paese che non ha mai messo l&rsquo;educazione finanziaria al centro della propria scuola. Lo dicono i numeri: secondo l&rsquo;indagine OCSE PISA 2022 Financial Literacy (rapporto INVALSI – Banca d&rsquo;Italia pubblicato nel 2024), gli studenti quindicenni italiani ottengono 484 punti contro una media OCSE di 498, e il 18% non raggiunge il livello minimo di competenza finanziaria. Cresciamo senza un linguaggio per parlare del nostro patrimonio. E un patrimonio di cui non sai parlare è un patrimonio che inevitabilmente si disordina.
       </p>
 
+      <hr className="my-12" />
+
+      <div className="not-prose bg-accent text-white p-6 sm:p-10 rounded-3xl mt-12 text-center">
+        <h3 className="text-white mt-0 mb-4 text-2xl sm:text-3xl font-bold">Il libro è in uscita</h3>
+        <p className="text-blue-100 mb-8 text-sm sm:text-base leading-relaxed">
+          Approfondisco la progettazione finanziaria, gli investimenti per il lungo periodo e molto altro nel mio libro che sta per uscire. È il distillato di anni di lavoro con persone reali, dati ufficiali e una convinzione di fondo: la confusione finanziaria non è un destino, è un problema risolvibile.
+        </p>
+        <a href="/libroanteprima" className="inline-block bg-white text-accent font-bold px-6 py-3.5 sm:px-8 sm:py-3.5 rounded-full hover:bg-blue-50 transition-colors w-full sm:w-auto">
+          Iscriviti alla lista d&rsquo;attesa
+        </a>
+      </div>
+
       <h2>Non è un problema di prodotti, è un problema di progetto</h2>
       <p>
         Permettimi un&rsquo;opinione personale, perché su questo punto vado controcorrente rispetto a buona parte di ciò che si racconta in giro.
