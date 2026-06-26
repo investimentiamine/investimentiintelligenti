@@ -19,7 +19,7 @@ export const posts = [
   },
   {
     title: "Cos'è la progettazione finanziaria: parto dalla vita, non dai prodotti",
-    date: "Giugno 2026",
+    date: "Agosto 2026",
     tag: "Metodo",
     slug: "cos-e-la-progettazione-finanziaria",
     excerpt: "Perché la pianificazione finanziaria personalizzata non parte dal portafoglio, ma dalla persona — e perché questo cambia tutto."
