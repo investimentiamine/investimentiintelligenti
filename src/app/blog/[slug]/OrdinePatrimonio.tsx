@@ -162,7 +162,7 @@ export function OrdinePatrimonio() {
       <div className="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 my-10">
         <h3 className="mt-0 text-blue-700">Il caso di Giovanni: cosa significa fare ordine, in pratica</h3>
         <p className="text-sm leading-relaxed">
-          Per non restare sull&rsquo;astratto, voglio raccontarti un caso reale (cambio nome e qualche dettaglio per riservatezza). Giovanni è un architetto. Quando è arrivato in studio, era già in età pensionabile, ma continuava a lavorare per passione e per necessità di integrare la pensione.
+          Per non restare sull&rsquo;astratto, voglio raccontarti un caso reale (cambio nome e qualche dettaglio per riservatezza). Giovanni è un architetto. Quando è arrivato in studio, era già in età pensionabile, ma continuava a lavorare.
         </p>
         <p className="text-sm leading-relaxed">
           <strong>Risultato concreto:</strong> un unico conto corrente su cui transitava tutto. Gli incassi della libera professione, le spese di casa, le bollette, le vacanze, le tasse e i contributi che doveva accantonare. Un fondo per &ldquo;le emergenze&rdquo; che esisteva solo nella sua testa, perché di fatto i soldi dell&rsquo;emergenza si confondevano con tutto il resto.
@@ -177,13 +177,13 @@ export function OrdinePatrimonio() {
           Il primo lavoro che abbiamo fatto insieme non è stato sui prodotti. Non gli ho proposto investimenti né polizze. Abbiamo fatto una cosa diversa: abbiamo <strong>separato</strong>. Abbiamo distinto i flussi della vita professionale da quelli della vita personale. Abbiamo creato canali dedicati per le tasse e i contributi (la zona grigia che generava ansia ogni anno fiscale). Abbiamo definito, sulla base delle sue spese reali annuali, un fondo di emergenza dimensionato non a sensazione ma sulla base di numeri concreti, e gli abbiamo dato una collocazione precisa. Abbiamo dato a ciascun euro un compito.
         </p>
         <p className="text-sm leading-relaxed">
-          Il sistema dei conti dedicati — un conto per la vita personale, un conto per le tasse e i contributi, un conto-cuscinetto per le emergenze, un canale separato per gli investimenti — non è una tecnicalità contabile. <strong>È un cambio di paradigma</strong>. Quando ogni euro ha un compito, non c&rsquo;è più ambiguità. Quando Giovanni oggi guarda il conto delle spese personali, sa esattamente che sono soldi suoi e disponibili. Quando guarda il conto delle tasse, sa che non sono soldi suoi e non li può toccare. Quel piccolo <strong>cambio strutturale</strong>, da solo, <strong>abbatte</strong> una parte enorme dell&rsquo;<strong>ansia finanziaria.</strong> E ti permette di prendere le decisioni successive (gli investimenti, le coperture, l&rsquo;accumulo per gli obiettivi di lungo periodo) da una posizione di lucidità, non di stress.
+          Il sistema dei conti dedicati — un conto per la vita personale, un conto per le tasse e i contributi, un conto-cuscinetto per le emergenze, un canale separato per gli investimenti — non è una tecnicalità contabile. <strong>È un cambio di paradigma</strong>. Quando ogni euro ha un compito, non c&rsquo;è più ambiguità. Quando Giovanni oggi guarda il conto delle spese personali, sa esattamente che sono soldi suoi e disponibili. Quando guarda il conto delle tasse, sa che non sono soldi suoi e non li può toccare. Quel piccolo <strong>cambio strutturale</strong>, da solo, <strong>abbatte</strong> una parte enorme dell&rsquo;<strong>ansia finanziaria.</strong> E ti permette di prendere le decisioni successive da una posizione di lucidità, non di stress.
         </p>
         <p className="text-sm leading-relaxed">
           Solo dopo aver fatto ordine, abbiamo affrontato i passi successivi: una strategia di investimento dedicata all&rsquo;integrazione della pensione, e un canale specifico per accumulare le risorse da destinare ai matrimoni dei figli. Prodotti scelti dopo, non prima. Strumenti coerenti con il progetto finanziario.
         </p>
         <p className="text-sm leading-relaxed">
-          Il risultato non è stato un cambio di rendimento. <strong>È stato un cambio di vita</strong>. Giovanni oggi non lavora più perché ha paura di non farcela: <strong>lavora perché ama farlo.</strong> Quando arriva una spesa imprevista, sa esattamente dove pescare senza toccare nient&rsquo;altro. Quando pensa ai matrimoni dei figli, sa che c&rsquo;è un canale dedicato che cresce mese dopo mese.
+          Il risultato non è stato un cambio di rendimento. <strong>È stato un cambio di vita</strong>. Giovanni oggi non lavora più perché ha paura di non farcela: <strong>lavora perché ama farlo.</strong> Quando arriva una spesa imprevista, sa esattamente dove pescare senza toccare nient&rsquo;altro.
         </p>
       </div>
 
