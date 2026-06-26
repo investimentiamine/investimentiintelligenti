@@ -12,7 +12,7 @@ export const posts = [
   },
   {
     title: "Come mettere ordine nel patrimonio familiare (e perché non puoi più rimandarlo)",
-    date: "18 Ago 2026",
+    date: "Luglio 2026",
     tag: "Pianificazione",
     slug: "ordine-patrimonio-familiare",
     excerpt: "Conti correnti che si confondono, polizze dimenticate in un cassetto, una casa che pesa sul bilancio e qualche fondo che non sai più cosa contenga. Un patrimonio familiare disordinato non è un problema estetico: è un costo silenzioso."
