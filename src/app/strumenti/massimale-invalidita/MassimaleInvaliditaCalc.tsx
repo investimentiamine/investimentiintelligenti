@@ -402,7 +402,15 @@ export default function MassimaleInvaliditaCalc() {
           background: var(--paper);
           color: var(--text-body);
           line-height: 1.4;
-          padding: clamp(16px, 4vw, 48px);
+          padding-left: clamp(16px, 4vw, 48px);
+          padding-right: clamp(16px, 4vw, 48px);
+          padding-bottom: clamp(16px, 4vw, 48px);
+          padding-top: 8rem;
+        }
+        @media (min-width: 1024px) {
+          .mi-calc {
+            padding-top: 12rem;
+          }
         }
         .mi-calc * {
           box-sizing: border-box;
@@ -435,8 +443,11 @@ export default function MassimaleInvaliditaCalc() {
           color: var(--text-muted);
           font-size: 0.9375rem;
           margin-top: 12px;
+          margin-left: auto;
+          margin-right: auto;
           max-width: 62ch;
           font-weight: var(--fw-medium);
+          text-align: center;
         }
         .sub b {
           color: var(--navy-700);
@@ -720,11 +731,14 @@ export default function MassimaleInvaliditaCalc() {
 
         footer {
           margin-top: 28px;
+          margin-left: auto;
+          margin-right: auto;
           font-size: 0.6875rem;
           color: var(--text-muted);
           line-height: 1.6;
           max-width: 84ch;
           font-weight: var(--fw-medium);
+          text-align: center;
         }
         footer b {
           color: var(--navy-700);
