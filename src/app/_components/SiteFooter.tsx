@@ -36,7 +36,7 @@ export default function SiteFooter() {
         </div>
         <div className="space-y-6 text-xs md:text-sm text-blue-100/80 lg:border-l lg:border-white/10 lg:pl-12 pt-8 lg:pt-0 border-t border-white/10 lg:border-t-0">
           <p className="uppercase tracking-widest text-[10px] md:text-xs font-bold text-white mb-4 md:mb-6">Albo e Iscrizioni</p>
-          <p className="leading-relaxed">Consulente finanziario abilitato all'offerta fuori sede iscritto all'albo OCF con delibera N. 1873 del 24/03/2022.</p>
+          <p className="leading-relaxed">Consulente finanziario abilitato all'offerta fuori sede iscritto all'albo OCF con delibera N. 1873 del 24/03/2022, che opera su mandato di Südtirol Bank S.p.A.</p>
           <p className="leading-relaxed">Subagente assicurativo iscritto all'albo RUI sezione E con N.E000712221.</p>
           <div className="flex flex-col xl:flex-row gap-6 xl:gap-8 mt-6 md:mt-8 items-start">
             {/* IVASS Block */}

@@ -282,8 +282,9 @@ export default function RenderGuidaPage() {
         <div className="max-w-3xl mx-auto space-y-1">
           <p>
             Amine Alahiyane &middot; Consulente finanziario abilitato all&rsquo;offerta fuori sede,
-            iscritto all&rsquo;albo OCF con delibera n. 1873 del 24/03/2022 &middot; Subagente
-            assicurativo iscritto all&rsquo;albo RUI sez. E n. E000712221.
+            iscritto all&rsquo;albo OCF con delibera n. 1873 del 24/03/2022, che opera su mandato di
+            S&uuml;dtirol Bank S.p.A. &middot; Subagente assicurativo iscritto all&rsquo;albo RUI sez.
+            E n. E000712221.
           </p>
           <p>P. IVA 12679780010 &middot; Copyright &copy; 2026 Amine Alahiyane</p>
           <p className="space-x-4 pt-1">

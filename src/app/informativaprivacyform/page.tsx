@@ -52,9 +52,9 @@ export default function InformativaPrivacyFormPage() {
         </h2>
         <p>
           Il Titolare del trattamento dei dati è Amine Alahiyane, Consulente Finanziario abilitato
-          all’offerta fuori sede iscritto all’albo OCF con delibera N. 1873 del 24/03/2022, con sede
-          legale in Strada Vecchia di San Giovanni 129, 10062 Luserna San Giovanni (TO), Partita IVA
-          12679780010.
+          all’offerta fuori sede iscritto all’albo OCF con delibera N. 1873 del 24/03/2022, che opera
+          su mandato di Südtirol Bank S.p.A., con sede legale in Strada Vecchia di San Giovanni 129,
+          10062 Luserna San Giovanni (TO), Partita IVA 12679780010.
         </p>
         <ul className="list-disc pl-6 space-y-2 mb-8">
           <li>
@@ -228,7 +228,8 @@ export default function InformativaPrivacyFormPage() {
         <h2 className="text-xl md:text-2xl font-bold text-accent mt-8 mb-4">Contatti</h2>
         <p>
           Amine Alahiyane &middot; Consulente Finanziario abilitato all’offerta fuori sede iscritto
-          all’albo OCF con delibera N. 1873 del 24/03/2022
+          all’albo OCF con delibera N. 1873 del 24/03/2022, che opera su mandato di Südtirol Bank
+          S.p.A.
           <br />
           Strada Vecchia di San Giovanni 129, 10062 Luserna San Giovanni (TO)
           <br />
