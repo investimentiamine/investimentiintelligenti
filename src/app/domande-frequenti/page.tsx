@@ -41,7 +41,7 @@ const faqs = [
   {
     question: "Ho già degli investimenti e non sono soddisfatto/a, come posso fare?",
     answer:
-      "Se non sei soddisfatto/a dei tuoi investimenti bisogna capire le motivazioni. Contattami per la prima consulenza e successivamente provvederemo a svolgere una diagnosi del tuo portafoglio.",
+      "Se non sei soddisfatto/a dei tuoi investimenti, il primo passo è capirne le motivazioni. Contattami per la prima consulenza: partiremo dai tuoi obiettivi di vita per capire insieme se l'impostazione attuale è davvero coerente con ciò che vuoi costruire.",
   },
   {
     question: "Vorrei investire ma non riesco a risparmiare",
