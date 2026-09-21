@@ -136,7 +136,7 @@ export default function Home() {
               <Wallet size={32} />
             </div>
             <h3 className="text-xl font-bold text-accent mb-3">Libertà di scelta</h3>
-            <p className="text-accent/70 text-sm leading-relaxed mt-auto">Liberi di scegliere gli strumenti più adatti a te tra quelli disponibili sul mercato.</p>
+            <p className="text-accent/70 text-sm leading-relaxed mt-auto">Liberi di scegliere gli strumenti più adatti a te sul mercato.</p>
           </div>
           <div className="flex flex-col items-center h-full">
             <div className="bg-blue-600 text-white p-5 rounded-full mb-6 shadow-[0_8px_20px_rgba(37,99,235,0.4)]">
