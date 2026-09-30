@@ -2,7 +2,22 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 
-export const posts = [
+// Mesi italiani → numero, per ordinare gli articoli dal più recente al più vecchio.
+const MESI_IT = [
+  "gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno",
+  "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"
+];
+
+// Converte una data tipo "Settembre 2026" in un numero ordinabile (anno * 100 + mese).
+function dataOrdinabile(date: string): number {
+  const [mese, anno] = date.toLowerCase().split(" ");
+  const meseNum = MESI_IT.indexOf(mese) + 1;
+  return parseInt(anno, 10) * 100 + meseNum;
+}
+
+// L'ordine in cui scrivi gli articoli qui sotto non conta: vengono sempre
+// mostrati dal più recente al più vecchio in base al campo "date".
+const rawPosts = [
   {
     title: "Errori comportamentali negli investimenti: perché prendiamo decisioni sbagliate (proprio quando conta di più)",
     date: "Settembre 2026",
@@ -32,6 +47,10 @@ export const posts = [
     excerpt: "Perché la pianificazione finanziaria personalizzata non parte dal portafoglio, ma dalla persona — e perché questo cambia tutto."
   }
 ];
+
+export const posts = [...rawPosts].sort(
+  (a, b) => dataOrdinabile(b.date) - dataOrdinabile(a.date)
+);
 
 export default function BlogPage() {
   return (
