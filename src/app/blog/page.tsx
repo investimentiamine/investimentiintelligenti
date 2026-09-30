@@ -4,6 +4,13 @@ import { ChevronRight } from "lucide-react";
 
 export const posts = [
   {
+    title: "Errori comportamentali negli investimenti: perché prendiamo decisioni sbagliate (proprio quando conta di più)",
+    date: "Settembre 2026",
+    tag: "Pianificazione",
+    slug: "errori-comportamentali-investimenti",
+    excerpt: "Pandemia, guerra in Ucraina, dazi del Liberation Day: tre crisi in sei anni, e ogni volta la stessa tentazione di uscire dal mercato. Cosa succede nella nostra testa quando i mercati scendono, quanto costano gli errori comportamentali e come proteggersi prima della prossima tempesta."
+  },
+  {
     title: "Silenzio assenso TFR 2026: cosa cambia davvero dal 1° luglio",
     date: "Giugno 2026",
     tag: "Previdenza",
