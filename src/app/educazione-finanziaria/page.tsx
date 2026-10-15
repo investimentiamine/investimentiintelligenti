@@ -1,5 +1,20 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowDown, Calendar } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Educazione Finanziaria — Video e contenuti formativi",
+  description:
+    "Video e contenuti di educazione finanziaria di Amine Alahiyane, Consulente Finanziario CFP®: previdenza, investimenti, risparmio e pianificazione spiegati in modo chiaro.",
+  alternates: { canonical: "/educazione-finanziaria" },
+  openGraph: {
+    type: "website",
+    url: "/educazione-finanziaria",
+    title: "Educazione Finanziaria | Investimenti Intelligenti",
+    description:
+      "Video e contenuti formativi per capire previdenza, investimenti e pianificazione.",
+  },
+};
 
 const featuredVideo = { 
   id: "HVfMOqSIbFI", 

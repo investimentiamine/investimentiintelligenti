@@ -1,12 +1,60 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, ArrowLeft } from "lucide-react";
-import { posts } from "../page";
+import { posts, postDateISO } from "../page";
 import { notFound } from "next/navigation";
+import { SITE_URL, SITE_NAME, AUTHOR_NAME, absoluteUrl } from "../../lib/site";
 import { TFR2026 } from "./TFR2026";
 import { OrdinePatrimonio } from "./OrdinePatrimonio";
 import { ProgettazioneFinanziaria } from "./ProgettazioneFinanziaria";
 import { ErroriComportamentali } from "./ErroriComportamentali";
+
+// Pre-genera staticamente le pagine dei singoli articoli al build.
+export function generateStaticParams() {
+  return posts.map((post) => ({ slug: post.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = posts.find((p) => p.slug === slug);
+
+  if (!post) {
+    return { title: "Articolo non trovato" };
+  }
+
+  const url = `${SITE_URL}/blog/${post.slug}`;
+  const published = postDateISO(post.date).toISOString();
+  const image = absoluteUrl("/AMINE-2-scaled.jpg");
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      type: "article",
+      url,
+      title: post.title,
+      description: post.excerpt,
+      siteName: SITE_NAME,
+      locale: "it_IT",
+      publishedTime: published,
+      authors: [AUTHOR_NAME],
+      section: post.tag,
+      images: [{ url: image }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [image],
+    },
+  };
+}
 
 export default async function BlogPostPage({
   params,
@@ -24,8 +72,46 @@ export default async function BlogPostPage({
   // Seleziona altri 3 articoli (escludendo quello corrente) per la sezione "suggeriti"
   const suggestedPosts = posts.filter(p => p.slug !== slug).slice(0, 3);
 
+  const url = `${SITE_URL}/blog/${post.slug}`;
+  const published = postDateISO(post.date).toISOString();
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#article`,
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: published,
+        dateModified: published,
+        inLanguage: "it-IT",
+        articleSection: post.tag,
+        image: absoluteUrl("/AMINE-2-scaled.jpg"),
+        author: {
+          "@type": "Person",
+          "@id": `${SITE_URL}/#amine`,
+          name: AUTHOR_NAME,
+        },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        mainEntityOfPage: { "@type": "WebPage", "@id": url },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+          { "@type": "ListItem", position: 3, name: post.title, item: url },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="flex flex-col bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       {/* Article Hero Section */}
       <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 flex flex-col items-center justify-center">
         <div className="absolute inset-0 z-0">

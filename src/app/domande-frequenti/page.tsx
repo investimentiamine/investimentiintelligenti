@@ -50,11 +50,40 @@ const faqs = [
   },
 ];
 
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Domande Frequenti sulla consulenza finanziaria",
+  description:
+    "Le risposte alle domande più comuni sulla consulenza finanziaria di Amine Alahiyane CFP®: come funziona la prima consulenza, i costi, dove avviene e perché scegliere un consulente indipendente.",
+  alternates: { canonical: "/domande-frequenti" },
+  openGraph: {
+    type: "website",
+    url: "/domande-frequenti",
+    title: "Domande Frequenti | Investimenti Intelligenti",
+    description:
+      "Risposte chiare alle domande più comuni sulla consulenza finanziaria indipendente.",
+  },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
 
 export default function DomandeFrequentiPage() {
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 flex flex-col items-center justify-center">
         {/* Background Image & Overlay */}

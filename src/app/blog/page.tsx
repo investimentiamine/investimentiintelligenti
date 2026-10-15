@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
+import { SITE_URL, SITE_NAME, AUTHOR_NAME } from "../lib/site";
 
 // Mesi italiani → numero, per ordinare gli articoli dal più recente al più vecchio.
 const MESI_IT = [
@@ -14,6 +16,28 @@ function dataOrdinabile(date: string): number {
   const meseNum = MESI_IT.indexOf(mese) + 1;
   return parseInt(anno, 10) * 100 + meseNum;
 }
+
+// Converte una data tipo "Settembre 2026" in una data ISO (primo del mese),
+// usata per lastModified nella sitemap e per i dati strutturati Article.
+export function postDateISO(date: string): Date {
+  const [mese, anno] = date.toLowerCase().split(" ");
+  const meseNum = MESI_IT.indexOf(mese);
+  return new Date(Date.UTC(parseInt(anno, 10), meseNum >= 0 ? meseNum : 0, 1));
+}
+
+export const metadata: Metadata = {
+  title: "Blog | Insight e strumenti per investire con consapevolezza",
+  description:
+    "Articoli di Amine Alahiyane, Consulente Finanziario CFP®, su previdenza, TFR, pianificazione patrimoniale, investimenti e comportamento finanziario.",
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    type: "website",
+    url: `${SITE_URL}/blog`,
+    title: `Blog | ${SITE_NAME}`,
+    description:
+      "Insight e strumenti di Amine Alahiyane per investire con metodo e consapevolezza.",
+  },
+};
 
 // L'ordine in cui scrivi gli articoli qui sotto non conta: vengono sempre
 // mostrati dal più recente al più vecchio in base al campo "date".
@@ -53,8 +77,29 @@ export const posts = [...rawPosts].sort(
 );
 
 export default function BlogPage() {
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${SITE_URL}/blog#blog`,
+    name: `Blog | ${SITE_NAME}`,
+    url: `${SITE_URL}/blog`,
+    inLanguage: "it-IT",
+    author: { "@type": "Person", name: AUTHOR_NAME },
+    blogPost: posts.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      url: `${SITE_URL}/blog/${post.slug}`,
+      datePublished: postDateISO(post.date).toISOString(),
+      description: post.excerpt,
+    })),
+  };
+
   return (
     <div className="flex flex-col bg-slate-50 h-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 flex flex-col items-center justify-center">
         {/* Background Image & Overlay */}

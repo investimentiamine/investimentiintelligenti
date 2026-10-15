@@ -1,3 +1,19 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contatti",
+  description:
+    "Contatta Amine Alahiyane, Consulente Finanziario CFP®. Prenota una prima consulenza gratuita in ufficio (Torino e Pinerolo) o online.",
+  alternates: { canonical: "/contatti" },
+  openGraph: {
+    type: "website",
+    url: "/contatti",
+    title: "Contatti | Investimenti Intelligenti",
+    description:
+      "Prenota una prima consulenza gratuita con Amine Alahiyane, Consulente Finanziario CFP®.",
+  },
+};
+
 export default function ContattiPage() {
   return (
     <div>
