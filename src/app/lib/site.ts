@@ -14,7 +14,7 @@ export const SITE_URL = "https://www.investimentiintelligenti.com";
 export const SITE_NAME = "Investimenti Intelligenti";
 
 export const SITE_DESCRIPTION =
-  "Amine Alahiyane, Consulente Finanziario indipendente CFP®. Pianificazione patrimoniale, previdenza, investimenti e protezione con metodo, chiarezza e visione di lungo periodo.";
+  "Amine Alahiyane, Consulente Finanziario CFP®. Pianificazione patrimoniale, previdenza, investimenti e protezione con metodo, chiarezza e visione di lungo periodo.";
 
 export const AUTHOR_NAME = "Amine Alahiyane";
 export const AUTHOR_JOB_TITLE = "Consulente Finanziario CFP®";

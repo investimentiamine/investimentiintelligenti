@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   publisher: AUTHOR_NAME,
   keywords: [
     "consulente finanziario",
-    "consulente finanziario indipendente",
+    "consulente finanziario CFP",
     "pianificazione finanziaria",
     "pianificazione patrimoniale",
     "previdenza complementare",
