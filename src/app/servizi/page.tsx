@@ -1,3 +1,19 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Servizi di consulenza finanziaria",
+  description:
+    "I servizi di Amine Alahiyane, Consulente Finanziario CFP®: check-up del portafoglio, pianificazione patrimoniale, previdenza, protezione e gestione degli investimenti.",
+  alternates: { canonical: "/servizi" },
+  openGraph: {
+    type: "website",
+    url: "/servizi",
+    title: "Servizi di consulenza finanziaria | Investimenti Intelligenti",
+    description:
+      "Check-up del portafoglio, pianificazione patrimoniale, previdenza e protezione con metodo.",
+  },
+};
+
 const services = [
   {
     title: "Check-up del portafoglio",

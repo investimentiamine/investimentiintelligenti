@@ -1,5 +1,20 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Chi sono — Amine Alahiyane, Consulente Finanziario CFP®",
+  description:
+    "La storia, la missione e il percorso di Amine Alahiyane, Consulente Finanziario indipendente CFP®: pianificazione patrimoniale su misura, senza conflitti di interesse.",
+  alternates: { canonical: "/chi-siamo" },
+  openGraph: {
+    type: "profile",
+    url: "/chi-siamo",
+    title: "Chi sono — Amine Alahiyane, Consulente Finanziario CFP®",
+    description:
+      "Il percorso e il metodo di Amine Alahiyane, Consulente Finanziario indipendente CFP®.",
+  },
+};
 
 export default function ChiSiamo() {
   return (

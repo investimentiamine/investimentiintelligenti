@@ -1,5 +1,20 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { BookOpen, ShieldAlert, TrendingUp, Brain, Landmark, Home, PiggyBank, Target, ChevronRight, CheckCircle2 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Il libro",
+  description:
+    "Il libro di Amine Alahiyane, Consulente Finanziario CFP®: una guida per mettere ordine nel patrimonio, investire con metodo e pianificare il futuro con serenità.",
+  alternates: { canonical: "/libro" },
+  openGraph: {
+    type: "book",
+    url: "/libro",
+    title: "Il libro | Investimenti Intelligenti",
+    description:
+      "Una guida per investire con metodo e pianificare il futuro finanziario con serenità.",
+  },
+};
 
 export default function LibroPage() {
   return (
