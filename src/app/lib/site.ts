@@ -36,6 +36,16 @@ export const CONTACT = {
   },
 };
 
+// Seconda sede operativa (Torino). Verifica che il CAP corrisponda a quello
+// usato sul Google Business Profile / nei documenti ufficiali.
+export const OFFICE_TORINO = {
+  streetAddress: "Via Alfieri 17",
+  postalCode: "10121",
+  addressLocality: "Torino",
+  addressRegion: "TO",
+  addressCountry: "IT",
+};
+
 // Profili esterni collegati al brand (sameAs). Aggiungi qui gli URL reali di
 // LinkedIn, Instagram, Facebook, canale YouTube, scheda Google, ecc.
 export const SAME_AS: string[] = [

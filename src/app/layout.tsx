@@ -11,6 +11,7 @@ import {
   AUTHOR_NAME,
   AUTHOR_JOB_TITLE,
   CONTACT,
+  OFFICE_TORINO,
   SAME_AS,
   absoluteUrl,
 } from "./lib/site";
@@ -84,6 +85,7 @@ export const metadata: Metadata = {
 
 const organizationId = `${SITE_URL}/#organization`;
 const personId = `${SITE_URL}/#amine`;
+const torinoOfficeId = `${SITE_URL}/#studio-torino`;
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -119,6 +121,29 @@ const structuredData = {
       },
       founder: { "@id": personId },
       sameAs: SAME_AS,
+    },
+    {
+      "@type": "FinancialService",
+      "@id": torinoOfficeId,
+      name: `${SITE_NAME} — Studio di Torino`,
+      parentOrganization: { "@id": organizationId },
+      url: SITE_URL,
+      image: absoluteUrl("/AMINE-2-scaled.jpg"),
+      email: CONTACT.email,
+      telephone: CONTACT.phone,
+      priceRange: "€€",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: OFFICE_TORINO.streetAddress,
+        postalCode: OFFICE_TORINO.postalCode,
+        addressLocality: OFFICE_TORINO.addressLocality,
+        addressRegion: OFFICE_TORINO.addressRegion,
+        addressCountry: OFFICE_TORINO.addressCountry,
+      },
+      areaServed: [
+        { "@type": "City", name: "Torino" },
+        { "@type": "AdministrativeArea", name: "Città metropolitana di Torino" },
+      ],
     },
     {
       "@type": "Person",
