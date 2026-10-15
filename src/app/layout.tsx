@@ -112,8 +112,20 @@ const structuredData = {
       "@id": personId,
       name: AUTHOR_NAME,
       jobTitle: AUTHOR_JOB_TITLE,
+      honorificSuffix: "CFP®",
       url: `${SITE_URL}/chi-siamo`,
       image: absoluteUrl("/amine-braccia-conserte.jpg"),
+      description:
+        "Amine Alahiyane è tra i primi 100 professionisti italiani ad aver ottenuto la certificazione CFP® (Certified Financial Planner), la certificazione più importante al mondo in pianificazione finanziaria.",
+      award:
+        "Tra i primi 100 professionisti italiani ad aver ottenuto la certificazione CFP® (Certified Financial Planner)",
+      hasCredential: {
+        "@type": "EducationalOccupationalCredential",
+        name: "Certified Financial Planner (CFP®)",
+        credentialCategory: "certification",
+        description:
+          "La certificazione più importante al mondo in pianificazione finanziaria.",
+      },
       worksFor: { "@id": organizationId },
       knowsAbout: [
         "Pianificazione finanziaria",
