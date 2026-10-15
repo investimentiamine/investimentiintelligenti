@@ -56,7 +56,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Domande Frequenti sulla consulenza finanziaria",
   description:
-    "Le risposte alle domande più comuni sulla consulenza finanziaria di Amine Alahiyane, Consulente Finanziario CFP®: come funziona la prima consulenza, i costi, dove avviene e perché scegliere un consulente CFP®.",
+    "Le risposte alle domande più comuni sulla consulenza finanziaria di Dott. Amine Alahiyane, Consulente Finanziario CFP®: come funziona la prima consulenza, i costi, dove avviene e perché scegliere un consulente CFP®.",
   alternates: { canonical: "/domande-frequenti" },
   openGraph: {
     type: "website",
