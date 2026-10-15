@@ -3,16 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Chi sono — Amine Alahiyane, Consulente Finanziario CFP®",
+  title: "Chi sono — Dott. Amine Alahiyane, Consulente Finanziario CFP®",
   description:
-    "Amine Alahiyane, Consulente Finanziario CFP®: tra i primi 100 in Italia ad ottenere la CFP®, la certificazione più importante al mondo in pianificazione finanziaria.",
+    "Dott. Amine Alahiyane, Consulente Finanziario CFP®: tra i primi 100 in Italia ad ottenere la CFP®, la certificazione più importante al mondo in pianificazione finanziaria.",
   alternates: { canonical: "/chi-siamo" },
   openGraph: {
     type: "profile",
     url: "/chi-siamo",
-    title: "Chi sono — Amine Alahiyane, Consulente Finanziario CFP®",
+    title: "Chi sono — Dott. Amine Alahiyane, Consulente Finanziario CFP®",
     description:
-      "Il percorso e il metodo di Amine Alahiyane, Consulente Finanziario CFP®.",
+      "Il percorso e il metodo del Dott. Amine Alahiyane, Consulente Finanziario CFP®.",
   },
 };
 

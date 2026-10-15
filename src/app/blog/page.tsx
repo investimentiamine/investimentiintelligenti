@@ -28,14 +28,14 @@ export function postDateISO(date: string): Date {
 export const metadata: Metadata = {
   title: "Blog | Insight e strumenti per investire con consapevolezza",
   description:
-    "Articoli di Amine Alahiyane, Consulente Finanziario CFP®, su previdenza, TFR, pianificazione patrimoniale, investimenti e comportamento finanziario.",
+    "Articoli del Dott. Amine Alahiyane, Consulente Finanziario CFP®, su previdenza, TFR, pianificazione patrimoniale, investimenti e comportamento finanziario.",
   alternates: { canonical: "/blog" },
   openGraph: {
     type: "website",
     url: `${SITE_URL}/blog`,
     title: `Blog | ${SITE_NAME}`,
     description:
-      "Insight e strumenti di Amine Alahiyane per investire con metodo e consapevolezza.",
+      "Insight e strumenti del Dott. Amine Alahiyane per investire con metodo e consapevolezza.",
   },
 };
 

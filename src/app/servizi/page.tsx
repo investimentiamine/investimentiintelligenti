@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Servizi di consulenza finanziaria",
   description:
-    "I servizi di Amine Alahiyane, Consulente Finanziario CFP®: check-up del portafoglio, pianificazione patrimoniale, previdenza, protezione e gestione degli investimenti.",
+    "I servizi di Dott. Amine Alahiyane, Consulente Finanziario CFP®: check-up del portafoglio, pianificazione patrimoniale, previdenza, protezione e gestione degli investimenti.",
   alternates: { canonical: "/servizi" },
   openGraph: {
     type: "website",

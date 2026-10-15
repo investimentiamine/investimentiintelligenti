@@ -36,7 +36,7 @@ const CREDENTIALS = [
 ];
 
 export const metadata: Metadata = {
-  title: "La tua sessione di Render Finanziario | Amine Alahiyane",
+  title: "La tua sessione di Render Finanziario | Dott. Amine Alahiyane",
   description:
     "Hai letto la guida «5 strategie per trasformare il caos finanziario in un progetto di vita»? Richiedi la tua sessione di Render Finanziario gratuita: uno spazio di ascolto e di chiarezza per iniziare a progettare il tuo futuro.",
 };

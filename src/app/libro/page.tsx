@@ -5,7 +5,7 @@ import { BookOpen, ShieldAlert, TrendingUp, Brain, Landmark, Home, PiggyBank, Ta
 export const metadata: Metadata = {
   title: "Il libro",
   description:
-    "Il libro di Amine Alahiyane, Consulente Finanziario CFP®: una guida per mettere ordine nel patrimonio, investire con metodo e pianificare il futuro con serenità.",
+    "Il libro di Dott. Amine Alahiyane, Consulente Finanziario CFP®: una guida per mettere ordine nel patrimonio, investire con metodo e pianificare il futuro con serenità.",
   alternates: { canonical: "/libro" },
   openGraph: {
     type: "book",

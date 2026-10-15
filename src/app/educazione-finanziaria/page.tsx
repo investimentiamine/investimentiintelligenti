@@ -5,7 +5,7 @@ import { ArrowDown, Calendar } from "lucide-react";
 export const metadata: Metadata = {
   title: "Educazione Finanziaria — Video e contenuti formativi",
   description:
-    "Video e contenuti di educazione finanziaria di Amine Alahiyane, Consulente Finanziario CFP®: previdenza, investimenti, risparmio e pianificazione spiegati in modo chiaro.",
+    "Video e contenuti di educazione finanziaria di Dott. Amine Alahiyane, Consulente Finanziario CFP®: previdenza, investimenti, risparmio e pianificazione spiegati in modo chiaro.",
   alternates: { canonical: "/educazione-finanziaria" },
   openGraph: {
     type: "website",
