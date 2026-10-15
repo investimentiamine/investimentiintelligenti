@@ -25,10 +25,12 @@ export const CONTACT = {
   phone: "+39 351 897 1482",
   whatsapp: "https://wa.me/message/IYGM7IR5X6E2J1",
   vatId: "12679780010",
+  // Indirizzo operativo di riferimento per la SEO locale (ufficio principale).
+  // La sede legale di Luserna San Giovanni resta solo nel testo visibile del sito.
   address: {
-    streetAddress: "Strada vecchia di San Giovanni 129",
-    postalCode: "10062",
-    addressLocality: "Luserna San Giovanni",
+    streetAddress: "Via Clemente Lequio 76",
+    postalCode: "10064",
+    addressLocality: "Pinerolo",
     addressRegion: "TO",
     addressCountry: "IT",
   },
