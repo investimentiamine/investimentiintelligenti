@@ -216,13 +216,28 @@ export default function RootLayout({
             analytics_storage) va abilitato dal pannello Cookiebot: Manager > Consent Mode.
         */}
         {cookiebotId && (
-          <Script
-            id="Cookiebot"
-            src="https://consent.cookiebot.com/uc.js"
-            data-cbid={cookiebotId}
-            data-blockingmode="auto"
-            strategy="beforeInteractive"
-          />
+          <>
+            {/*
+              Google Consent Mode v2 — stato di default (tutto negato) PRIMA di
+              Cookiebot e di qualsiasi tag Google. È un file esterno perché Next
+              non consente inline script con beforeInteractive; l'ordine rispetto
+              a Cookiebot è garantito dall'ordine in cui sono posti.
+              data-cookieconsent="ignore": Cookiebot non deve bloccarlo.
+            */}
+            <Script
+              id="google-consent-default"
+              src="/gcm-consent-default.js"
+              data-cookieconsent="ignore"
+              strategy="beforeInteractive"
+            />
+            <Script
+              id="Cookiebot"
+              src="https://consent.cookiebot.com/uc.js"
+              data-cbid={cookiebotId}
+              data-blockingmode="auto"
+              strategy="beforeInteractive"
+            />
+          </>
         )}
 
         {/* Dati strutturati Schema.org (Organization + Person + WebSite) */}
