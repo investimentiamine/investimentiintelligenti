@@ -191,11 +191,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // ID del dominio Cookiebot (Manager Cookiebot > Impostazioni > la tua "Domain Group ID").
-  // Impostalo in .env.local come NEXT_PUBLIC_COOKIEBOT_CBID. Finché non è valorizzato,
-  // non viene caricato alcuno script di consenso né di tracciamento (comportamento
-  // conforme: nessun cookie non tecnico in assenza di una CMP attiva).
-  const cookiebotId = process.env.NEXT_PUBLIC_COOKIEBOT_CBID;
+  // ID del dominio Cookiebot ("Domain Group ID", visibile nel Manager Cookiebot).
+  // Non è un segreto: compare comunque nello script pubblico in ogni pagina.
+  // Si può sovrascrivere con la env NEXT_PUBLIC_COOKIEBOT_CBID (es. per un dominio
+  // di test). Se vuoto, non viene caricato alcuno script di consenso né di
+  // tracciamento (comportamento conforme in assenza di CMP attiva).
+  const cookiebotId =
+    process.env.NEXT_PUBLIC_COOKIEBOT_CBID ??
+    "16aa2f20-5400-4355-aaec-730d0eca8d12";
 
   return (
     <html

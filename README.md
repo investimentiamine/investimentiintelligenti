@@ -48,21 +48,23 @@ Il progetto è costruito sfruttando le tecnologie più moderne per garantire il 
 
 ## 🍪 Consenso cookie e tracciamento (Cookiebot + Google Consent Mode v2)
 
-Il sito usa **Cookiebot** come Consent Management Platform. Finché l'ID dominio
-non è configurato, **nessuno script di tracciamento viene caricato** (Microsoft
-Clarity compreso): è il comportamento conforme di default.
+Il sito usa **Cookiebot** come Consent Management Platform. Il Domain Group ID è
+già configurato di default nel codice (`src/app/layout.tsx`), quindi il banner è
+attivo dopo il deploy senza ulteriori passaggi. Microsoft Clarity parte **solo**
+dopo il consenso alla categoria *statistiche*.
 
-### 1. Variabile d'ambiente
+### 1. Variabile d'ambiente (opzionale)
 
-Crea un file `.env.local` (ignorato da git) con l'ID del tuo dominio Cookiebot:
+L'ID Cookiebot (non è un segreto: appare nello script pubblico di ogni pagina) può
+essere sovrascritto tramite env, ad esempio per un dominio di test:
 
 ```bash
 # Cookiebot > Manager > Impostazioni > "Domain Group ID"
 NEXT_PUBLIC_COOKIEBOT_CBID=00000000-0000-0000-0000-000000000000
 ```
 
-Dopo averlo impostato, riavvia `npm run dev` (o rilancia la build). Il banner
-comparirà e Clarity partirà **solo** dopo il consenso alla categoria *statistiche*.
+Se la env è vuota viene usato l'ID di produzione. Se la imposti a stringa vuota,
+nessuno script di consenso/tracciamento viene caricato.
 
 ### 2. Impostazioni nel pannello Cookiebot (banner minimal ma conforme)
 
