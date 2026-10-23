@@ -107,22 +107,38 @@
     .timeline-container::after {
       left: 31px;
     }
-    
+
     .timeline-item {
       width: 100%;
       padding-left: 70px;
       padding-right: 25px;
       margin-bottom: 20px;
     }
-    
+
     .timeline-item.left, .timeline-item.right {
       left: 0;
     }
-    
+
     .timeline-item.left .timeline-icon,
     .timeline-item.right .timeline-icon {
       left: 9px;
     }
   }
 }
+
+/* -------------------------------------------------------------------------
+   Cookiebot — banner consenso
+   -------------------------------------------------------------------------
+   Aspetto e layout del banner si configurano direttamente nel pannello
+   Cookiebot (Design, Contenuto, Privacy), che è l'unica fonte di verità per
+   colori, posizione e testi. Non aggiungiamo qui override: regole CSS con
+   !important sovrascriverebbero le scelte del pannello, rendendole "invisibili".
+
+   Palette del sito, da riportare nel pannello Cookiebot:
+   - Background:  #FFFFFF
+   - Testo:       #15131A (titoli: #000435)
+   - In evidenza / pulsante primario: #0044FF
+
+   Se in futuro servisse una rifinitura che il pannello non consente, aggiungere
+   qui regole mirate sugli ID #CybotCookiebotDialog* dello script uc.js. */
 
