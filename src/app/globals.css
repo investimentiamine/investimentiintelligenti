@@ -127,83 +127,18 @@
 }
 
 /* -------------------------------------------------------------------------
-   Cookiebot — banner consenso minimal e on-brand
+   Cookiebot — banner consenso
    -------------------------------------------------------------------------
-   Questi override rendono il banner Cookiebot discreto e coerente con la
-   grafica del sito: card d'angolo in basso, angoli arrotondati, colori del
-   brand, nessun overlay scuro che oscura la pagina.
+   Aspetto e layout del banner si configurano direttamente nel pannello
+   Cookiebot (Design, Contenuto, Privacy), che è l'unica fonte di verità per
+   colori, posizione e testi. Non aggiungiamo qui override: regole CSS con
+   !important sovrascriverebbero le scelte del pannello, rendendole "invisibili".
 
-   IMPORTANTE (conformità Garante): "Accetta" e "Rifiuta" restano paritari e
-   ugualmente visibili — non vanno nascosti né resi meno evidenti.
+   Palette del sito, da riportare nel pannello Cookiebot:
+   - Background:  #FFFFFF
+   - Testo:       #15131A (titoli: #000435)
+   - In evidenza / pulsante primario: #0044FF
 
-   Le regole sono pensate per il layout "banner" in basso (impostato dal
-   pannello Cookiebot). Gli ID sono quelli dello script uc.js: se cambiano con
-   una versione futura del widget, vanno verificati in ispezione. Usano
-   !important perché Cookiebot applica stili propri ad alta specificità. */
-
-/* Niente overlay scuro: la pagina resta leggibile e non si "blocca" l'attenzione */
-#CybotCookiebotDialogBodyUnderlay {
-  display: none !important;
-}
-
-/* Contenitore: card compatta d'angolo, non a tutto schermo */
-#CybotCookiebotDialog {
-  inset: auto 1.25rem 1.25rem auto !important; /* ancorata in basso a destra */
-  top: auto !important;
-  left: auto !important;
-  transform: none !important;
-  max-width: 420px !important;
-  width: calc(100vw - 2.5rem) !important;
-  border: 1px solid var(--line) !important;
-  border-radius: 1.25rem !important;
-  box-shadow: var(--shadow-soft) !important;
-  font-family: var(--font-sans), "Segoe UI", sans-serif !important;
-}
-
-/* Testi: compatti e nei colori del brand */
-#CybotCookiebotDialogBodyContentTitle {
-  color: var(--accent) !important;
-  font-weight: 700 !important;
-}
-#CybotCookiebotDialogBodyContentText {
-  color: var(--muted) !important;
-  font-size: 0.85rem !important;
-  line-height: 1.4 !important;
-}
-
-/* Bottoni: pill arrotondati come le CTA del sito */
-.CybotCookiebotDialogBodyButton {
-  border-radius: 9999px !important;
-  padding: 0.5rem 1.25rem !important;
-  font-weight: 600 !important;
-  font-size: 0.85rem !important;
-}
-
-/* "Accetta" e "Rifiuta" con lo stesso peso visivo (parità richiesta dal Garante):
-   stessa dimensione, colori pieni distinti ma equivalenti per prominenza. */
-#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection,
-#CybotCookiebotDialogBodyButtonAccept {
-  background: var(--accent-2) !important;
-  border-color: var(--accent-2) !important;
-  color: #ffffff !important;
-}
-#CybotCookiebotDialogBodyButtonDecline {
-  background: var(--accent) !important;
-  border-color: var(--accent) !important;
-  color: #ffffff !important;
-}
-
-/* "Personalizza/Dettagli": link discreto, secondario */
-#CybotCookiebotDialogBodyButtonDetails {
-  color: var(--muted) !important;
-  text-decoration: underline !important;
-}
-
-@media screen and (max-width: 640px) {
-  #CybotCookiebotDialog {
-    inset: auto 0.75rem 0.75rem 0.75rem !important;
-    width: auto !important;
-    max-width: none !important;
-  }
-}
+   Se in futuro servisse una rifinitura che il pannello non consente, aggiungere
+   qui regole mirate sugli ID #CybotCookiebotDialog* dello script uc.js. */
 
