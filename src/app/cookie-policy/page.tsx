@@ -3,9 +3,9 @@ export default function CookiePolicyPage() {
     <div className="min-h-screen bg-surface py-32 px-6">
       <div className="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-xl prose prose-blue max-w-none">
         <h1 className="text-3xl md:text-5xl font-bold text-accent mb-4">Cookie Policy</h1>
-        <p className="text-sm text-accent/60 mb-12">Ultimo aggiornamento in data 20 Febbraio 2023</p>
+        <p className="text-sm text-accent/60 mb-12">Ultimo aggiornamento in data 23 Ottobre 2026</p>
 
-        <p>Questo sito utilizza cookie. I cookie utilizzati sono di due tipologie: cookie tecnici e cookie di terze parti.</p>
+        <p>Questo sito utilizza cookie. I cookie utilizzati sono di due tipologie: cookie tecnici e cookie di terze parti (statistici e, se attivati, di marketing). I cookie non tecnici vengono installati esclusivamente previo consenso dell'utente, raccolto tramite il banner di gestione del consenso (Consent Management Platform) presente alla prima visita.</p>
 
         <h2 className="text-xl md:text-2xl font-bold text-accent mt-8 mb-4">Cosa sono i cookie?</h2>
         <p>
@@ -36,15 +36,16 @@ export default function CookiePolicyPage() {
           Il sito include servizi di terzi (o link alle loro piattaforme) quali Google, Facebook, Instagram e Youtube. Tali contenuti sono aggiunti ad esempio per utilizzare servizi di streaming o permettere la condivisione sulle piattaforme social più utilizzate; tuttavia, questo può implicare che tali provider terzi salvino ulteriori cookie sul dispositivo (prima o dopo l'interazione), sui quali non abbiamo il completo controllo, in particolar modo nel caso il visitatore abbia già avuto relazioni di un qualche tipo con i suddetti servizi terzi. Di conseguenza, si consiglia di consultare i siti web di tali terze parti e la loro informativa sulla privacy per ulteriori informazioni sui loro cookie e su come gestirli (soprattutto nel caso in cui si sia in possesso di un account).
         </p>
         <ul className="list-disc pl-6 space-y-2 mb-6">
+          <li>Microsoft Clarity (cookie statistici: analisi del comportamento di navigazione e registrazione aggregata delle sessioni)</li>
+          <li>Google (Google Ads e Google Analytics, quando attivi: misurazione delle conversioni e remarketing)</li>
           <li>YouTube</li>
-          <li>Google</li>
           <li>Linkedin</li>
           <li>Facebook</li>
           <li>Instagram</li>
           <li>Whatsapp (mobile)</li>
         </ul>
         <p>
-          L'attivazione di questi servizi (ad eccezione dei link) è subordinata all'accettazione dei cookie sul sito.
+          L'attivazione di questi servizi (ad eccezione dei link) è subordinata all'accettazione dei cookie sul sito. I segnali di consenso vengono trasmessi ai servizi Google tramite Google Consent Mode v2.
         </p>
 
         <h2 className="text-xl md:text-2xl font-bold text-accent mt-8 mb-4">Durata dei cookie</h2>
@@ -54,7 +55,7 @@ export default function CookiePolicyPage() {
 
         <h2 className="text-xl md:text-2xl font-bold text-accent mt-8 mb-4">Come gestire i cookie</h2>
         <p>
-          I nostri sistemi invieranno cookie non tecnici solo dopo l'accettazione dei cookie sul sito tramite la scheda dedicata alla loro gestione. La scheda è accessibile, quando non già attiva, tramite l'etichetta "cookie" presente in basso a sinistra su tutte le pagine. Il rifiuto dei cookie tecnici tramite questa scheda potrebbe compromettere le funzionalità del sito.
+          I nostri sistemi invieranno cookie non tecnici solo dopo l'accettazione tramite il banner di gestione del consenso mostrato alla prima visita. Puoi modificare o revocare le tue scelte in qualsiasi momento tramite il link "Gestisci cookie" presente nel footer di tutte le pagine. Il rifiuto dei cookie tecnici potrebbe compromettere le funzionalità del sito.
         </p>
         <p>
           I cookie possono essere rifiutati autonomamente anche attivando nel browser l’impostazione che consente di rifiutare il salvataggio dei cookie, cancellandoli se già presenti. Questo eliminerà tutti i dati dal browser. Tuttavia, se si seleziona questa impostazione, potrebbe essere impossibile accedere ad alcune parti del sito o utilizzare determinate funzionalità.

@@ -191,24 +191,67 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // ID del dominio Cookiebot (Manager Cookiebot > Impostazioni > la tua "Domain Group ID").
+  // Impostalo in .env.local come NEXT_PUBLIC_COOKIEBOT_CBID. Finché non è valorizzato,
+  // non viene caricato alcuno script di consenso né di tracciamento (comportamento
+  // conforme: nessun cookie non tecnico in assenza di una CMP attiva).
+  const cookiebotId = process.env.NEXT_PUBLIC_COOKIEBOT_CBID;
+
   return (
     <html
       lang="it"
       className={`${displayFont.variable} ${bodyFont.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col text-foreground bg-background">
+        {/*
+          Cookiebot CMP (consenso cookie + Google Consent Mode v2).
+          - strategy "beforeInteractive": Next lo inietta nell'<head> e lo esegue
+            prima del codice first-party, come raccomandato per i cookie consent manager.
+          - data-blockingmode="auto": blocco preventivo degli script di tracciamento
+            finché l'utente non presta il consenso (richiesto dalle linee guida del Garante).
+          - Il Consent Mode v2 (segnali ad_storage/ad_user_data/ad_personalization/
+            analytics_storage) va abilitato dal pannello Cookiebot: Manager > Consent Mode.
+        */}
+        {cookiebotId && (
+          <Script
+            id="Cookiebot"
+            src="https://consent.cookiebot.com/uc.js"
+            data-cbid={cookiebotId}
+            data-blockingmode="auto"
+            strategy="beforeInteractive"
+          />
+        )}
+
         {/* Dati strutturati Schema.org (Organization + Person + WebSite) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-        {/* Microsoft Clarity */}
+
+        {/*
+          Microsoft Clarity: strumento di statistica/registrazione sessioni (cookie di
+          profilazione). Viene caricato SOLO dopo il consenso alla categoria "statistics"
+          raccolto da Cookiebot: senza una CMP attiva o senza consenso non parte affatto.
+        */}
         <Script id="microsoft-clarity" strategy="afterInteractive">
-          {`(function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "nr5q6n25sz");`}
+          {`(function () {
+              function loadClarity() {
+                if (window.__clarityLoaded) return;
+                window.__clarityLoaded = true;
+                (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "nr5q6n25sz");
+              }
+              function checkConsent() {
+                if (window.Cookiebot && window.Cookiebot.consent && window.Cookiebot.consent.statistics) {
+                  loadClarity();
+                }
+              }
+              window.addEventListener("CookiebotOnConsentReady", checkConsent);
+              window.addEventListener("CookiebotOnAccept", checkConsent);
+          })();`}
         </Script>
         <SiteHeaderGate />
         <main className="flex-1">{children}</main>

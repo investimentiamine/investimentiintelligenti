@@ -46,9 +46,51 @@ Il progetto è costruito sfruttando le tecnologie più moderne per garantire il 
    npm run build
    ```
 
+## 🍪 Consenso cookie e tracciamento (Cookiebot + Google Consent Mode v2)
+
+Il sito usa **Cookiebot** come Consent Management Platform. Finché l'ID dominio
+non è configurato, **nessuno script di tracciamento viene caricato** (Microsoft
+Clarity compreso): è il comportamento conforme di default.
+
+### 1. Variabile d'ambiente
+
+Crea un file `.env.local` (ignorato da git) con l'ID del tuo dominio Cookiebot:
+
+```bash
+# Cookiebot > Manager > Impostazioni > "Domain Group ID"
+NEXT_PUBLIC_COOKIEBOT_CBID=00000000-0000-0000-0000-000000000000
+```
+
+Dopo averlo impostato, riavvia `npm run dev` (o rilancia la build). Il banner
+comparirà e Clarity partirà **solo** dopo il consenso alla categoria *statistiche*.
+
+### 2. Impostazioni nel pannello Cookiebot (banner minimal ma conforme)
+
+- **Consent Mode**: attiva *Google Consent Mode* (Manager → Impostazioni) → invia
+  a Google i segnali `ad_storage`, `ad_user_data`, `ad_personalization`,
+  `analytics_storage`. È il requisito per fare Google Ads/remarketing a norma.
+- **Layout banner**: scegli il tipo *Banner* in basso (non il popup overlay a
+  centro pagina), così è discreto e non oscura il sito.
+- **Pulsanti**: abilita il pulsante *Rifiuta* accanto ad *Accetta* (parità
+  richiesta dal Garante). Non usare "solo Accetta".
+- **Blocco preventivo**: lascia attivo l'auto-blocking (già impostato via
+  `data-blockingmode="auto"` nel codice).
+
+Lo stile on-brand del banner (card d'angolo, colori, angoli arrotondati) è già
+definito in `src/app/globals.css` nella sezione "Cookiebot". Nota: il piano Free
+di Cookiebot mostra una piccola dicitura "Consent by Cookiebot".
+
+### 3. Quando aggiungerai Google Ads / GA4
+
+Inserisci i tag (preferibilmente via Google Tag Manager). Grazie a Consent Mode
+v2 gestito da Cookiebot, i tag rispetteranno automaticamente le scelte di
+consenso dell'utente. Il remarketing si attiva solo con consenso *marketing*.
+
 ## 📝 Note Operative
 - Sostituire le immagini placeholder o i video (su Educazione Finanziaria) con asset di produzione prima della messa online definitiva.
 - I testi correnti sulle pagine *Blog* ed *Educazione Finanziaria* fungono da segnaposto architetturale per i veri contenuti editoriali.
+- **Prima della messa online**: aggiornare Privacy Policy e Cookie Policy (dati del
+  titolare ed email coerenti) e far validare le informative a un legale/DPO.
 
 ---
 *Progettato su misura per unire istituzionalità finanziaria e accessibilità visiva.*
