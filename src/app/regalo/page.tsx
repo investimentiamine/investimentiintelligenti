@@ -20,10 +20,30 @@ export const metadata: Metadata = {
       noimageindex: true,
     },
   },
+  // Anteprima quando il link viene condiviso (WhatsApp, Facebook, LinkedIn…): immagine del
+  // mockup dello Starter Kit, usata solo per questa pagina.
   openGraph: {
+    type: "website",
+    locale: "it_IT",
+    url: "/regalo",
+    siteName: "Investimenti Intelligenti",
     title: "Un regalo per te: il tuo Starter Kit",
     description:
-      "Richiedi gratuitamente lo Starter Kit del Dott. Amine Alahiyane, CFP®, direttamente a casa tua.",
+      "Il libro «Non basta avere più soldi», una guida pratica e un articolo sulle pensioni del Dott. Amine Alahiyane, CFP®. Gratis, a casa tua.",
+    images: [
+      {
+        url: "/regalo/og-starter-kit.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lo Starter Kit: busta con il libro «Non basta avere più soldi», la guida e l'articolo sulle pensioni",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Un regalo per te: il tuo Starter Kit",
+    description: "Il libro, la guida e l'articolo sulle pensioni del Dott. Amine Alahiyane, CFP®. Gratis, a casa tua.",
+    images: ["/regalo/og-starter-kit.jpg"],
   },
 };
 
