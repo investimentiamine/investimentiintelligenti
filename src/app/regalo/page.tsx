@@ -41,6 +41,7 @@ const KIT_ITEMS = [
   {
     icon: <BookOpen size={22} />,
     label: "Il libro",
+    book3d: true,
     title: "«Non basta avere più soldi»",
     subtitle: "Capire il denaro per vivere con più libertà e meno preoccupazioni",
     image: { src: "/regalo/libro-copertina.webp", width: 700, height: 980, alt: "Copertina del libro «Non basta avere più soldi» di Amine Alahiyane" },
@@ -80,13 +81,13 @@ const KIT_ITEMS = [
 ];
 
 /* Libro in 3D: copertina ruotata con lo spessore delle pagine visibile sul taglio e in cima */
-function Book3D() {
+function Book3D({ alt = "", priority = false }: { alt?: string; priority?: boolean }) {
   return (
     <div className="[perspective:1000px]">
       <div className="relative [--d:20px] sm:[--d:28px] [transform-style:preserve-3d] [transform:rotateY(-32deg)_rotateX(-8deg)]">
         {/* Copertina */}
         <div className="relative [transform:translateZ(calc(var(--d)/2))] rounded-r-[3px] overflow-hidden shadow-[0_20px_40px_rgba(0,4,53,0.45)]">
-          <Image src="/regalo/libro-copertina.webp" alt="" width={700} height={980} priority className="w-full h-auto block" />
+          <Image src="/regalo/libro-copertina.webp" alt={alt} width={700} height={980} priority={priority} className="w-full h-auto block" />
           {/* Cerniera del dorso e riflesso */}
           <div className="absolute inset-y-0 left-0 w-[7%] bg-gradient-to-r from-black/35 via-white/10 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/15" />
@@ -118,7 +119,7 @@ function StarterKitMockup() {
         <Image src="/regalo/articolo-pensioni.webp" alt="" width={600} height={849} className="w-full h-auto block" />
       </div>
       <div className="absolute left-1/2 -translate-x-1/2 top-[7%] w-[40%]">
-        <Book3D />
+        <Book3D priority />
       </div>
 
       {/* Fronte della busta: grafica reale */}
@@ -232,9 +233,15 @@ export default function RegaloPage() {
                 className={`bg-white rounded-[2rem] p-8 lg:p-12 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 grid gap-8 lg:gap-12 items-center ${i % 2 === 1 ? "md:grid-cols-[1fr_220px] lg:grid-cols-[1fr_260px]" : "md:grid-cols-[220px_1fr] lg:grid-cols-[260px_1fr]"}`}
               >
                 <div className={`flex justify-center ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                  <div className={`w-[180px] lg:w-[220px] rounded-md overflow-hidden shadow-2xl ${i % 2 === 1 ? "rotate-2" : "-rotate-2"}`}>
-                    <Image src={item.image.src} alt={item.image.alt} width={item.image.width} height={item.image.height} className="w-full h-auto" />
-                  </div>
+                  {item.book3d ? (
+                    <div className="w-[170px] lg:w-[205px]">
+                      <Book3D alt={item.image.alt} />
+                    </div>
+                  ) : (
+                    <div className={`w-[180px] lg:w-[220px] rounded-md overflow-hidden shadow-2xl ${i % 2 === 1 ? "rotate-2" : "-rotate-2"}`}>
+                      <Image src={item.image.src} alt={item.image.alt} width={item.image.width} height={item.image.height} className="w-full h-auto" />
+                    </div>
+                  )}
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
