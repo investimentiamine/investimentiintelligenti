@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, type FormEvent, type ReactNode } from "react";
-import { CheckCircle2, Loader2, MessageCircle } from "lucide-react";
+import { CheckCircle2, Loader2 } from "lucide-react";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 const INPUT_CLASS =
   "w-full rounded-xl border border-gray-200 px-4 py-3 text-accent focus:border-accent-2 focus:ring-2 focus:ring-accent-2/20 outline-none transition";
@@ -76,9 +77,15 @@ export default function RegaloForm() {
         <h3 className="text-2xl font-bold text-accent mb-4">Richiesta ricevuta, {form.name}!</h3>
         <p className="text-accent/70 leading-relaxed">
           Il tuo Starter Kit &egrave; prenotato. A breve riceverai un messaggio su{" "}
-          <strong className="text-accent">WhatsApp</strong> per confermare l&rsquo;indirizzo di
-          spedizione: rispondi al messaggio, cos&igrave; siamo sicuri che il kit arrivi proprio a te.
+          <strong className="text-accent">WhatsApp</strong> per confermare l&rsquo;indirizzo di spedizione.
         </p>
+        <div className="mt-6 flex items-start gap-3 rounded-2xl bg-[#25D366]/10 border border-[#25D366]/40 p-4 text-left">
+          <WhatsAppIcon size={24} className="text-[#25D366] shrink-0 mt-0.5" />
+          <p className="text-sm text-accent leading-relaxed">
+            <strong>Rispondi al messaggio:</strong> spediamo lo Starter Kit solo dopo la tua conferma,
+            cos&igrave; siamo sicuri che sei proprio tu.
+          </p>
+        </div>
       </div>
     );
   }
@@ -172,7 +179,7 @@ export default function RegaloForm() {
       </button>
 
       <p className="flex items-center justify-center gap-2 text-xs text-accent/50">
-        <MessageCircle size={14} /> Spedizione gratuita &middot; Conferma dell&rsquo;indirizzo via WhatsApp
+        <WhatsAppIcon size={14} className="text-[#25D366]" /> Spedizione gratuita &middot; Conferma dell&rsquo;indirizzo via WhatsApp
       </p>
     </form>
   );

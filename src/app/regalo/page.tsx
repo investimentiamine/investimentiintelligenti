@@ -1,7 +1,8 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { BookOpen, Compass, Landmark, Gift, Lock, CheckCircle2, MessageCircle, Quote } from "lucide-react";
+import { BookOpen, Compass, Landmark, Gift, Lock, CheckCircle2, Quote } from "lucide-react";
 import RegaloForm from "./RegaloForm";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 // Landing riservata a chi ha ricevuto il voucher cartaceo (QR code) o la mail dedicata.
 // NON deve comparire su Google né sui motori AI: noindex qui, header X-Robots-Tag in
@@ -26,9 +27,13 @@ export const metadata: Metadata = {
   },
 };
 
+// Gli stessi miti della landing /libroanteprima.
 const PHRASES = [
+  "\"I soldi sono al sicuro solo sul conto corrente.\"",
+  "\"Il mattone non tradisce mai.\"",
+  "\"In borsa guadagna solo chi è già ricco.\"",
   "\"La banca mi chiama solo per vendermi qualcosa.\"",
-  "\"I soldi sono al sicuro solo sul conto.\"",
+  "\"Il mio bancario cambia in continuazione.\"",
   "\"Ci penserò più avanti.\"",
 ];
 
@@ -74,54 +79,58 @@ const KIT_ITEMS = [
   },
 ];
 
-/* Mockup della busta dello Starter Kit, ricreato come sul voucher */
+/* Libro in 3D: copertina ruotata con lo spessore delle pagine visibile sul taglio e in cima */
+function Book3D() {
+  return (
+    <div className="[perspective:1000px]">
+      <div className="relative [--d:20px] sm:[--d:28px] [transform-style:preserve-3d] [transform:rotateY(-32deg)_rotateX(-8deg)]">
+        {/* Copertina */}
+        <div className="relative [transform:translateZ(calc(var(--d)/2))] rounded-r-[3px] overflow-hidden shadow-[0_20px_40px_rgba(0,4,53,0.45)]">
+          <Image src="/regalo/libro-copertina.webp" alt="" width={700} height={980} priority className="w-full h-auto block" />
+          {/* Cerniera del dorso e riflesso */}
+          <div className="absolute inset-y-0 left-0 w-[7%] bg-gradient-to-r from-black/35 via-white/10 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/15" />
+        </div>
+        {/* Taglio delle pagine (lato destro) */}
+        <div className="absolute top-[1.2%] bottom-[1.2%] left-[calc(100%-var(--d)/2)] w-[var(--d)] [transform:rotateY(90deg)] bg-[repeating-linear-gradient(90deg,#f7f3ea_0px,#f7f3ea_1px,#ddd5c3_1px,#ddd5c3_2px)] shadow-[inset_6px_0_8px_rgba(0,0,0,0.18)]" />
+        {/* Pagine viste dall'alto */}
+        <div className="absolute left-[1%] right-[1.2%] top-[calc(var(--d)/-2)] h-[var(--d)] [transform:rotateX(90deg)] bg-[repeating-linear-gradient(0deg,#f7f3ea_0px,#f7f3ea_1px,#ddd5c3_1px,#ddd5c3_2px)]" />
+        {/* Retro di copertina */}
+        <div className="absolute inset-0 [transform:translateZ(calc(var(--d)/-2))] bg-[#1d3461] rounded-r-[3px]" />
+      </div>
+    </div>
+  );
+}
+
+/* Mockup della busta in cartone dello Starter Kit, con la grafica reale stampata sul fronte */
 function StarterKitMockup() {
   return (
-    <div className="relative w-[300px] h-[380px] sm:w-[400px] sm:h-[500px]" aria-label="Lo Starter Kit: busta con libro, guida e articolo" role="img">
-      {/* Retro della busta */}
-      <div className="absolute inset-x-0 bottom-0 h-[70%] rounded-2xl bg-gradient-to-br from-[#a9abd9] to-[#8d90c9] shadow-2xl" />
+    <div className="relative w-[300px] sm:w-[420px] aspect-[5/6]" aria-label="Lo Starter Kit: busta in cartone con libro, guida e articolo" role="img">
+      {/* Aletta aperta e retro della busta */}
+      <div className="absolute inset-x-[2%] top-[16%] h-[26%] bg-gradient-to-b from-[#8f92c8] to-[#a3a6d6] [clip-path:polygon(0_100%,100%_100%,90%_0,10%_0)]" />
+      <div className="absolute inset-x-0 top-[40%] bottom-0 rounded-[6px] bg-gradient-to-b from-[#7f83bf] to-[#9a9dd3]" />
 
       {/* Contenuti che spuntano dalla busta */}
-      <div className="absolute left-[4%] top-[14%] w-[34%] -rotate-[12deg] shadow-xl rounded-sm overflow-hidden">
-        <Image src="/regalo/guida-copertina.webp" alt="" width={600} height={842} className="w-full h-auto" />
+      <div className="absolute left-[5%] top-[19%] w-[33%] -rotate-[9deg] shadow-[0_10px_25px_rgba(0,4,53,0.35)] rounded-[2px] overflow-hidden">
+        <Image src="/regalo/guida-copertina.webp" alt="" width={600} height={842} className="w-full h-auto block" />
       </div>
-      <div className="absolute right-[3%] top-[17%] w-[34%] rotate-[10deg] shadow-xl rounded-sm overflow-hidden">
-        <Image src="/regalo/articolo-pensioni.webp" alt="" width={600} height={849} className="w-full h-auto" />
+      <div className="absolute right-[5%] top-[21%] w-[33%] rotate-[8deg] shadow-[0_10px_25px_rgba(0,4,53,0.35)] rounded-[2px] overflow-hidden">
+        <Image src="/regalo/articolo-pensioni.webp" alt="" width={600} height={849} className="w-full h-auto block" />
       </div>
-      <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[44%] shadow-2xl rounded-sm overflow-hidden">
-        <Image src="/regalo/libro-copertina.webp" alt="" width={700} height={980} priority className="w-full h-auto" />
+      <div className="absolute left-1/2 -translate-x-1/2 top-[7%] w-[40%]">
+        <Book3D />
       </div>
 
-      {/* Tasca frontale della busta */}
-      <div className="absolute inset-x-0 bottom-0 h-[52%] rounded-2xl overflow-hidden bg-gradient-to-br from-[#d5d6f0] via-[#c3c5e9] to-[#aeb1de] shadow-[0_-12px_30px_rgba(0,4,53,0.18)] flex flex-col items-center justify-center px-[7%] gap-[6%]">
-        {/* Sfaccettature low-poly come sul voucher */}
-        <div className="absolute inset-0 opacity-40 pointer-events-none" aria-hidden="true">
-          <div className="absolute inset-0 bg-white/40 [clip-path:polygon(0_0,45%_0,20%_60%)]" />
-          <div className="absolute inset-0 bg-[#9a9dd3]/50 [clip-path:polygon(60%_100%,100%_30%,100%_100%)]" />
-          <div className="absolute inset-0 bg-white/30 [clip-path:polygon(55%_0,100%_0,80%_45%)]" />
-        </div>
-
-        <div className="relative text-center">
-          <p className="text-accent font-extrabold tracking-tight text-lg sm:text-2xl leading-none">IL TUO STARTER KIT</p>
-          <div className="mx-auto mt-2 h-[3px] w-12 sm:w-16 rounded-full bg-[#5fd0c8]" />
-        </div>
-
-        <div className="relative w-full rounded-xl bg-accent px-3 py-3 sm:px-4 sm:py-4 flex items-center gap-3 sm:gap-4 shadow-lg">
-          <div className="relative w-12 h-12 sm:w-16 sm:h-16 shrink-0 rounded-full overflow-hidden border-2 border-white/80">
-            <Image src="/IMG_0391-copia-2.png" alt="" fill sizes="64px" className="object-cover object-top" />
-          </div>
-          <div className="text-left">
-            <p className="text-white text-[10px] sm:text-xs font-extrabold leading-tight">CONSULENTE FINANZIARIO CFP&reg;</p>
-            <p className="text-blue-100/80 text-[9px] sm:text-[11px] leading-snug mt-1">
-              Tra i <span className="text-[#5fd0c8] font-bold">primi 100 professionisti in Italia</span>{" "}certificati CFP&reg;
-            </p>
-            <p className="text-blue-200/60 text-[9px] sm:text-[10px] mt-1">Dott. Amine Alahiyane</p>
-          </div>
-        </div>
+      {/* Fronte della busta: grafica reale */}
+      <div className="absolute inset-x-0 bottom-0 rounded-[6px] overflow-hidden shadow-[0_-10px_24px_rgba(0,4,53,0.28),0_30px_50px_rgba(0,4,53,0.30)]">
+        <Image src="/regalo/busta-fronte.webp" alt="" width={1000} height={717} priority className="w-full h-auto block" />
+        {/* Bordo del cartone e leggera ombra interna all'apertura */}
+        <div className="absolute inset-x-0 top-0 h-[3px] bg-white/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/10 pointer-events-none" />
       </div>
 
       {/* Bollino sorprese */}
-      <div className="absolute -right-2 sm:-right-5 bottom-[44%] rotate-12 w-[72px] h-[72px] sm:w-[88px] sm:h-[88px] rounded-full bg-accent-2 text-white flex flex-col items-center justify-center text-center shadow-[0_8px_20px_rgba(37,99,235,0.45)] border-4 border-white">
+      <div className="absolute -right-3 sm:-right-6 -bottom-4 sm:-bottom-5 rotate-12 w-[70px] h-[70px] sm:w-[86px] sm:h-[86px] rounded-full bg-accent-2 text-white flex flex-col items-center justify-center text-center shadow-[0_8px_20px_rgba(37,99,235,0.45)] border-4 border-white">
         <Gift size={18} />
         <span className="text-[10px] sm:text-xs font-extrabold leading-tight mt-0.5">+ sorprese</span>
       </div>
@@ -143,10 +152,12 @@ export default function RegaloPage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] text-accent tracking-tight">
               RICEVI IL TUO<br /><span className="text-accent-2">STARTER KIT</span>
             </h1>
+            <p className="text-xl sm:text-2xl text-accent font-bold max-w-lg mx-auto lg:mx-0 leading-snug">
+              Qualcuno ha voluto farti un regalo donandoti questo voucher.
+            </p>
             <p className="text-lg sm:text-xl text-accent/70 font-medium max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              Qualcuno ha pensato a te. Con il voucher che hai ricevuto ottieni{" "}
-              <strong className="text-accent">gratuitamente</strong> lo Starter Kit,{" "}
-              <strong className="text-accent">direttamente a casa tua</strong>: il mio libro, una guida pratica, un articolo sulle pensioni&hellip; e qualche sorpresa.
+              Con questo voucher ricevi <strong className="text-accent">gratuitamente</strong> lo Starter Kit,{" "}
+              <strong className="text-accent">direttamente a casa tua</strong>, che comprende il mio libro, una guida pratica e un articolo sulle pensioni&hellip; e qualche sorpresa.
             </p>
             <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href="#richiedi" className="inline-block px-10 py-4 bg-accent text-white font-bold rounded-full hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-center">
@@ -177,7 +188,7 @@ export default function RegaloPage() {
         <section className="text-white py-20 lg:py-28 px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl lg:text-5xl font-bold">Ti riconosci in queste frasi?</h2>
-            <div className="grid sm:grid-cols-3 gap-5 text-left max-w-3xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 text-left max-w-4xl mx-auto">
               {PHRASES.map((frase) => (
                 <div key={frase} className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/10">
                   <Quote className="text-blue-300/60 mb-2" size={18} />
@@ -341,16 +352,23 @@ export default function RegaloPage() {
           <RegaloForm />
 
           {/* Reminder WhatsApp */}
-          <div className="bg-accent text-white rounded-[2rem] p-6 lg:p-8 text-left flex items-start gap-4 shadow-xl">
-            <div className="bg-[#25D366] text-white p-3 rounded-full shrink-0 shadow-[0_8px_20px_rgba(37,211,102,0.35)]">
-              <MessageCircle size={24} />
+          <div className="bg-accent text-white rounded-[2rem] p-6 lg:p-8 text-left shadow-xl space-y-5">
+            <div className="flex items-center gap-4">
+              <div className="bg-[#25D366] text-white p-3 rounded-full shrink-0 shadow-[0_8px_20px_rgba(37,211,102,0.35)]">
+                <WhatsAppIcon size={28} />
+              </div>
+              <p className="font-bold text-lg lg:text-xl leading-snug">Importante: tieni d&rsquo;occhio WhatsApp</p>
             </div>
-            <div className="space-y-2">
-              <p className="font-bold text-lg">Ricorda: tieni d&rsquo;occhio WhatsApp</p>
-              <p className="text-blue-100/80 text-sm leading-relaxed">
-                Dopo la richiesta riceverai un messaggio su WhatsApp dal numero dello studio{" "}
-                <strong className="text-white whitespace-nowrap">+39 351 897 1482</strong>{" "}per confermare l&rsquo;indirizzo di spedizione.
-                Rispondi al messaggio: cos&igrave; siamo sicuri che lo Starter Kit arrivi proprio a te.
+            <p className="text-blue-100/80 text-sm lg:text-base leading-relaxed">
+              Dopo la richiesta riceverai un messaggio su WhatsApp dal numero dello studio{" "}
+              <strong className="text-white whitespace-nowrap">+39 351 897 1482</strong>{" "}per confermare l&rsquo;indirizzo di spedizione.
+            </p>
+            <div className="rounded-2xl bg-[#25D366]/15 border border-[#25D366]/50 p-4 lg:p-5">
+              <p className="text-white font-bold leading-relaxed">
+                Rispondi al messaggio: spediamo lo Starter Kit solo dopo la tua conferma.
+              </p>
+              <p className="text-blue-100/80 text-sm leading-relaxed mt-1">
+                Cos&igrave; siamo sicuri che sei proprio tu e che il kit arrivi all&rsquo;indirizzo giusto.
               </p>
             </div>
           </div>
