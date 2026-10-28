@@ -305,7 +305,7 @@ export default function RegaloPage() {
               </div>
             </div>
             <div className="lg:col-span-3 space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold">Chi ti fa questo regalo</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold">Chi sono</h2>
               <p className="text-blue-100/80 leading-relaxed">
                 Sono <strong className="text-white">Amine Alahiyane</strong>, Consulente Finanziario e tra i primi 100 professionisti in Italia certificati <strong className="text-white">CFP&reg; (Certified Financial Planner)</strong>, il riconoscimento pi&ugrave; importante al mondo in pianificazione finanziaria.
               </p>
