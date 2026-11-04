@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "Il libro «Non basta avere più soldi», una guida pratica e un articolo sulle pensioni del Dott. Amine Alahiyane, CFP®. Gratis, a casa tua.",
     images: [
       {
-        url: "/regalo/og-starter-kit.jpg",
+        url: "/regalo/og-starter-kit-v2.jpg",
         width: 1200,
         height: 630,
         alt: "Lo Starter Kit: busta con il libro «Non basta avere più soldi», la guida e l'articolo sulle pensioni",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Un regalo per te: il tuo Starter Kit",
     description: "Il libro, la guida e l'articolo sulle pensioni del Dott. Amine Alahiyane, CFP®. Gratis, a casa tua.",
-    images: ["/regalo/og-starter-kit.jpg"],
+    images: ["/regalo/og-starter-kit-v2.jpg"],
   },
 };
 
@@ -153,7 +153,7 @@ function StarterKitMockup() {
       {/* Bollino sorprese */}
       <div className="absolute -right-3 sm:-right-6 -bottom-4 sm:-bottom-5 rotate-12 w-[70px] h-[70px] sm:w-[86px] sm:h-[86px] rounded-full bg-accent-2 text-white flex flex-col items-center justify-center text-center shadow-[0_8px_20px_rgba(37,99,235,0.45)] border-4 border-white">
         <Gift size={18} />
-        <span className="text-[10px] sm:text-xs font-extrabold leading-tight mt-0.5">+ sorprese</span>
+        <span className="text-[10px] sm:text-xs font-extrabold leading-tight mt-0.5">+ 2 sorprese</span>
       </div>
     </div>
   );
@@ -178,7 +178,7 @@ export default function RegaloPage() {
             </p>
             <p className="text-lg sm:text-xl text-accent/70 font-medium max-w-lg mx-auto lg:mx-0 leading-relaxed">
               Con questo voucher ricevi <strong className="text-accent">gratuitamente</strong> lo Starter Kit,{" "}
-              <strong className="text-accent">direttamente a casa tua</strong>, che comprende il mio libro, una guida pratica e un articolo sulle pensioni&hellip; e qualche sorpresa.
+              <strong className="text-accent">direttamente a casa tua</strong>, che comprende il mio libro, una guida pratica e un articolo sulle pensioni&hellip; e due sorprese.
             </p>
             <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href="#richiedi" className="inline-block px-10 py-4 bg-accent text-white font-bold rounded-full hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-center">
@@ -294,13 +294,13 @@ export default function RegaloPage() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-600/10 text-blue-600 text-xs font-bold uppercase tracking-widest rounded-full mb-6">
             <Lock size={14} /> Top secret
           </div>
-          <h2 className="text-3xl lg:text-5xl font-bold text-accent mb-6">&hellip;e qualche sorpresa</h2>
+          <h2 className="text-3xl lg:text-5xl font-bold text-accent mb-6">&hellip;e due sorprese</h2>
           <p className="text-lg text-accent/70 max-w-2xl mx-auto mb-14">
-            Non posso svelarti tutto: dentro la busta troverai anche qualcosa in pi&ugrave;. Lo scoprirai solo quando aprirai il tuo Starter Kit.
+            Non posso svelarti tutto: dentro la busta troverai anche due sorprese. Le scoprirai solo quando aprirai il tuo Starter Kit.
           </p>
 
-          <div className="grid sm:grid-cols-3 gap-6">
-            {[1, 2, 3].map((n) => (
+          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {[1, 2].map((n) => (
               <div key={n} className="relative rounded-[2rem] shadow-sm border border-gray-100 overflow-hidden min-h-[260px] bg-gradient-to-br from-accent to-blue-900">
                 {/* Contenuto finto, volutamente oscurato */}
                 <div className="absolute inset-0 p-8 blur-md select-none pointer-events-none space-y-4 text-left" aria-hidden="true">
@@ -368,7 +368,7 @@ export default function RegaloPage() {
               "Il libro «Non basta avere più soldi»",
               "La guida «5 strategie per trasformare il caos finanziario»",
               "L'articolo «Pensioni, demografia e il grande inganno»",
-              "…e qualche sorpresa",
+              "…e due sorprese",
             ].map((item) => (
               <div key={item} className="flex items-start gap-3">
                 <CheckCircle2 className="text-blue-600 mt-0.5 shrink-0" size={18} />
