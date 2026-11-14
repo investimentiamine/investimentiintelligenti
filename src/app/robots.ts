@@ -29,7 +29,7 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        // /regalo resta volutamente scansionabile dai motori di ricerca: solo così Google e
+        // /regalo e /eserciziario restano volutamente scansionabile dai motori di ricerca: solo così Google e
         // Bing leggono il "noindex" della pagina e non la mostrano mai nei risultati.
         // Bloccarla qui impedirebbe di vedere il noindex e l'URL potrebbe comparire comunque.
         userAgent: "*",
@@ -39,7 +39,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: AI_CRAWLERS,
         allow: "/",
-        disallow: [...DISALLOW, "/regalo"],
+        disallow: [...DISALLOW, "/regalo", "/eserciziario"],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
