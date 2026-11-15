@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "Il libro «Non basta avere più soldi», una guida pratica e un articolo sulle pensioni del Dott. Amine Alahiyane, CFP®. Gratis, a casa tua.",
     images: [
       {
-        url: "/regalo/og-starter-kit-v2.jpg",
+        url: "/regalo/og-starter-kit-v3.jpg",
         width: 1200,
         height: 630,
         alt: "Lo Starter Kit: busta con il libro «Non basta avere più soldi», la guida e l'articolo sulle pensioni",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Un regalo per te: il tuo Starter Kit",
     description: "Il libro, la guida e l'articolo sulle pensioni del Dott. Amine Alahiyane, CFP®. Gratis, a casa tua.",
-    images: ["/regalo/og-starter-kit-v2.jpg"],
+    images: ["/regalo/og-starter-kit-v3.jpg"],
   },
 };
 
@@ -117,7 +117,7 @@ function Book3D({ alt = "", priority = false }: { alt?: string; priority?: boole
         {/* Pagine viste dall'alto */}
         <div className="absolute left-[1%] right-[1.2%] top-[calc(var(--d)/-2)] h-[var(--d)] [transform:rotateX(90deg)] bg-[repeating-linear-gradient(0deg,#f7f3ea_0px,#f7f3ea_1px,#ddd5c3_1px,#ddd5c3_2px)]" />
         {/* Retro di copertina */}
-        <div className="absolute inset-0 [transform:translateZ(calc(var(--d)/-2))] bg-[#1d3461] rounded-r-[3px]" />
+        <div className="absolute inset-0 [transform:translateZ(calc(var(--d)/-2))] bg-[#1a2f5a] rounded-r-[3px]" />
       </div>
     </div>
   );
