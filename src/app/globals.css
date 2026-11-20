@@ -127,18 +127,59 @@
 }
 
 /* -------------------------------------------------------------------------
-   Cookiebot — banner consenso
+   Cookiebot — banner consenso: compatto e non invasivo
    -------------------------------------------------------------------------
-   Aspetto e layout del banner si configurano direttamente nel pannello
-   Cookiebot (Design, Contenuto, Privacy), che è l'unica fonte di verità per
-   colori, posizione e testi. Non aggiungiamo qui override: regole CSS con
-   !important sovrascriverebbero le scelte del pannello, rendendole "invisibili".
+   Sul piano Free di Cookiebot le impostazioni di layout del banner sono
+   bloccate (sono tra le personalizzazioni Premium), quindi il banner esce come
+   finestra grande e centrata. Qui lo rendiamo una card compatta ancorata in
+   basso a destra, senza overlay che copre la pagina.
 
-   Palette del sito, da riportare nel pannello Cookiebot:
-   - Background:  #FFFFFF
-   - Testo:       #15131A (titoli: #000435)
-   - In evidenza / pulsante primario: #0044FF
+   Vincolo di conformità (Garante): "Accetta" e "Rifiuta" restano paritari e
+   ugualmente visibili — non vengono nascosti né rimpiccioliti.
 
-   Se in futuro servisse una rifinitura che il pannello non consente, aggiungere
-   qui regole mirate sugli ID #CybotCookiebotDialog* dello script uc.js. */
+   Gli ID sono quelli dello script uc.js; !important perché Cookiebot applica
+   stili propri ad alta specificità. Se il widget cambia, verificare in ispezione. */
+
+/* Nessun overlay scuro: la pagina resta visibile e navigabile */
+#CybotCookiebotDialogBodyUnderlay {
+  display: none !important;
+}
+
+/* Card compatta d'angolo, non a tutto schermo */
+#CybotCookiebotDialog {
+  inset: auto 1.25rem 1.25rem auto !important; /* ancorata in basso a destra */
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  width: min(380px, calc(100vw - 2rem)) !important;
+  max-width: min(380px, calc(100vw - 2rem)) !important;
+  max-height: calc(100vh - 2.5rem) !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Testi più compatti */
+#CybotCookiebotDialogBodyContentTitle {
+  font-size: 0.95rem !important;
+}
+#CybotCookiebotDialogBodyContentText {
+  font-size: 0.8rem !important;
+  line-height: 1.4 !important;
+}
+
+/* Bottoni compatti e di pari dimensione (parità Accetta/Rifiuta) */
+.CybotCookiebotDialogBodyButton {
+  font-size: 0.8rem !important;
+  padding: 0.5rem 0.75rem !important;
+  min-width: 0 !important;
+}
+
+/* Su mobile: barra compatta in basso a tutta larghezza */
+@media (max-width: 600px) {
+  #CybotCookiebotDialog {
+    inset: auto 0.5rem 0.5rem 0.5rem !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+}
 
